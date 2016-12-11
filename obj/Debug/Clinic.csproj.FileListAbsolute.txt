@@ -1,0 +1,11 @@
+D:\Projects\Clinic\bin\Debug\Clinic.exe.config
+D:\Projects\Clinic\bin\Debug\Clinic.exe
+D:\Projects\Clinic\bin\Debug\Clinic.pdb
+D:\Projects\Clinic\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
+D:\Projects\Clinic\obj\Debug\Clinic.Form1.resources
+D:\Projects\Clinic\obj\Debug\Clinic.Properties.Resources.resources
+D:\Projects\Clinic\obj\Debug\Clinic.csproj.GenerateResource.Cache
+D:\Projects\Clinic\obj\Debug\Clinic.exe
+D:\Projects\Clinic\obj\Debug\Clinic.pdb
+D:\Projects\Clinic\bin\Debug\ClinicDB.accdb
+D:\Projects\Clinic\obj\Debug\Clinic.Select_Patient.resources
