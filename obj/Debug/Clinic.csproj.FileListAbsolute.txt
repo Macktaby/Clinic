@@ -7,5 +7,5 @@ D:\Projects\Clinic\obj\Debug\Clinic.Properties.Resources.resources
 D:\Projects\Clinic\obj\Debug\Clinic.csproj.GenerateResource.Cache
 D:\Projects\Clinic\obj\Debug\Clinic.exe
 D:\Projects\Clinic\obj\Debug\Clinic.pdb
-D:\Projects\Clinic\bin\Debug\ClinicDB.accdb
 D:\Projects\Clinic\obj\Debug\Clinic.Select_Patient.resources
+D:\Projects\Clinic\obj\Debug\Clinic.Froms.Patient.resources

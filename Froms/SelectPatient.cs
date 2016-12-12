@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clinic.Froms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,13 +27,28 @@ namespace Clinic
             this.dr = dr;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_select_Click(object sender, EventArgs e)
         {
+            if (listView.SelectedIndices.Count <= 0)
+            {
+                MessageBox.Show("No Patient Selected !!!");
+                return;
+            }
+            int intselectedindex = listView.SelectedIndices[0];
+            if (intselectedindex >= 0)
+            {
+    //            if (Int32.TryParse(TextBoxD1.Text, out x))
+                int id = Int32.Parse(listView.Items[intselectedindex].Text);
+
+                Patient patient = new Patient(id);
+                this.Close();
+                patient.Show();
+            }
         }
 
         private void Select_Patient_Load(object sender, EventArgs e)
@@ -46,5 +62,14 @@ namespace Clinic
             }
 
         }
+
+        private void listView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_select_Click(sender, e);
+            }
+        }
+
     }
 }

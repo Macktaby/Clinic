@@ -30,15 +30,15 @@ namespace Clinic
             {
                 conn.Open();
                 String sql = "INSERT INTO Patient "
-                    + "(patient_name, patient_age, husband_name, husband_age,phone) "
-                    + "VALUES(@name, @age, @hName, @hAge, @phone)";
+                    + "(patient_name, patient_bdate, husband_name, husband_bdate, phone) "
+                    + "VALUES(@name, @bdate, @hName, @hBDate, @phone)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@name", txt_patientName.Text);
-                command.Parameters.AddWithValue("@age", num_patientAge.Value);
+                command.Parameters.AddWithValue("@bdate", date_patientBDate.Value.Date);
                 command.Parameters.AddWithValue("@hName", txt_husbandName.Text);
-                command.Parameters.AddWithValue("@hAge", num_husbandAge.Value);
+                command.Parameters.AddWithValue("@hBDate", date_husbandBDate.Value.Date);
                 command.Parameters.AddWithValue("@phone", txt_phone.Text);
 
                 command.ExecuteNonQuery();

@@ -35,20 +35,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_patientName = new System.Windows.Forms.TextBox();
             this.txt_husbandName = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
-            this.num_patientAge = new System.Windows.Forms.NumericUpDown();
-            this.num_husbandAge = new System.Windows.Forms.NumericUpDown();
             this.btn_addAction = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,10 +51,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btn_searchPatient = new System.Windows.Forms.Button();
             this.goupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_husbandAge)).BeginInit();
+            this.date_patientBDate = new System.Windows.Forms.DateTimePicker();
+            this.date_husbandBDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox3.SuspendLayout();
             this.goupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(439, 41);
+            this.label5.Location = new System.Drawing.Point(392, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 4;
@@ -105,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(439, 94);
+            this.label6.Location = new System.Drawing.Point(383, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 26);
             this.label6.TabIndex = 5;
@@ -125,20 +117,6 @@
             this.txt_husbandName.Name = "txt_husbandName";
             this.txt_husbandName.Size = new System.Drawing.Size(243, 20);
             this.txt_husbandName.TabIndex = 3;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(497, 39);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 11;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(497, 97);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 12;
             // 
             // splitter1
             // 
@@ -183,25 +161,6 @@
             this.label7.Text = "Husband\r\nName";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(439, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Age";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(439, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 26);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Husband\r\nAge";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(87, 38);
@@ -224,21 +183,6 @@
             this.txt_phone.TabIndex = 5;
             this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
-            // num_patientAge
-            // 
-            this.num_patientAge.Location = new System.Drawing.Point(497, 39);
-            this.num_patientAge.Name = "num_patientAge";
-            this.num_patientAge.Size = new System.Drawing.Size(120, 20);
-            this.num_patientAge.TabIndex = 2;
-            this.num_patientAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // num_husbandAge
-            // 
-            this.num_husbandAge.Location = new System.Drawing.Point(497, 97);
-            this.num_husbandAge.Name = "num_husbandAge";
-            this.num_husbandAge.Size = new System.Drawing.Size(120, 20);
-            this.num_husbandAge.TabIndex = 4;
-            // 
             // btn_addAction
             // 
             this.btn_addAction.Location = new System.Drawing.Point(542, 160);
@@ -251,7 +195,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.num_patientAge);
+            this.groupBox3.Controls.Add(this.date_husbandBDate);
+            this.groupBox3.Controls.Add(this.date_patientBDate);
             this.groupBox3.Controls.Add(this.btn_addAction);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label3);
@@ -260,13 +205,8 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.num_husbandAge);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.numericUpDown2);
             this.groupBox3.Controls.Add(this.txt_patientName);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.numericUpDown1);
             this.groupBox3.Controls.Add(this.txt_husbandName);
             this.groupBox3.Controls.Add(this.textBox5);
             this.groupBox3.Controls.Add(this.textBox4);
@@ -334,6 +274,20 @@
             this.goupBox1.TabStop = false;
             this.goupBox1.Text = "Search patient";
             // 
+            // date_patientBDate
+            // 
+            this.date_patientBDate.Location = new System.Drawing.Point(443, 38);
+            this.date_patientBDate.Name = "date_patientBDate";
+            this.date_patientBDate.Size = new System.Drawing.Size(200, 20);
+            this.date_patientBDate.TabIndex = 19;
+            // 
+            // date_husbandBDate
+            // 
+            this.date_husbandBDate.Location = new System.Drawing.Point(443, 97);
+            this.date_husbandBDate.Name = "date_husbandBDate";
+            this.date_husbandBDate.Size = new System.Drawing.Size(200, 20);
+            this.date_husbandBDate.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,10 +300,6 @@
             this.Controls.Add(this.splitter1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_husbandAge)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.goupBox1.ResumeLayout(false);
@@ -367,20 +317,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_patientName;
         private System.Windows.Forms.TextBox txt_husbandName;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Splitter splitter3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox txt_phone;
-        private System.Windows.Forms.NumericUpDown num_patientAge;
-        private System.Windows.Forms.NumericUpDown num_husbandAge;
         private System.Windows.Forms.Button btn_addAction;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
@@ -389,6 +333,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_searchPatient;
         private System.Windows.Forms.GroupBox goupBox1;
+        private System.Windows.Forms.DateTimePicker date_husbandBDate;
+        private System.Windows.Forms.DateTimePicker date_patientBDate;
     }
 }
 
