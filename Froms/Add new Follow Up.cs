@@ -41,18 +41,70 @@ namespace Clinic.Froms
         private void btn_addFollowUpAction_Click(object sender, EventArgs e)
         {
             int followUpID = addFollowUp();
-            //addPastHistory(followUpID);
-            //addFamilyHistoy(followUpID);
+            addAllPastHistory(followUpID);
+            addAllFamilyHistoy(followUpID);
         }
 
-        private void addFamilyHistoy(int followUpID)
+        private void addAllFamilyHistoy(int followUpID)
         {
-            throw new NotImplementedException();
+            foreach (String item in listBox_FamilyHistory.Items)
+                addFamilyHistory(followUpID, item);
         }
 
-        private void addPastHistory(int followUpID)
+        private void addFamilyHistory(int followUpID, string item)
         {
-            throw new NotImplementedException();
+            try
+            {
+                conn.Open();
+
+                String sql = "INSERT INTO Family_History (follow_up_id, hValue) VALUES (@fID, @hValue)";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@fID", followUpID);
+                command.Parameters.AddWithValue("@hValue", item);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void addAllPastHistory(int followUpID)
+        {
+            foreach(String item in listBox_pastHistory.Items)
+                    addPastHistory(followUpID, item);
+        }
+
+        private void addPastHistory(int followUpID, string item)
+        {
+            try
+            {
+                conn.Open();
+
+                String sql = "INSERT INTO Past_History (follow_up_id, hValue) VALUES (@fID, @hValue)";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@fID", followUpID);
+                command.Parameters.AddWithValue("@hValue", item);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private int addFollowUp()
@@ -84,9 +136,7 @@ namespace Clinic.Froms
 
                 command = new OleDbCommand("SELECT @@IDENTITY", conn);
 
-                int id = (int)command.ExecuteScalar();
-                MessageBox.Show(id.ToString());
-                return id;
+                return (int)command.ExecuteScalar(); ;
             }
             catch (Exception ex)
             {
@@ -111,7 +161,7 @@ namespace Clinic.Froms
 
         public String rhValue()
         {
-            if (string.IsNullOrEmpty(combo_familyHistory.SelectedText))
+            if (string.IsNullOrEmpty(combo_rh.Text.ToString()))
             {
                 MessageBox.Show("RH is not selected");
                 return "";
