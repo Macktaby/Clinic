@@ -135,8 +135,6 @@ namespace Clinic.Froms
             {
                 conn.Open();
                 String sql = "SELECT * FROM Follow_Up WHERE Follow_Up.follow_up_id = @id";
-                // Past_History, Family_History 
-                // AND Follow_Up.follow_up_id = Follow_Up.follow_up_id AND Follow_Up.follow_up_id = Follow_Up.follow_up_id
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@id", followUpID);
@@ -156,17 +154,20 @@ namespace Clinic.Froms
                     txt_living.Text = dr.GetInt32(dr.GetOrdinal("living")).ToString();
                     txt_male.Text = dr.GetInt32(dr.GetOrdinal("male")).ToString();
                     txt_female.Text = dr.GetInt32(dr.GetOrdinal("female")).ToString();
-                    txt_rh.Text = dr.GetString(dr.GetOrdinal("rh"));
-                    txt_menarchal.Text = dr.GetInt32(dr.GetOrdinal("menarchal")) + "Years Old";
+
+                    txt_rh.Text = dr[dr.GetOrdinal("rh")].ToString();
+
+                    txt_menarchal.Text = dr.GetInt32(dr.GetOrdinal("menarchal")) + " Years Old";
                     txt_cycleD.Text = dr.GetInt32(dr.GetOrdinal("cycle_d")).ToString();
                     txt_cycleC.Text = dr.GetInt32(dr.GetOrdinal("cycle_c")).ToString();
 
-                    // GET PAST AND FAMILY HISTORY
+                    getPastHistory(followUpID);
+                    getFamilyHistory(followUpID);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured !!!" + ex.ToString());
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -174,6 +175,50 @@ namespace Clinic.Froms
             }
         }
 
+        private void getPastHistory(int followUpID)
+        {
+            try
+            {
+                String sql = "SELECT * FROM Past_History WHERE follow_up_id = @id";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                command.Parameters.AddWithValue("@id", followUpID);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                listBox_pastHistory.Items.Clear();
+                while (dr.Read())
+                {
+                    listBox_pastHistory.Items.Add(dr[dr.GetOrdinal("hValue")]);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        private void getFamilyHistory(int followUpID)
+        {
+            try
+            {
+                String sql = "SELECT * FROM Family_History WHERE follow_up_id = @id";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                command.Parameters.AddWithValue("@id", followUpID);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                listBox_FamilyHistory.Items.Clear();
+                while (dr.Read())
+                {
+                    listBox_FamilyHistory.Items.Add(dr[dr.GetOrdinal("hValue")]);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+//                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
     }
