@@ -216,8 +216,14 @@ namespace Clinic.Froms
             catch (Exception ex)
             {
                 throw;
-//                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_addFollowUpLink_Click(object sender, EventArgs e)
+        {
+            Add_new_Follow_Up form = new Add_new_Follow_Up(id);
+            form.Show();
         }
 
 

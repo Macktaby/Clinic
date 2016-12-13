@@ -64,6 +64,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClinicDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Froms\Add new Follow Up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Add new Follow Up.Designer.cs">
+      <DependentUpon>Add new Follow Up.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Froms\SelectPatient.Designer.cs">
       <DependentUpon>SelectPatient.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Froms\Add new Follow Up.resx">
+      <DependentUpon>Add new Follow Up.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

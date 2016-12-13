@@ -74,7 +74,7 @@
             this.txt_lmp = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.combo_followUps = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_addFollowUpLink = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -531,14 +531,15 @@
             this.combo_followUps.SelectedIndexChanged += new System.EventHandler(this.combo_followUps_SelectedIndexChanged);
             this.combo_followUps.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_followUps_KeyPress);
             // 
-            // button1
+            // btn_addFollowUpLink
             // 
-            this.button1.Location = new System.Drawing.Point(748, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 39);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Add new Follow up";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_addFollowUpLink.Location = new System.Drawing.Point(748, 51);
+            this.btn_addFollowUpLink.Name = "btn_addFollowUpLink";
+            this.btn_addFollowUpLink.Size = new System.Drawing.Size(75, 39);
+            this.btn_addFollowUpLink.TabIndex = 22;
+            this.btn_addFollowUpLink.Text = "Add new Follow up";
+            this.btn_addFollowUpLink.UseVisualStyleBackColor = true;
+            this.btn_addFollowUpLink.Click += new System.EventHandler(this.btn_addFollowUpLink_Click);
             // 
             // button2
             // 
@@ -586,7 +587,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_addFollowUpLink);
             this.Controls.Add(this.combo_followUps);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
@@ -626,7 +627,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txt_lmp;
         private System.Windows.Forms.ComboBox combo_followUps;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_addFollowUpLink;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
