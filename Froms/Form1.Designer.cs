@@ -45,14 +45,14 @@
             this.txt_phone = new System.Windows.Forms.TextBox();
             this.btn_addAction = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.date_husbandBDate = new System.Windows.Forms.DateTimePicker();
+            this.date_patientBDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_patientSearchName = new System.Windows.Forms.TextBox();
             this.txt_patientSearchPhone = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_searchPatient = new System.Windows.Forms.Button();
             this.goupBox1 = new System.Windows.Forms.GroupBox();
-            this.date_patientBDate = new System.Windows.Forms.DateTimePicker();
-            this.date_husbandBDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox3.SuspendLayout();
             this.goupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -217,6 +217,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add new Patient";
             // 
+            // date_husbandBDate
+            // 
+            this.date_husbandBDate.Location = new System.Drawing.Point(443, 97);
+            this.date_husbandBDate.Name = "date_husbandBDate";
+            this.date_husbandBDate.Size = new System.Drawing.Size(200, 20);
+            this.date_husbandBDate.TabIndex = 20;
+            // 
+            // date_patientBDate
+            // 
+            this.date_patientBDate.Location = new System.Drawing.Point(443, 38);
+            this.date_patientBDate.Name = "date_patientBDate";
+            this.date_patientBDate.Size = new System.Drawing.Size(200, 20);
+            this.date_patientBDate.TabIndex = 19;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -273,20 +287,6 @@
             this.goupBox1.TabIndex = 17;
             this.goupBox1.TabStop = false;
             this.goupBox1.Text = "Search patient";
-            // 
-            // date_patientBDate
-            // 
-            this.date_patientBDate.Location = new System.Drawing.Point(443, 38);
-            this.date_patientBDate.Name = "date_patientBDate";
-            this.date_patientBDate.Size = new System.Drawing.Size(200, 20);
-            this.date_patientBDate.TabIndex = 19;
-            // 
-            // date_husbandBDate
-            // 
-            this.date_husbandBDate.Location = new System.Drawing.Point(443, 97);
-            this.date_husbandBDate.Name = "date_husbandBDate";
-            this.date_husbandBDate.Size = new System.Drawing.Size(200, 20);
-            this.date_husbandBDate.TabIndex = 20;
             // 
             // Form1
             // 

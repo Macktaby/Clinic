@@ -44,6 +44,9 @@
             this.txt_husbandName = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btn_addVisitLink = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_cycleC = new System.Windows.Forms.TextBox();
             this.txt_cycleD = new System.Windows.Forms.TextBox();
@@ -230,6 +233,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btn_addVisitLink);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.txt_cycleC);
             this.groupBox1.Controls.Add(this.txt_cycleD);
@@ -266,10 +272,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(829, 120);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(106, 23);
+            this.button6.TabIndex = 46;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(829, 85);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(106, 23);
+            this.button5.TabIndex = 45;
+            this.button5.Text = "View Visits";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // btn_addVisitLink
+            // 
+            this.btn_addVisitLink.Location = new System.Drawing.Point(829, 50);
+            this.btn_addVisitLink.Name = "btn_addVisitLink";
+            this.btn_addVisitLink.Size = new System.Drawing.Size(106, 23);
+            this.btn_addVisitLink.TabIndex = 44;
+            this.btn_addVisitLink.Text = "Add new Visit";
+            this.btn_addVisitLink.UseVisualStyleBackColor = true;
+            this.btn_addVisitLink.Click += new System.EventHandler(this.btn_addVisitLink_Click);
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(826, 116);
+            this.label22.Location = new System.Drawing.Point(713, 116);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(12, 13);
             this.label22.TabIndex = 43;
@@ -278,7 +312,7 @@
             // txt_cycleC
             // 
             this.txt_cycleC.Enabled = false;
-            this.txt_cycleC.Location = new System.Drawing.Point(844, 113);
+            this.txt_cycleC.Location = new System.Drawing.Point(731, 113);
             this.txt_cycleC.Name = "txt_cycleC";
             this.txt_cycleC.Size = new System.Drawing.Size(40, 20);
             this.txt_cycleC.TabIndex = 42;
@@ -286,7 +320,7 @@
             // txt_cycleD
             // 
             this.txt_cycleD.Enabled = false;
-            this.txt_cycleD.Location = new System.Drawing.Point(780, 113);
+            this.txt_cycleD.Location = new System.Drawing.Point(667, 113);
             this.txt_cycleD.Name = "txt_cycleD";
             this.txt_cycleD.Size = new System.Drawing.Size(40, 20);
             this.txt_cycleD.TabIndex = 41;
@@ -294,7 +328,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(700, 120);
+            this.label21.Location = new System.Drawing.Point(587, 120);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(56, 13);
             this.label21.TabIndex = 40;
@@ -304,7 +338,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(700, 87);
+            this.label24.Location = new System.Drawing.Point(587, 87);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(57, 13);
             this.label24.TabIndex = 33;
@@ -314,7 +348,7 @@
             // txt_menarchal
             // 
             this.txt_menarchal.Enabled = false;
-            this.txt_menarchal.Location = new System.Drawing.Point(781, 84);
+            this.txt_menarchal.Location = new System.Drawing.Point(668, 84);
             this.txt_menarchal.Name = "txt_menarchal";
             this.txt_menarchal.Size = new System.Drawing.Size(103, 20);
             this.txt_menarchal.TabIndex = 36;
@@ -322,7 +356,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(687, 48);
+            this.label25.Location = new System.Drawing.Point(574, 48);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(109, 13);
             this.label25.TabIndex = 32;
@@ -331,7 +365,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(700, 192);
+            this.label20.Location = new System.Drawing.Point(681, 192);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(35, 13);
             this.label20.TabIndex = 31;
@@ -340,7 +374,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(370, 192);
+            this.label19.Location = new System.Drawing.Point(360, 192);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 13);
             this.label19.TabIndex = 30;
@@ -358,7 +392,7 @@
             // rtxt_notes
             // 
             this.rtxt_notes.Enabled = false;
-            this.rtxt_notes.Location = new System.Drawing.Point(703, 215);
+            this.rtxt_notes.Location = new System.Drawing.Point(684, 215);
             this.rtxt_notes.Name = "rtxt_notes";
             this.rtxt_notes.Size = new System.Drawing.Size(274, 160);
             this.rtxt_notes.TabIndex = 28;
@@ -368,7 +402,7 @@
             // 
             this.listBox_FamilyHistory.Enabled = false;
             this.listBox_FamilyHistory.FormattingEnabled = true;
-            this.listBox_FamilyHistory.Location = new System.Drawing.Point(367, 215);
+            this.listBox_FamilyHistory.Location = new System.Drawing.Point(357, 215);
             this.listBox_FamilyHistory.Name = "listBox_FamilyHistory";
             this.listBox_FamilyHistory.Size = new System.Drawing.Size(300, 160);
             this.listBox_FamilyHistory.TabIndex = 27;
@@ -387,7 +421,7 @@
             this.txt_rh.Enabled = false;
             this.txt_rh.Location = new System.Drawing.Point(422, 134);
             this.txt_rh.Name = "txt_rh";
-            this.txt_rh.Size = new System.Drawing.Size(130, 20);
+            this.txt_rh.Size = new System.Drawing.Size(105, 20);
             this.txt_rh.TabIndex = 25;
             // 
             // label17
@@ -402,7 +436,7 @@
             // txt_female
             // 
             this.txt_female.Enabled = false;
-            this.txt_female.Location = new System.Drawing.Point(489, 99);
+            this.txt_female.Location = new System.Drawing.Point(487, 89);
             this.txt_female.Name = "txt_female";
             this.txt_female.Size = new System.Drawing.Size(40, 20);
             this.txt_female.TabIndex = 23;
@@ -410,7 +444,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(490, 83);
+            this.label16.Location = new System.Drawing.Point(488, 73);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 22;
@@ -419,7 +453,7 @@
             // txt_male
             // 
             this.txt_male.Enabled = false;
-            this.txt_male.Location = new System.Drawing.Point(422, 99);
+            this.txt_male.Location = new System.Drawing.Point(420, 89);
             this.txt_male.Name = "txt_male";
             this.txt_male.Size = new System.Drawing.Size(40, 20);
             this.txt_male.TabIndex = 21;
@@ -427,7 +461,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(427, 83);
+            this.label12.Location = new System.Drawing.Point(425, 73);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 20;
@@ -436,15 +470,15 @@
             // txt_living
             // 
             this.txt_living.Enabled = false;
-            this.txt_living.Location = new System.Drawing.Point(471, 47);
+            this.txt_living.Location = new System.Drawing.Point(419, 47);
             this.txt_living.Name = "txt_living";
-            this.txt_living.Size = new System.Drawing.Size(40, 20);
+            this.txt_living.Size = new System.Drawing.Size(43, 20);
             this.txt_living.TabIndex = 19;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(419, 50);
+            this.label15.Location = new System.Drawing.Point(378, 50);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(35, 13);
             this.label15.TabIndex = 18;
@@ -659,5 +693,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_menarchal;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_addVisitLink;
     }
 }

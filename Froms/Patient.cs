@@ -15,8 +15,12 @@ namespace Clinic.Froms
     {
         private OleDbConnection conn;
         private String connectionStr;
-        private int id;
+
+        private int patientID;
         private List<int> followUps;
+
+        private int followUpID = 0;
+        private DateTime lmp;
 
         public Patient()
         {
@@ -29,13 +33,12 @@ namespace Clinic.Froms
         public Patient(int id)
             : this()
         {
-            this.id = id;
+            this.patientID = id;
         }
 
         private void Patient_Load(object sender, EventArgs e)
         {
             loadPatientInfo();
-            //            getFollowUps();
         }
 
         private void getFollowUps()
@@ -45,7 +48,7 @@ namespace Clinic.Froms
                 conn.Open();
                 String sql = "SELECT * FROM Follow_Up WHERE Follow_Up.patient_id = @id ORDER BY start_date DESC";
                 OleDbCommand command = new OleDbCommand(sql, conn);
-                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@id", patientID);
                 OleDbDataReader dr = command.ExecuteReader();
 
                 followUps = new List<int>();
@@ -75,7 +78,7 @@ namespace Clinic.Froms
                 // AND Patient.patient_id = Follow_Up.patient_id
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
-                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@id", patientID);
 
                 OleDbDataReader dr = command.ExecuteReader();
 
@@ -118,18 +121,22 @@ namespace Clinic.Froms
 
         private void combo_followUps_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Reject the input
-            e.Handled = true;
+            if (char.IsControl(e.KeyChar))
+                //Do not reject the input
+                e.Handled = false;
+            else
+                //Reject the input
+                e.Handled = true;
         }
 
         private void combo_followUps_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int followUpID = followUps[combo_followUps.SelectedIndex];
+            followUpID = followUps[combo_followUps.SelectedIndex];
 
-            getFollowUp(followUpID);
+            getFollowUp();
         }
 
-        private void getFollowUp(int followUpID)
+        private void getFollowUp()
         {
             try
             {
@@ -146,7 +153,9 @@ namespace Clinic.Froms
                     txt_parityA.Text = dr.GetInt32(dr.GetOrdinal("parity_a")).ToString();
                     txt_parityB.Text = dr.GetInt32(dr.GetOrdinal("parity_b")).ToString();
 
-                    txt_lmp.Text = Convert.ToString(dr.GetDateTime(dr.GetOrdinal("lmp")));
+                    lmp = dr.GetDateTime(dr.GetOrdinal("lmp"));
+                    txt_lmp.Text = Convert.ToString(lmp.ToString());
+
                     DateTime edd = dr.GetDateTime(dr.GetOrdinal("lmp"));
                     edd.AddMonths(9).AddDays(7);
                     txt_edd.Text = edd.ToString();
@@ -161,8 +170,8 @@ namespace Clinic.Froms
                     txt_cycleD.Text = dr.GetInt32(dr.GetOrdinal("cycle_d")).ToString();
                     txt_cycleC.Text = dr.GetInt32(dr.GetOrdinal("cycle_c")).ToString();
 
-                    getPastHistory(followUpID);
-                    getFamilyHistory(followUpID);
+                    getPastHistory();
+                    getFamilyHistory();
                 }
             }
             catch (Exception ex)
@@ -175,7 +184,7 @@ namespace Clinic.Froms
             }
         }
 
-        private void getPastHistory(int followUpID)
+        private void getPastHistory()
         {
             try
             {
@@ -191,13 +200,13 @@ namespace Clinic.Froms
                     listBox_pastHistory.Items.Add(dr[dr.GetOrdinal("hValue")]);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
         }
 
-        private void getFamilyHistory(int followUpID)
+        private void getFamilyHistory()
         {
             try
             {
@@ -213,19 +222,29 @@ namespace Clinic.Froms
                     listBox_FamilyHistory.Items.Add(dr[dr.GetOrdinal("hValue")]);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
-                //                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btn_addFollowUpLink_Click(object sender, EventArgs e)
         {
-            Add_new_Follow_Up form = new Add_new_Follow_Up(id);
+            Add_new_Follow_Up form = new Add_new_Follow_Up(patientID);
             form.Show();
         }
 
+        private void btn_addVisitLink_Click(object sender, EventArgs e)
+        {
+            if (followUpID == 0)
+            {
+                MessageBox.Show("Please select a follow up");
+                return;
+            }
+
+            AddNewVisit form = new AddNewVisit(followUpID, lmp);
+            form.Show();
+        }
 
     }
 }

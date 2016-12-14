@@ -15,7 +15,11 @@ namespace Clinic.Froms
     {
         private OleDbConnection conn;
         private String connectionStr;
-        int patientID = 0;
+
+        private int patientID = 0;
+        private List<int> medicines;
+        private List<int> selectedMedications;
+
 
         public Add_new_Follow_Up()
         {
@@ -23,6 +27,7 @@ namespace Clinic.Froms
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
         }
+
         public Add_new_Follow_Up(int patientID)
             : this()
         {
@@ -43,6 +48,8 @@ namespace Clinic.Froms
             int followUpID = addFollowUp();
             addAllPastHistory(followUpID);
             addAllFamilyHistoy(followUpID);
+            MessageBox.Show("Follow Up added SUCCESSFULLY");
+            this.Close();
         }
 
         private void addAllFamilyHistoy(int followUpID)
@@ -78,8 +85,8 @@ namespace Clinic.Froms
 
         private void addAllPastHistory(int followUpID)
         {
-            foreach(String item in listBox_pastHistory.Items)
-                    addPastHistory(followUpID, item);
+            foreach (String item in listBox_pastHistory.Items)
+                addPastHistory(followUpID, item);
         }
 
         private void addPastHistory(int followUpID, string item)
@@ -172,24 +179,24 @@ namespace Clinic.Froms
 
         private void btn_addFHistory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(combo_familyHistory.SelectedText))
+            if (string.IsNullOrEmpty(combo_familyHistory.Text))
             {
                 MessageBox.Show("No value selected");
                 return;
             }
-            String fHistory = combo_familyHistory.SelectedItem.ToString();
+            String fHistory = combo_familyHistory.Text.ToString();
             listBox_FamilyHistory.Items.Add(fHistory);
         }
 
         private void btn_addPHistory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(combo_pastHistory.SelectedText))
+            if (string.IsNullOrEmpty(combo_pastHistory.Text))
             {
                 MessageBox.Show("No value selected");
                 return;
             }
 
-            String pHistory = combo_pastHistory.SelectedItem.ToString();
+            String pHistory = combo_pastHistory.Text.ToString();
             listBox_pastHistory.Items.Add(pHistory);
         }
 
