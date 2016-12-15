@@ -246,5 +246,17 @@ namespace Clinic.Froms
             form.Show();
         }
 
+        private void btn_viewVisitsLink_Click(object sender, EventArgs e)
+        {
+            if (followUpID == 0)
+            {
+                MessageBox.Show("Please select a follow up");
+                return;
+            }
+
+            Visits form = new Visits(followUpID);
+            form.Show();
+        }
+
     }
 }

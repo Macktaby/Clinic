@@ -89,6 +89,12 @@
       <DependentUpon>Patient.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\Program.cs" />
+    <Compile Include="Froms\Visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Visits.Designer.cs">
+      <DependentUpon>Visits.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Froms\SelectPatient.cs">
       <SubType>Form</SubType>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\Patient.resx">
       <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Visits.resx">
+      <DependentUpon>Visits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

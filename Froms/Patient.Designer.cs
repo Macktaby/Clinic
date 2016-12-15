@@ -44,8 +44,8 @@
             this.txt_husbandName = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_prointFollowUpLink = new System.Windows.Forms.Button();
+            this.btn_viewVisitsLink = new System.Windows.Forms.Button();
             this.btn_addVisitLink = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txt_cycleC = new System.Windows.Forms.TextBox();
@@ -233,8 +233,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btn_prointFollowUpLink);
+            this.groupBox1.Controls.Add(this.btn_viewVisitsLink);
             this.groupBox1.Controls.Add(this.btn_addVisitLink);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.txt_cycleC);
@@ -267,28 +267,29 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(27, 261);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1013, 399);
+            this.groupBox1.Size = new System.Drawing.Size(965, 399);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
-            // button6
+            // btn_prointFollowUpLink
             // 
-            this.button6.Location = new System.Drawing.Point(829, 120);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 23);
-            this.button6.TabIndex = 46;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_prointFollowUpLink.Location = new System.Drawing.Point(829, 120);
+            this.btn_prointFollowUpLink.Name = "btn_prointFollowUpLink";
+            this.btn_prointFollowUpLink.Size = new System.Drawing.Size(106, 23);
+            this.btn_prointFollowUpLink.TabIndex = 46;
+            this.btn_prointFollowUpLink.Text = "Print follow Up";
+            this.btn_prointFollowUpLink.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_viewVisitsLink
             // 
-            this.button5.Location = new System.Drawing.Point(829, 85);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 23);
-            this.button5.TabIndex = 45;
-            this.button5.Text = "View Visits";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_viewVisitsLink.Location = new System.Drawing.Point(829, 85);
+            this.btn_viewVisitsLink.Name = "btn_viewVisitsLink";
+            this.btn_viewVisitsLink.Size = new System.Drawing.Size(106, 23);
+            this.btn_viewVisitsLink.TabIndex = 45;
+            this.btn_viewVisitsLink.Text = "View Visits";
+            this.btn_viewVisitsLink.UseVisualStyleBackColor = true;
+            this.btn_viewVisitsLink.Click += new System.EventHandler(this.btn_viewVisitsLink_Click);
             // 
             // btn_addVisitLink
             // 
@@ -693,8 +694,8 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_menarchal;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_prointFollowUpLink;
+        private System.Windows.Forms.Button btn_viewVisitsLink;
         private System.Windows.Forms.Button btn_addVisitLink;
     }
 }

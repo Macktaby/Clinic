@@ -18,6 +18,7 @@ namespace Clinic.Froms
 
         private int followUpID;
         private DateTime lmp;
+        private int days;
 
         private List<int> medicines;
         private List<int> selectedMedications;
@@ -31,6 +32,18 @@ namespace Clinic.Froms
             selectedMedications = new List<int>();
 
             loadMedicines();
+        }
+        public AddNewVisit(int followUpID, DateTime lmp)
+            : this()
+        {
+            this.followUpID = followUpID;
+            this.lmp = lmp;
+
+            DateTime now = DateTime.Today;
+            txt_curentDate.Text = now.ToString("dd/MM/yyyy");
+            days = (now - lmp).Days;
+
+            txt_gasAge.Text = (days / 7) + " Week(s) and " + (days % 7) + " Day(s)";
         }
 
         private void loadMedicines()
@@ -62,18 +75,6 @@ namespace Clinic.Froms
 
         }
 
-        public AddNewVisit(int followUpID, DateTime lmp)
-            : this()
-        {
-            this.followUpID = followUpID;
-            this.lmp = lmp;
-
-            DateTime now = DateTime.Today;
-            txt_curentDate.Text = now.ToString("dd/MM/yyyy");
-            int days = (now - lmp).Days;
-
-            txt_gasAge.Text = (days / 7) + " Week(s) and " + (days % 7) + " Day(s)";
-        }
 
         public int numberValue(String s)
         {
@@ -105,14 +106,15 @@ namespace Clinic.Froms
                 conn.Open();
 
                 String sql = "INSERT INTO Visit "
-                    + "(weight, bl_pr_num, bl_pr_dom, ultra_sound, notes, follow_up_id) "
-                    + "VALUES (@weight, @bl_num, @bl_dom, @ultra, @notes, @fID)";
+                    + "(weight, bl_pr_num, bl_pr_dom, tmp, ultra_sound, notes, follow_up_id) "
+                    + "VALUES (@weight, @bl_num, @bl_dom, @tmp, @ultra, @notes, @fID)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@weight", numberValue(txt_weight.Text));
                 command.Parameters.AddWithValue("@bl_num", numberValue(txt_bl_pr_num.Text));
                 command.Parameters.AddWithValue("@bl_dom", numberValue(txt_bl_pr_dom.Text));
+                command.Parameters.AddWithValue("@tmp", numberValue(txt_tmp.Text));
                 command.Parameters.AddWithValue("@ultra", stringValue(txt_ultraSound.Text));
                 command.Parameters.AddWithValue("@notes", stringValue(combo_notes.Text.ToString()));
                 command.Parameters.AddWithValue("@fID", followUpID);
@@ -123,6 +125,7 @@ namespace Clinic.Froms
                 int id = (int)command.ExecuteScalar();
 
                 addVisitMedications(id);
+                MessageBox.Show("The visit is added SUCCESSFULLY", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return id;
             }
