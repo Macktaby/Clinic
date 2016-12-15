@@ -56,6 +56,8 @@
             this.listBox_allWeights = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.listBox_allBloodPressures = new System.Windows.Forms.ListBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.listBox_uniqueMedicines = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -323,11 +325,30 @@
             this.listBox_allBloodPressures.Size = new System.Drawing.Size(126, 160);
             this.listBox_allBloodPressures.TabIndex = 99;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(861, 267);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(108, 13);
+            this.label14.TabIndex = 102;
+            this.label14.Text = "Previous Medications";
+            // 
+            // listBox_uniqueMedicines
+            // 
+            this.listBox_uniqueMedicines.FormattingEnabled = true;
+            this.listBox_uniqueMedicines.Location = new System.Drawing.Point(743, 296);
+            this.listBox_uniqueMedicines.Name = "listBox_uniqueMedicines";
+            this.listBox_uniqueMedicines.Size = new System.Drawing.Size(342, 160);
+            this.listBox_uniqueMedicines.TabIndex = 101;
+            // 
             // Visits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 652);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.listBox_uniqueMedicines);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.listBox_allBloodPressures);
             this.Controls.Add(this.label12);
@@ -372,5 +393,7 @@
         private System.Windows.Forms.ListBox listBox_allWeights;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ListBox listBox_allBloodPressures;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox listBox_uniqueMedicines;
     }
 }

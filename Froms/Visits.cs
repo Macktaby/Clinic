@@ -33,20 +33,8 @@ namespace Clinic.Froms
             this.followUpID = followUpID;
 
             loadWeightsSort();
-            //            loadBloodPressureSort();
-            //            LoadMedicationsSort();
+            LoadMedicationsSort();
         }
-
-        private void LoadMedicationsSort()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void loadBloodPressureSort()
-        {
-            throw new NotImplementedException();
-        }
-
 
         private void combo_visits_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -194,7 +182,32 @@ namespace Clinic.Froms
             finally { conn.Close(); }
         }
 
+        private void LoadMedicationsSort()
+        {
+            try
+            {
+                conn.Open();
 
+                String sql = "SELECT * FROM Medicine WHERE Medicine.medicine_id IN "
+                + "(SELECT DISTINCT Visit_Medication.medicine_id FROM Visit_Medication, Visit "
+                + "WHERE Visit.follow_up_id = @fID AND Visit.visit_id = Visit_Medication.visit_id)";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                command.Parameters.AddWithValue("@fID", followUpID);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                listBox_uniqueMedicines.Items.Clear();
+                while (dr.Read())
+                {
+                    listBox_uniqueMedicines.Items.Add(dr["medicine_name"] + " - " + dr["concentration"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { conn.Close(); }
+        }
 
     }
 }
