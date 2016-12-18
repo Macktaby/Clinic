@@ -13,10 +13,11 @@ namespace Clinic.Froms
 {
     public partial class Visits : Form
     {
-        private int followUpID;
         private OleDbConnection conn;
         private String connectionStr;
 
+        private int patientID;
+        private int followUpID;
         private List<int> visits;
 
         public Visits()
@@ -26,14 +27,16 @@ namespace Clinic.Froms
             conn = new OleDbConnection(connectionStr);
         }
 
-        public Visits(int followUpID)
+        public Visits(int patientID, int followUpID)
             : this()
         {
             this.WindowState = FormWindowState.Maximized;
             this.followUpID = followUpID;
+            this.patientID = patientID;
 
             loadWeightsSort();
             LoadMedicationsSort();
+            loadLastLabs();
         }
 
         private void combo_visits_SelectedIndexChanged(object sender, EventArgs e)
@@ -207,6 +210,36 @@ namespace Clinic.Froms
                 MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally { conn.Close(); }
+        }
+
+        private void loadLastLabs()
+        {
+            try
+            {
+                conn.Open();
+                String sql = "SELECT Distinct(lab_name), * FROM Lab WHERE patient_id = @pID";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@pID", patientID);
+
+                OleDbDataReader dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    string[] row = { dr["lab_name"].ToString(), dr["lab_result"].ToString() };
+
+                    ListViewItem lvi = new ListViewItem(row);
+                    listView_labs.Items.Add(lvi);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured !!!" + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
     }

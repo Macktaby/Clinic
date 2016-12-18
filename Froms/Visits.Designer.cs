@@ -58,6 +58,10 @@
             this.listBox_allBloodPressures = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.listBox_uniqueMedicines = new System.Windows.Forms.ListBox();
+            this.listView_labs = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +120,7 @@
             // 
             // txt_tmp
             // 
+            this.txt_tmp.Enabled = false;
             this.txt_tmp.Location = new System.Drawing.Point(467, 132);
             this.txt_tmp.Name = "txt_tmp";
             this.txt_tmp.Size = new System.Drawing.Size(63, 20);
@@ -140,6 +145,7 @@
             // 
             // txt_bl_pr_dom
             // 
+            this.txt_bl_pr_dom.Enabled = false;
             this.txt_bl_pr_dom.Location = new System.Drawing.Point(522, 171);
             this.txt_bl_pr_dom.Name = "txt_bl_pr_dom";
             this.txt_bl_pr_dom.Size = new System.Drawing.Size(41, 20);
@@ -194,6 +200,7 @@
             // 
             // txt_weight
             // 
+            this.txt_weight.Enabled = false;
             this.txt_weight.Location = new System.Drawing.Point(95, 135);
             this.txt_weight.Name = "txt_weight";
             this.txt_weight.Size = new System.Drawing.Size(41, 20);
@@ -209,6 +216,7 @@
             // 
             // txt_bl_pr_num
             // 
+            this.txt_bl_pr_num.Enabled = false;
             this.txt_bl_pr_num.Location = new System.Drawing.Point(457, 171);
             this.txt_bl_pr_num.Name = "txt_bl_pr_num";
             this.txt_bl_pr_num.Size = new System.Drawing.Size(41, 20);
@@ -216,6 +224,7 @@
             // 
             // txt_ultraSound
             // 
+            this.txt_ultraSound.Enabled = false;
             this.txt_ultraSound.Location = new System.Drawing.Point(29, 229);
             this.txt_ultraSound.Multiline = true;
             this.txt_ultraSound.Name = "txt_ultraSound";
@@ -285,6 +294,7 @@
             // 
             // txt_visitNotes
             // 
+            this.txt_visitNotes.Enabled = false;
             this.txt_visitNotes.Location = new System.Drawing.Point(29, 523);
             this.txt_visitNotes.Multiline = true;
             this.txt_visitNotes.Name = "txt_visitNotes";
@@ -294,7 +304,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(772, 43);
+            this.label12.Location = new System.Drawing.Point(781, 43);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 13);
             this.label12.TabIndex = 98;
@@ -303,7 +313,7 @@
             // listBox_allWeights
             // 
             this.listBox_allWeights.FormattingEnabled = true;
-            this.listBox_allWeights.Location = new System.Drawing.Point(743, 65);
+            this.listBox_allWeights.Location = new System.Drawing.Point(752, 65);
             this.listBox_allWeights.Name = "listBox_allWeights";
             this.listBox_allWeights.Size = new System.Drawing.Size(126, 160);
             this.listBox_allWeights.TabIndex = 97;
@@ -311,7 +321,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(980, 43);
+            this.label13.Location = new System.Drawing.Point(763, 306);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(105, 13);
             this.label13.TabIndex = 100;
@@ -320,7 +330,7 @@
             // listBox_allBloodPressures
             // 
             this.listBox_allBloodPressures.FormattingEnabled = true;
-            this.listBox_allBloodPressures.Location = new System.Drawing.Point(969, 65);
+            this.listBox_allBloodPressures.Location = new System.Drawing.Point(752, 331);
             this.listBox_allBloodPressures.Name = "listBox_allBloodPressures";
             this.listBox_allBloodPressures.Size = new System.Drawing.Size(126, 160);
             this.listBox_allBloodPressures.TabIndex = 99;
@@ -328,7 +338,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(861, 267);
+            this.label14.Location = new System.Drawing.Point(1064, 39);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 13);
             this.label14.TabIndex = 102;
@@ -337,16 +347,52 @@
             // listBox_uniqueMedicines
             // 
             this.listBox_uniqueMedicines.FormattingEnabled = true;
-            this.listBox_uniqueMedicines.Location = new System.Drawing.Point(743, 296);
+            this.listBox_uniqueMedicines.Location = new System.Drawing.Point(983, 65);
             this.listBox_uniqueMedicines.Name = "listBox_uniqueMedicines";
-            this.listBox_uniqueMedicines.Size = new System.Drawing.Size(342, 160);
+            this.listBox_uniqueMedicines.Size = new System.Drawing.Size(275, 160);
             this.listBox_uniqueMedicines.TabIndex = 101;
+            // 
+            // listView_labs
+            // 
+            this.listView_labs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView_labs.FullRowSelect = true;
+            this.listView_labs.GridLines = true;
+            this.listView_labs.Location = new System.Drawing.Point(973, 309);
+            this.listView_labs.MultiSelect = false;
+            this.listView_labs.Name = "listView_labs";
+            this.listView_labs.Size = new System.Drawing.Size(301, 199);
+            this.listView_labs.TabIndex = 103;
+            this.listView_labs.UseCompatibleStateImageBehavior = false;
+            this.listView_labs.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Lab Name";
+            this.columnHeader1.Width = 170;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Result";
+            this.columnHeader2.Width = 127;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1095, 284);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 104;
+            this.label15.Text = "Last Labs";
             // 
             // Visits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 652);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.listView_labs);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.listBox_uniqueMedicines);
             this.Controls.Add(this.label13);
@@ -395,5 +441,9 @@
         private System.Windows.Forms.ListBox listBox_allBloodPressures;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ListBox listBox_uniqueMedicines;
+        private System.Windows.Forms.ListView listView_labs;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Label label15;
     }
 }

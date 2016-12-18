@@ -78,9 +78,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.combo_followUps = new System.Windows.Forms.ComboBox();
             this.btn_addFollowUpLink = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_viewLabs = new System.Windows.Forms.Button();
+            this.btn_addLabLink = new System.Windows.Forms.Button();
+            this.btn_transferLink = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).BeginInit();
@@ -576,32 +576,34 @@
             this.btn_addFollowUpLink.UseVisualStyleBackColor = true;
             this.btn_addFollowUpLink.Click += new System.EventHandler(this.btn_addFollowUpLink_Click);
             // 
-            // button2
+            // btn_viewLabs
             // 
-            this.button2.Location = new System.Drawing.Point(856, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 39);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "View Labs";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_viewLabs.Location = new System.Drawing.Point(856, 124);
+            this.btn_viewLabs.Name = "btn_viewLabs";
+            this.btn_viewLabs.Size = new System.Drawing.Size(75, 39);
+            this.btn_viewLabs.TabIndex = 23;
+            this.btn_viewLabs.Text = "View Labs";
+            this.btn_viewLabs.UseVisualStyleBackColor = true;
+            this.btn_viewLabs.Click += new System.EventHandler(this.btn_viewLabs_Click);
             // 
-            // button3
+            // btn_addLabLink
             // 
-            this.button3.Location = new System.Drawing.Point(748, 124);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 39);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Add new Lab";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_addLabLink.Location = new System.Drawing.Point(748, 124);
+            this.btn_addLabLink.Name = "btn_addLabLink";
+            this.btn_addLabLink.Size = new System.Drawing.Size(75, 39);
+            this.btn_addLabLink.TabIndex = 24;
+            this.btn_addLabLink.Text = "Add new Lab";
+            this.btn_addLabLink.UseVisualStyleBackColor = true;
+            this.btn_addLabLink.Click += new System.EventHandler(this.btn_addLabLink_Click);
             // 
-            // button4
+            // btn_transferLink
             // 
-            this.button4.Location = new System.Drawing.Point(856, 51);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 39);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Transfer";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_transferLink.Location = new System.Drawing.Point(856, 51);
+            this.btn_transferLink.Name = "btn_transferLink";
+            this.btn_transferLink.Size = new System.Drawing.Size(75, 39);
+            this.btn_transferLink.TabIndex = 25;
+            this.btn_transferLink.Text = "Transfer";
+            this.btn_transferLink.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -619,9 +621,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 672);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_transferLink);
+            this.Controls.Add(this.btn_addLabLink);
+            this.Controls.Add(this.btn_viewLabs);
             this.Controls.Add(this.btn_addFollowUpLink);
             this.Controls.Add(this.combo_followUps);
             this.Controls.Add(this.groupBox1);
@@ -663,9 +665,9 @@
         private System.Windows.Forms.TextBox txt_lmp;
         private System.Windows.Forms.ComboBox combo_followUps;
         private System.Windows.Forms.Button btn_addFollowUpLink;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_viewLabs;
+        private System.Windows.Forms.Button btn_addLabLink;
+        private System.Windows.Forms.Button btn_transferLink;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;

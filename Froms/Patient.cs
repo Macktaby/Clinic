@@ -157,7 +157,7 @@ namespace Clinic.Froms
                     txt_lmp.Text = Convert.ToString(lmp.ToString());
 
                     DateTime edd = dr.GetDateTime(dr.GetOrdinal("lmp"));
-                    edd.AddMonths(9).AddDays(7);
+                    edd = edd.AddMonths(9).AddDays(7);
                     txt_edd.Text = edd.ToString();
 
                     txt_living.Text = dr.GetInt32(dr.GetOrdinal("living")).ToString();
@@ -254,8 +254,40 @@ namespace Clinic.Froms
                 return;
             }
 
-            Visits form = new Visits(followUpID);
+            Visits form = new Visits(patientID, followUpID);
             form.Show();
+        }
+
+        private void btn_addLabLink_Click(object sender, EventArgs e)
+        {
+            AddNewLab form = new AddNewLab(patientID);
+            form.Show();
+        }
+
+        private void btn_viewLabs_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                String sql = "SELECT * FROM Lab WHERE patient_id = @pID";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@pID", patientID);
+
+                OleDbDataReader dr = command.ExecuteReader();
+                ViewLabs form = new ViewLabs(dr);
+                form.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured !!!" + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
     }

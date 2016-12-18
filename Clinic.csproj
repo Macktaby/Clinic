@@ -70,6 +70,12 @@
     <Compile Include="Froms\AddNewFollowUp.Designer.cs">
       <DependentUpon>AddNewFollowUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Froms\AddNewLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\AddNewLab.Designer.cs">
+      <DependentUpon>AddNewLab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\AddNewVisit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
       <DependentUpon>Patient.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\Program.cs" />
+    <Compile Include="Froms\ViewLabs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\ViewLabs.Designer.cs">
+      <DependentUpon>ViewLabs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\Visits.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,9 @@
     <EmbeddedResource Include="Froms\AddNewFollowUp.resx">
       <DependentUpon>AddNewFollowUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Froms\AddNewLab.resx">
+      <DependentUpon>AddNewLab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\AddNewVisit.resx">
       <DependentUpon>AddNewVisit.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\Patient.resx">
       <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\ViewLabs.resx">
+      <DependentUpon>ViewLabs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\Visits.resx">
       <DependentUpon>Visits.cs</DependentUpon>

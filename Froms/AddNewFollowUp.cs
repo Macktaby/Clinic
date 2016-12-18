@@ -17,9 +17,6 @@ namespace Clinic.Froms
         private String connectionStr;
 
         private int patientID = 0;
-        private List<int> medicines;
-        private List<int> selectedMedications;
-
 
         public Add_new_Follow_Up()
         {

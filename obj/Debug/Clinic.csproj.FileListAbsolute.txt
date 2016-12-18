@@ -12,3 +12,5 @@ D:\Projects\Clinic\obj\Debug\Clinic.Froms.Patient.resources
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.Add_new_Follow_Up.resources
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.AddNewVisit.resources
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.Visits.resources
+D:\Projects\Clinic\obj\Debug\Clinic.Froms.AddNewLab.resources
+D:\Projects\Clinic\obj\Debug\Clinic.Froms.ViewLabs.resources

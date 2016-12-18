@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 346);
+            this.ClientSize = new System.Drawing.Size(677, 346);
             this.Controls.Add(this.btn_addVisitAction);
             this.Controls.Add(this.btn_printVisitAction);
             this.Controls.Add(this.combo_notes);
