@@ -53,6 +53,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btn_searchPatient = new System.Windows.Forms.Button();
             this.goupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_addLabLink = new System.Windows.Forms.Button();
+            this.btn_addMedicineLink = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.goupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -288,18 +290,39 @@
             this.goupBox1.TabStop = false;
             this.goupBox1.Text = "Search patient";
             // 
+            // btn_addLabLink
+            // 
+            this.btn_addLabLink.Location = new System.Drawing.Point(825, 91);
+            this.btn_addLabLink.Name = "btn_addLabLink";
+            this.btn_addLabLink.Size = new System.Drawing.Size(75, 41);
+            this.btn_addLabLink.TabIndex = 21;
+            this.btn_addLabLink.Text = "Add New Lab";
+            this.btn_addLabLink.UseVisualStyleBackColor = true;
+            this.btn_addLabLink.Click += new System.EventHandler(this.btn_addLabLink_Click);
+            // 
+            // btn_addMedicineLink
+            // 
+            this.btn_addMedicineLink.Location = new System.Drawing.Point(825, 166);
+            this.btn_addMedicineLink.Name = "btn_addMedicineLink";
+            this.btn_addMedicineLink.Size = new System.Drawing.Size(75, 41);
+            this.btn_addMedicineLink.TabIndex = 22;
+            this.btn_addMedicineLink.Text = "Add New Medicine";
+            this.btn_addMedicineLink.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 519);
+            this.Controls.Add(this.btn_addMedicineLink);
+            this.Controls.Add(this.btn_addLabLink);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.goupBox1);
             this.Controls.Add(this.splitter3);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.splitter1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Welcome Page";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.goupBox1.ResumeLayout(false);
@@ -335,6 +358,8 @@
         private System.Windows.Forms.GroupBox goupBox1;
         private System.Windows.Forms.DateTimePicker date_husbandBDate;
         private System.Windows.Forms.DateTimePicker date_patientBDate;
+        private System.Windows.Forms.Button btn_addLabLink;
+        private System.Windows.Forms.Button btn_addMedicineLink;
     }
 }
 

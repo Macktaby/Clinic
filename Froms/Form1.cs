@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using Clinic.Froms;
 
 namespace Clinic
 {
@@ -42,6 +43,7 @@ namespace Clinic
                 command.Parameters.AddWithValue("@phone", txt_phone.Text);
 
                 command.ExecuteNonQuery();
+                MessageBox.Show("Patient added SUCCESSFULLY", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -88,6 +90,12 @@ namespace Clinic
                 conn.Close();
             }
 
+        }
+
+        private void btn_addLabLink_Click(object sender, EventArgs e)
+        {
+            AddLabValue form = new AddLabValue();
+            form.Show();
         }
 
     }
