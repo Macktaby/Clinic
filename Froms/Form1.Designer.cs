@@ -55,6 +55,8 @@
             this.goupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_addLabLink = new System.Windows.Forms.Button();
             this.btn_addMedicineLink = new System.Windows.Forms.Button();
+            this.btn_addFamHistValue = new System.Windows.Forms.Button();
+            this.btn_addPastHistValue = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.goupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -292,7 +294,7 @@
             // 
             // btn_addLabLink
             // 
-            this.btn_addLabLink.Location = new System.Drawing.Point(825, 91);
+            this.btn_addLabLink.Location = new System.Drawing.Point(754, 54);
             this.btn_addLabLink.Name = "btn_addLabLink";
             this.btn_addLabLink.Size = new System.Drawing.Size(75, 41);
             this.btn_addLabLink.TabIndex = 21;
@@ -302,18 +304,41 @@
             // 
             // btn_addMedicineLink
             // 
-            this.btn_addMedicineLink.Location = new System.Drawing.Point(825, 166);
+            this.btn_addMedicineLink.Location = new System.Drawing.Point(855, 54);
             this.btn_addMedicineLink.Name = "btn_addMedicineLink";
             this.btn_addMedicineLink.Size = new System.Drawing.Size(75, 41);
             this.btn_addMedicineLink.TabIndex = 22;
             this.btn_addMedicineLink.Text = "Add New Medicine";
             this.btn_addMedicineLink.UseVisualStyleBackColor = true;
+            this.btn_addMedicineLink.Click += new System.EventHandler(this.btn_addMedicineLink_Click);
+            // 
+            // btn_addFamHistValue
+            // 
+            this.btn_addFamHistValue.Location = new System.Drawing.Point(855, 116);
+            this.btn_addFamHistValue.Name = "btn_addFamHistValue";
+            this.btn_addFamHistValue.Size = new System.Drawing.Size(75, 52);
+            this.btn_addFamHistValue.TabIndex = 23;
+            this.btn_addFamHistValue.Text = "Add New Family History Value";
+            this.btn_addFamHistValue.UseVisualStyleBackColor = true;
+            this.btn_addFamHistValue.Click += new System.EventHandler(this.btn_addFamHistValue_Click);
+            // 
+            // btn_addPastHistValue
+            // 
+            this.btn_addPastHistValue.Location = new System.Drawing.Point(754, 116);
+            this.btn_addPastHistValue.Name = "btn_addPastHistValue";
+            this.btn_addPastHistValue.Size = new System.Drawing.Size(75, 52);
+            this.btn_addPastHistValue.TabIndex = 24;
+            this.btn_addPastHistValue.Text = "Add New Past History Value";
+            this.btn_addPastHistValue.UseVisualStyleBackColor = true;
+            this.btn_addPastHistValue.Click += new System.EventHandler(this.btn_addPastHistValue_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 519);
+            this.Controls.Add(this.btn_addPastHistValue);
+            this.Controls.Add(this.btn_addFamHistValue);
             this.Controls.Add(this.btn_addMedicineLink);
             this.Controls.Add(this.btn_addLabLink);
             this.Controls.Add(this.groupBox3);
@@ -360,6 +385,8 @@
         private System.Windows.Forms.DateTimePicker date_patientBDate;
         private System.Windows.Forms.Button btn_addLabLink;
         private System.Windows.Forms.Button btn_addMedicineLink;
+        private System.Windows.Forms.Button btn_addFamHistValue;
+        private System.Windows.Forms.Button btn_addPastHistValue;
     }
 }
 

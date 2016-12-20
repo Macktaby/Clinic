@@ -188,7 +188,8 @@ namespace Clinic.Froms
         {
             try
             {
-                String sql = "SELECT * FROM Past_History WHERE follow_up_id = @id";
+                String sql = "SELECT * FROM Past_History, Values_Past_History "
+                +"WHERE follow_up_id = @id AND Past_History.hValue = Values_Past_History.ID";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
                 command.Parameters.AddWithValue("@id", followUpID);
@@ -197,7 +198,7 @@ namespace Clinic.Froms
                 listBox_pastHistory.Items.Clear();
                 while (dr.Read())
                 {
-                    listBox_pastHistory.Items.Add(dr[dr.GetOrdinal("hValue")]);
+                    listBox_pastHistory.Items.Add(dr[dr.GetOrdinal("hName")]);
                 }
             }
             catch (Exception)
@@ -210,7 +211,8 @@ namespace Clinic.Froms
         {
             try
             {
-                String sql = "SELECT * FROM Family_History WHERE follow_up_id = @id";
+                String sql = "SELECT * FROM Family_History, Values_Family_History "
+                + "WHERE follow_up_id = @id AND Family_History.hValue = Values_Family_History.ID";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
                 command.Parameters.AddWithValue("@id", followUpID);
@@ -219,7 +221,7 @@ namespace Clinic.Froms
                 listBox_FamilyHistory.Items.Clear();
                 while (dr.Read())
                 {
-                    listBox_FamilyHistory.Items.Add(dr[dr.GetOrdinal("hValue")]);
+                    listBox_FamilyHistory.Items.Add(dr[dr.GetOrdinal("hName")]);
                 }
             }
             catch (Exception)

@@ -217,8 +217,10 @@ namespace Clinic.Froms
             try
             {
                 conn.Open();
-                String sql = "SELECT Distinct(lab_name), * FROM Lab WHERE patient_id = @pID";
-
+//                String sql = "SELECT Distinct(lab_value_id), * FROM Lab";
+//                    SELECT * FROM Customers Where City = 'México D.F.' Group By City;
+                String sql = "SELECT * FROM Lab WHERE Lab.patient_id = @pID GROUP BY lab_value_id";
+//                
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@pID", patientID);
@@ -226,15 +228,19 @@ namespace Clinic.Froms
                 OleDbDataReader dr = command.ExecuteReader();
                 while (dr.Read())
                 {
-                    string[] row = { dr["lab_name"].ToString(), dr["lab_result"].ToString() };
+                    String str = "";
+                    for (int i = 0; i < dr.FieldCount; i++)
+                        str += dr[i] + " ";
+                    MessageBox.Show(str);
+                    //                    string[] row = { dr["lab_name"].ToString(), dr["lab_result"].ToString() };
 
-                    ListViewItem lvi = new ListViewItem(row);
-                    listView_labs.Items.Add(lvi);
+                    //                    ListViewItem lvi = new ListViewItem(row);
+                    //                    listView_labs.Items.Add(lvi);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured !!!" + ex.Message);
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

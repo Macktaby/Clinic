@@ -30,8 +30,6 @@ namespace Clinic.Froms
             conn = new OleDbConnection(connectionStr);
             medicines = new List<int>();
             selectedMedications = new List<int>();
-
-            loadMedicines();
         }
         public AddNewVisit(int followUpID, DateTime lmp)
             : this()
@@ -203,6 +201,11 @@ namespace Clinic.Froms
                 listBox_visitMedications.Items.RemoveAt(intselectedindex);
                 selectedMedications.RemoveAt(intselectedindex);
             }
+        }
+
+        private void combo_medication_DropDown(object sender, EventArgs e)
+        {
+            loadMedicines();
         }
 
     }

@@ -98,5 +98,23 @@ namespace Clinic
             form.Show();
         }
 
+        private void btn_addPastHistValue_Click(object sender, EventArgs e)
+        {
+            AddPastHistory form = new AddPastHistory();
+            form.Show();
+        }
+
+        private void btn_addFamHistValue_Click(object sender, EventArgs e)
+        {
+            AddFamilyHistory form = new AddFamilyHistory();
+            form.Show();
+        }
+
+        private void btn_addMedicineLink_Click(object sender, EventArgs e)
+        {
+            AddNewMedicine form = new AddNewMedicine();
+            form.Show();
+        }
+
     }
 }

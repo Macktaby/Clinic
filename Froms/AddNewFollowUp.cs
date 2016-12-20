@@ -16,13 +16,23 @@ namespace Clinic.Froms
         private OleDbConnection conn;
         private String connectionStr;
 
+        private List<int> pastHistory;
+        private List<int> selectedPastHistory;
+
+        private List<int> familyHistory;
+        private List<int> selectedFamilyHistory;
+
         private int patientID = 0;
 
         public Add_new_Follow_Up()
         {
             InitializeComponent();
+
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
+
+            selectedFamilyHistory = new List<int>();
+            selectedPastHistory = new List<int>();
         }
 
         public Add_new_Follow_Up(int patientID)
@@ -51,11 +61,11 @@ namespace Clinic.Froms
 
         private void addAllFamilyHistoy(int followUpID)
         {
-            foreach (String item in listBox_FamilyHistory.Items)
-                addFamilyHistory(followUpID, item);
+            foreach (int selected in selectedFamilyHistory)
+                addFamilyHistory(followUpID, selected);
         }
 
-        private void addFamilyHistory(int followUpID, string item)
+        private void addFamilyHistory(int followUpID, int selected)
         {
             try
             {
@@ -66,7 +76,7 @@ namespace Clinic.Froms
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@fID", followUpID);
-                command.Parameters.AddWithValue("@hValue", item);
+                command.Parameters.AddWithValue("@hValue", selected);
 
                 command.ExecuteNonQuery();
             }
@@ -82,11 +92,11 @@ namespace Clinic.Froms
 
         private void addAllPastHistory(int followUpID)
         {
-            foreach (String item in listBox_pastHistory.Items)
-                addPastHistory(followUpID, item);
+            foreach (int selected in selectedPastHistory)
+                addPastHistory(followUpID, selected);
         }
 
-        private void addPastHistory(int followUpID, string item)
+        private void addPastHistory(int followUpID, int selected)
         {
             try
             {
@@ -97,7 +107,7 @@ namespace Clinic.Froms
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@fID", followUpID);
-                command.Parameters.AddWithValue("@hValue", item);
+                command.Parameters.AddWithValue("@hValue", selected);
 
                 command.ExecuteNonQuery();
             }
@@ -176,18 +186,20 @@ namespace Clinic.Froms
 
         private void btn_addFHistory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(combo_familyHistory.Text))
+            if (combo_familyHistory.SelectedIndex < 0)
             {
                 MessageBox.Show("No value selected");
                 return;
             }
+
             String fHistory = combo_familyHistory.Text.ToString();
             listBox_FamilyHistory.Items.Add(fHistory);
+            selectedFamilyHistory.Add(familyHistory[combo_familyHistory.SelectedIndex]);
         }
 
         private void btn_addPHistory_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(combo_pastHistory.Text))
+            if (combo_pastHistory.SelectedIndex < 0)
             {
                 MessageBox.Show("No value selected");
                 return;
@@ -195,6 +207,7 @@ namespace Clinic.Froms
 
             String pHistory = combo_pastHistory.Text.ToString();
             listBox_pastHistory.Items.Add(pHistory);
+            selectedPastHistory.Add(pastHistory[combo_pastHistory.SelectedIndex]);
         }
 
         private void btn_removePHistory_Click(object sender, EventArgs e)
@@ -204,9 +217,13 @@ namespace Clinic.Froms
                 MessageBox.Show("No item Selected !!!");
                 return;
             }
+
             int intselectedindex = listBox_pastHistory.SelectedIndices[0];
             if (intselectedindex >= 0)
+            {
                 listBox_pastHistory.Items.RemoveAt(intselectedindex);
+                selectedPastHistory.RemoveAt(intselectedindex);
+            }
         }
 
         private void btn_removeFHistory_Click(object sender, EventArgs e)
@@ -216,9 +233,86 @@ namespace Clinic.Froms
                 MessageBox.Show("No item Selected !!!");
                 return;
             }
+
             int intselectedindex = listBox_FamilyHistory.SelectedIndices[0];
             if (intselectedindex >= 0)
+            {
                 listBox_FamilyHistory.Items.RemoveAt(intselectedindex);
+                selectedFamilyHistory.RemoveAt(intselectedindex);
+            }
         }
+
+        private void combo_pastHistory_DropDown(object sender, EventArgs e)
+        {
+            loadPastHistory();
+        }
+        private void combo_familyHistory_DropDown(object sender, EventArgs e)
+        {
+            loadFamilyHistory();
+        }
+
+        private void loadPastHistory()
+        {
+            try
+            {
+                conn.Open();
+
+                String sql = "SELECT * FROM Values_Past_History";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                pastHistory = new List<int>();
+                combo_pastHistory.Items.Clear();
+                while (dr.Read())
+                {
+                    pastHistory.Add(dr.GetInt32(dr.GetOrdinal("ID")));
+                    String value = dr.GetString(dr.GetOrdinal("hName"));
+                    combo_pastHistory.Items.Add(value);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void loadFamilyHistory()
+        {
+            try
+            {
+                conn.Open();
+
+                String sql = "SELECT * FROM Values_Family_History";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                familyHistory = new List<int>();
+                combo_familyHistory.Items.Clear();
+                while (dr.Read())
+                {
+                    familyHistory.Add(dr.GetInt32(dr.GetOrdinal("ID")));
+                    String value = dr.GetString(dr.GetOrdinal("hName"));
+                    combo_familyHistory.Items.Add(value);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+
+
     }
 }

@@ -64,6 +64,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClinicDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Froms\AddFamilyHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\AddFamilyHistory.Designer.cs">
+      <DependentUpon>AddFamilyHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\AddLabValue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,23 @@
     <Compile Include="Froms\AddNewLab.Designer.cs">
       <DependentUpon>AddNewLab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Froms\AddNewMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\AddNewMedicine.Designer.cs">
+      <DependentUpon>AddNewMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\AddNewVisit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Froms\AddNewVisit.Designer.cs">
       <DependentUpon>AddNewVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\AddPastHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\AddPastHistory.Designer.cs">
+      <DependentUpon>AddPastHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\Form1.cs">
       <SubType>Form</SubType>
@@ -120,6 +138,9 @@
     <Compile Include="Froms\SelectPatient.Designer.cs">
       <DependentUpon>SelectPatient.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Froms\AddFamilyHistory.resx">
+      <DependentUpon>AddFamilyHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\AddLabValue.resx">
       <DependentUpon>AddLabValue.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,8 +150,14 @@
     <EmbeddedResource Include="Froms\AddNewLab.resx">
       <DependentUpon>AddNewLab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Froms\AddNewMedicine.resx">
+      <DependentUpon>AddNewMedicine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\AddNewVisit.resx">
       <DependentUpon>AddNewVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\AddPastHistory.resx">
+      <DependentUpon>AddPastHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Froms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

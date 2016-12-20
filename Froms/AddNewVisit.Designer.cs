@@ -201,6 +201,7 @@
             this.combo_medication.Name = "combo_medication";
             this.combo_medication.Size = new System.Drawing.Size(280, 21);
             this.combo_medication.TabIndex = 62;
+            this.combo_medication.DropDown += new System.EventHandler(this.combo_medication_DropDown);
             // 
             // btn_addMedication
             // 

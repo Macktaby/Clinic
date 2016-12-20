@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_female = new System.Windows.Forms.TextBox();
+            this.txt_male = new System.Windows.Forms.TextBox();
+            this.txt_living = new System.Windows.Forms.TextBox();
+            this.txt_parityB = new System.Windows.Forms.TextBox();
+            this.txt_parityA = new System.Windows.Forms.TextBox();
             this.btn_addFHistory = new System.Windows.Forms.Button();
             this.combo_familyHistory = new System.Windows.Forms.ComboBox();
             this.btn_removeFHistory = new System.Windows.Forms.Button();
@@ -60,11 +65,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_parityA = new System.Windows.Forms.TextBox();
-            this.txt_parityB = new System.Windows.Forms.TextBox();
-            this.txt_living = new System.Windows.Forms.TextBox();
-            this.txt_male = new System.Windows.Forms.TextBox();
-            this.txt_female = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +113,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
+            // txt_female
+            // 
+            this.txt_female.Location = new System.Drawing.Point(487, 90);
+            this.txt_female.Name = "txt_female";
+            this.txt_female.Size = new System.Drawing.Size(40, 20);
+            this.txt_female.TabIndex = 66;
+            this.txt_female.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // txt_male
+            // 
+            this.txt_male.Location = new System.Drawing.Point(420, 90);
+            this.txt_male.Name = "txt_male";
+            this.txt_male.Size = new System.Drawing.Size(40, 20);
+            this.txt_male.TabIndex = 65;
+            this.txt_male.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // txt_living
+            // 
+            this.txt_living.Location = new System.Drawing.Point(420, 45);
+            this.txt_living.Name = "txt_living";
+            this.txt_living.Size = new System.Drawing.Size(40, 20);
+            this.txt_living.TabIndex = 64;
+            this.txt_living.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // txt_parityB
+            // 
+            this.txt_parityB.Location = new System.Drawing.Point(152, 38);
+            this.txt_parityB.Name = "txt_parityB";
+            this.txt_parityB.Size = new System.Drawing.Size(40, 20);
+            this.txt_parityB.TabIndex = 63;
+            this.txt_parityB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // txt_parityA
+            // 
+            this.txt_parityA.Location = new System.Drawing.Point(87, 38);
+            this.txt_parityA.Name = "txt_parityA";
+            this.txt_parityA.Size = new System.Drawing.Size(40, 20);
+            this.txt_parityA.TabIndex = 62;
+            this.txt_parityA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
             // btn_addFHistory
             // 
             this.btn_addFHistory.Location = new System.Drawing.Point(420, 386);
@@ -130,6 +170,7 @@
             this.combo_familyHistory.Name = "combo_familyHistory";
             this.combo_familyHistory.Size = new System.Drawing.Size(280, 21);
             this.combo_familyHistory.TabIndex = 60;
+            this.combo_familyHistory.DropDown += new System.EventHandler(this.combo_familyHistory_DropDown);
             // 
             // btn_removeFHistory
             // 
@@ -148,10 +189,11 @@
             this.combo_pastHistory.Name = "combo_pastHistory";
             this.combo_pastHistory.Size = new System.Drawing.Size(280, 21);
             this.combo_pastHistory.TabIndex = 57;
+            this.combo_pastHistory.DropDown += new System.EventHandler(this.combo_pastHistory_DropDown);
             // 
             // btn_addPHistory
             // 
-            this.btn_addPHistory.Location = new System.Drawing.Point(71, 382);
+            this.btn_addPHistory.Location = new System.Drawing.Point(71, 385);
             this.btn_addPHistory.Name = "btn_addPHistory";
             this.btn_addPHistory.Size = new System.Drawing.Size(75, 38);
             this.btn_addPHistory.TabIndex = 56;
@@ -161,7 +203,7 @@
             // 
             // btn_removePHistory
             // 
-            this.btn_removePHistory.Location = new System.Drawing.Point(195, 382);
+            this.btn_removePHistory.Location = new System.Drawing.Point(195, 386);
             this.btn_removePHistory.Name = "btn_removePHistory";
             this.btn_removePHistory.Size = new System.Drawing.Size(75, 38);
             this.btn_removePHistory.TabIndex = 55;
@@ -391,46 +433,6 @@
             this.label8.Size = new System.Drawing.Size(33, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Parity";
-            // 
-            // txt_parityA
-            // 
-            this.txt_parityA.Location = new System.Drawing.Point(87, 38);
-            this.txt_parityA.Name = "txt_parityA";
-            this.txt_parityA.Size = new System.Drawing.Size(40, 20);
-            this.txt_parityA.TabIndex = 62;
-            this.txt_parityA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // txt_parityB
-            // 
-            this.txt_parityB.Location = new System.Drawing.Point(152, 38);
-            this.txt_parityB.Name = "txt_parityB";
-            this.txt_parityB.Size = new System.Drawing.Size(40, 20);
-            this.txt_parityB.TabIndex = 63;
-            this.txt_parityB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // txt_living
-            // 
-            this.txt_living.Location = new System.Drawing.Point(420, 45);
-            this.txt_living.Name = "txt_living";
-            this.txt_living.Size = new System.Drawing.Size(40, 20);
-            this.txt_living.TabIndex = 64;
-            this.txt_living.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // txt_male
-            // 
-            this.txt_male.Location = new System.Drawing.Point(420, 90);
-            this.txt_male.Name = "txt_male";
-            this.txt_male.Size = new System.Drawing.Size(40, 20);
-            this.txt_male.TabIndex = 65;
-            this.txt_male.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // txt_female
-            // 
-            this.txt_female.Location = new System.Drawing.Point(487, 90);
-            this.txt_female.Name = "txt_female";
-            this.txt_female.Size = new System.Drawing.Size(40, 20);
-            this.txt_female.TabIndex = 66;
-            this.txt_female.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // Add_new_Follow_Up
             // 
