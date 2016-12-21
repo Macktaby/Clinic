@@ -61,6 +61,15 @@ namespace Clinic.Froms
                 e.Handled = true;
         }
 
+        public String stringValue(String value)
+        {
+            if (string.IsNullOrEmpty(value))
+                return "";
+
+            return value;
+        }
+
+
         private void getVisits()
         {
             try
@@ -109,8 +118,8 @@ namespace Clinic.Froms
                     txt_weight.Text = dr.GetInt32(dr.GetOrdinal("weight")).ToString();
                     txt_tmp.Text = dr.GetInt32(dr.GetOrdinal("tmp")).ToString();
 
-                    txt_ultraSound.Text = dr.GetString(dr.GetOrdinal("ultra_sound")).ToString();
-                    txt_visitNotes.Text = dr.GetString(dr.GetOrdinal("notes")).ToString();
+                    txt_ultraSound.Text = dr[dr.GetOrdinal("ultra_sound")].ToString();
+                    txt_visitNotes.Text = dr[dr.GetOrdinal("notes")].ToString();
 
                     int days = dr.GetInt32(dr.GetOrdinal("days"));
                     txt_gasAge.Text = (days / 7) + " Week(s) and " + (days % 7) + " Day(s)";
@@ -217,10 +226,11 @@ namespace Clinic.Froms
             try
             {
                 conn.Open();
-//                String sql = "SELECT Distinct(lab_value_id), * FROM Lab";
-//                    SELECT * FROM Customers Where City = 'México D.F.' Group By City;
-                String sql = "SELECT * FROM Lab WHERE Lab.patient_id = @pID GROUP BY lab_value_id";
-//                
+
+                String sql = "SELECT * FROM Lab, Values_Lab "
+                + "WHERE Lab.lab_value_id = Values_Lab.ID "
+                + "AND lab_id in (SELECT MAX(lab_id) FROM Lab WHERE Lab.patient_id = @pID GROUP BY lab_value_id);";
+
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@pID", patientID);
@@ -228,14 +238,14 @@ namespace Clinic.Froms
                 OleDbDataReader dr = command.ExecuteReader();
                 while (dr.Read())
                 {
-                    String str = "";
-                    for (int i = 0; i < dr.FieldCount; i++)
-                        str += dr[i] + " ";
-                    MessageBox.Show(str);
-                    //                    string[] row = { dr["lab_name"].ToString(), dr["lab_result"].ToString() };
+                    string[] row = { 
+                                   dr["lab_name"].ToString(), 
+                                   dr["lab_result"].ToString(), 
+                                   dr.GetDateTime(dr.GetOrdinal("lab_date")).ToString("dd/MM/yyyy")
+                               };
 
-                    //                    ListViewItem lvi = new ListViewItem(row);
-                    //                    listView_labs.Items.Add(lvi);
+                    ListViewItem lvi = new ListViewItem(row);
+                    listView_labs.Items.Add(lvi);
                 }
             }
             catch (Exception ex)

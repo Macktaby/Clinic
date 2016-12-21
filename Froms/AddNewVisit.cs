@@ -26,8 +26,10 @@ namespace Clinic.Froms
         public AddNewVisit()
         {
             InitializeComponent();
+
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
+            
             medicines = new List<int>();
             selectedMedications = new List<int>();
         }
@@ -114,7 +116,7 @@ namespace Clinic.Froms
                 command.Parameters.AddWithValue("@bl_dom", numberValue(txt_bl_pr_dom.Text));
                 command.Parameters.AddWithValue("@tmp", numberValue(txt_tmp.Text));
                 command.Parameters.AddWithValue("@ultra", stringValue(txt_ultraSound.Text));
-                command.Parameters.AddWithValue("@notes", stringValue(combo_notes.Text.ToString()));
+                command.Parameters.AddWithValue("@notes", stringValue(txt_notes.Text));
                 command.Parameters.AddWithValue("@fID", followUpID);
 
                 command.ExecuteNonQuery();

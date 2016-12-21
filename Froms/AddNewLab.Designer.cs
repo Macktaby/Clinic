@@ -44,6 +44,8 @@
             this.combo_labName.Name = "combo_labName";
             this.combo_labName.Size = new System.Drawing.Size(193, 21);
             this.combo_labName.TabIndex = 0;
+            this.combo_labName.DropDown += new System.EventHandler(this.combo_labName_DropDown);
+            this.combo_labName.SelectedIndexChanged += new System.EventHandler(this.combo_labName_SelectedIndexChanged);
             // 
             // label1
             // 

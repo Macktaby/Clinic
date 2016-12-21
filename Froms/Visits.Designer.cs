@@ -58,10 +58,11 @@
             this.listBox_allBloodPressures = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.listBox_uniqueMedicines = new System.Windows.Forms.ListBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.listView_labs = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label15 = new System.Windows.Forms.Label();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -352,18 +353,28 @@
             this.listBox_uniqueMedicines.Size = new System.Drawing.Size(275, 160);
             this.listBox_uniqueMedicines.TabIndex = 101;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(1095, 284);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 104;
+            this.label15.Text = "Last Labs";
+            // 
             // listView_labs
             // 
             this.listView_labs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listView_labs.FullRowSelect = true;
             this.listView_labs.GridLines = true;
-            this.listView_labs.Location = new System.Drawing.Point(973, 309);
+            this.listView_labs.Location = new System.Drawing.Point(930, 313);
             this.listView_labs.MultiSelect = false;
             this.listView_labs.Name = "listView_labs";
-            this.listView_labs.Size = new System.Drawing.Size(301, 199);
-            this.listView_labs.TabIndex = 103;
+            this.listView_labs.Size = new System.Drawing.Size(382, 273);
+            this.listView_labs.TabIndex = 105;
             this.listView_labs.UseCompatibleStateImageBehavior = false;
             this.listView_labs.View = System.Windows.Forms.View.Details;
             // 
@@ -377,22 +388,18 @@
             this.columnHeader2.Text = "Result";
             this.columnHeader2.Width = 127;
             // 
-            // label15
+            // columnHeader3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(1095, 284);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 13);
-            this.label15.TabIndex = 104;
-            this.label15.Text = "Last Labs";
+            this.columnHeader3.Text = "Date";
+            this.columnHeader3.Width = 81;
             // 
             // Visits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 652);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.listView_labs);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.listBox_uniqueMedicines);
             this.Controls.Add(this.label13);
@@ -441,9 +448,10 @@
         private System.Windows.Forms.ListBox listBox_allBloodPressures;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ListBox listBox_uniqueMedicines;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ListView listView_labs;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

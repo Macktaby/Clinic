@@ -31,7 +31,11 @@ namespace Clinic.Froms
         {
             while (dr.Read())
             {
-                string[] row = { dr["lab_name"].ToString(), dr["lab_result"].ToString() };
+                string[] row = { 
+                                   dr["lab_name"].ToString(), 
+                                   dr["lab_result"].ToString(), 
+                                   dr.GetDateTime(dr.GetOrdinal("lab_date")).ToString("dd/MM/yyyy")
+                               };
 
                 ListViewItem lvi = new ListViewItem(row);
                 listView_labs.Items.Add(lvi);

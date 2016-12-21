@@ -49,10 +49,10 @@
             this.btn_removeMedication = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.listBox_visitMedications = new System.Windows.Forms.ListBox();
-            this.combo_notes = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_printVisitAction = new System.Windows.Forms.Button();
             this.btn_addVisitAction = new System.Windows.Forms.Button();
+            this.txt_notes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_ultraSound
@@ -240,14 +240,6 @@
             this.listBox_visitMedications.Size = new System.Drawing.Size(296, 134);
             this.listBox_visitMedications.TabIndex = 58;
             // 
-            // combo_notes
-            // 
-            this.combo_notes.FormattingEnabled = true;
-            this.combo_notes.Location = new System.Drawing.Point(28, 292);
-            this.combo_notes.Name = "combo_notes";
-            this.combo_notes.Size = new System.Drawing.Size(280, 21);
-            this.combo_notes.TabIndex = 66;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -276,14 +268,22 @@
             this.btn_addVisitAction.UseVisualStyleBackColor = true;
             this.btn_addVisitAction.Click += new System.EventHandler(this.btn_addVisitAction_Click);
             // 
+            // txt_notes
+            // 
+            this.txt_notes.Enabled = false;
+            this.txt_notes.Location = new System.Drawing.Point(27, 287);
+            this.txt_notes.Name = "txt_notes";
+            this.txt_notes.Size = new System.Drawing.Size(280, 20);
+            this.txt_notes.TabIndex = 69;
+            // 
             // AddNewVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 346);
+            this.Controls.Add(this.txt_notes);
             this.Controls.Add(this.btn_addVisitAction);
             this.Controls.Add(this.btn_printVisitAction);
-            this.Controls.Add(this.combo_notes);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.combo_medication);
             this.Controls.Add(this.btn_addMedication);
@@ -336,9 +336,9 @@
         private System.Windows.Forms.Button btn_removeMedication;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ListBox listBox_visitMedications;
-        private System.Windows.Forms.ComboBox combo_notes;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btn_printVisitAction;
         private System.Windows.Forms.Button btn_addVisitAction;
+        private System.Windows.Forms.TextBox txt_notes;
     }
 }

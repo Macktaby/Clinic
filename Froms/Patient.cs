@@ -26,6 +26,7 @@ namespace Clinic.Froms
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
         }
@@ -39,6 +40,10 @@ namespace Clinic.Froms
         private void Patient_Load(object sender, EventArgs e)
         {
             loadPatientInfo();
+            getFollowUps();
+
+            if (followUps.Count > 0)
+                combo_followUps.SelectedIndex = 0;
         }
 
         private void getFollowUps()
@@ -271,7 +276,7 @@ namespace Clinic.Froms
             try
             {
                 conn.Open();
-                String sql = "SELECT * FROM Lab WHERE patient_id = @pID";
+                String sql = "SELECT * FROM Lab, Values_Lab WHERE patient_id = @pID AND Lab.lab_value_id = Values_Lab.ID ORDER BY lab_date DESC";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
