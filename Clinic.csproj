@@ -47,8 +47,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,6 +122,18 @@
       <DependentUpon>Patient.cs</DependentUpon>
     </Compile>
     <Compile Include="Froms\Program.cs" />
+    <Compile Include="Froms\TransferDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\TransferDetails.Designer.cs">
+      <DependentUpon>TransferDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\TransferPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\TransferPrint.Designer.cs">
+      <DependentUpon>TransferPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Froms\ViewLabs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +180,12 @@
     <EmbeddedResource Include="Froms\Patient.resx">
       <DependentUpon>Patient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Froms\TransferDetails.resx">
+      <DependentUpon>TransferDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\TransferPrint.resx">
+      <DependentUpon>TransferPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Froms\ViewLabs.resx">
       <DependentUpon>ViewLabs.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +204,7 @@
     <EmbeddedResource Include="Froms\SelectPatient.resx">
       <DependentUpon>SelectPatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransferReport.rdlc" />
     <None Include="ClinicDBDataSet.xsc">
       <DependentUpon>ClinicDBDataSet.xsd</DependentUpon>
     </None>

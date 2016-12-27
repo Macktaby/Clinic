@@ -297,5 +297,12 @@ namespace Clinic.Froms
 
         }
 
+        private void btn_transferLink_Click(object sender, EventArgs e)
+        {
+
+            TransferDetails form = new TransferDetails(txt_patientName.Text, num_patientAge.Text);
+            form.Show();
+        }
+
     }
 }

@@ -14,7 +14,11 @@ D:\Projects\Clinic\obj\Debug\Clinic.pdb
 D:\Projects\Clinic\bin\Debug\Clinic.exe.config
 D:\Projects\Clinic\bin\Debug\Clinic.exe
 D:\Projects\Clinic\bin\Debug\Clinic.pdb
-D:\Projects\Clinic\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.AddFamilyHistory.resources
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.AddPastHistory.resources
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.AddNewMedicine.resources
+D:\Projects\Clinic\obj\Debug\Clinic.Froms.TransferPrint.resources
+D:\Projects\Clinic\obj\Debug\RdlCompile.cache
+D:\Projects\Clinic\obj\Debug\RdlCompile.compiled
+D:\Projects\Clinic\obj\Debug\Clinic.Froms.TransferDetails.resources
+D:\Projects\Clinic\obj\Debug\Clinic.csprojResolveAssemblyReference.cache

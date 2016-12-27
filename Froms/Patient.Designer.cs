@@ -604,6 +604,7 @@
             this.btn_transferLink.TabIndex = 25;
             this.btn_transferLink.Text = "Transfer";
             this.btn_transferLink.UseVisualStyleBackColor = true;
+            this.btn_transferLink.Click += new System.EventHandler(this.btn_transferLink_Click);
             // 
             // label7
             // 
