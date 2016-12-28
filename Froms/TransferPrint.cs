@@ -37,7 +37,7 @@ namespace Clinic.Froms
 
         private void TransferPrint_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.RefreshReport();
+            this.reportViewer.RefreshReport();
 
             Microsoft.Reporting.WinForms.ReportParameter[] para = new Microsoft.Reporting.WinForms.ReportParameter[]
             {
@@ -50,8 +50,8 @@ namespace Clinic.Froms
                 new Microsoft.Reporting.WinForms.ReportParameter("hosEntry", entry)
             };
 
-            this.reportViewer1.LocalReport.SetParameters(para);
-            this.reportViewer1.RefreshReport();
+            this.reportViewer.LocalReport.SetParameters(para);
+            this.reportViewer.RefreshReport();
         }
     }
 }

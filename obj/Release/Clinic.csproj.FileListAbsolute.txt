@@ -21,3 +21,9 @@ D:\Projects\Clinic\obj\Release\RdlCompile.cache
 D:\Projects\Clinic\obj\Release\RdlCompile.compiled
 D:\Projects\Clinic\obj\Release\Clinic.exe
 D:\Projects\Clinic\obj\Release\Clinic.pdb
+D:\Projects\Clinic\bin\Release\ClinicDB.accdb
+D:\Projects\Clinic\bin\Release\Clinic.exe.manifest
+D:\Projects\Clinic\bin\Release\Clinic.application
+D:\Projects\Clinic\obj\Release\Clinic.csprojResolveAssemblyReference.cache
+D:\Projects\Clinic\obj\Release\Clinic.exe.manifest
+D:\Projects\Clinic\obj\Release\Clinic.application

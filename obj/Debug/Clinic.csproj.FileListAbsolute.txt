@@ -22,3 +22,7 @@ D:\Projects\Clinic\obj\Debug\RdlCompile.cache
 D:\Projects\Clinic\obj\Debug\RdlCompile.compiled
 D:\Projects\Clinic\obj\Debug\Clinic.Froms.TransferDetails.resources
 D:\Projects\Clinic\obj\Debug\Clinic.csprojResolveAssemblyReference.cache
+D:\Projects\Clinic\bin\Debug\Clinic.exe.manifest
+D:\Projects\Clinic\bin\Debug\Clinic.application
+D:\Projects\Clinic\obj\Debug\Clinic.exe.manifest
+D:\Projects\Clinic\obj\Debug\Clinic.application
