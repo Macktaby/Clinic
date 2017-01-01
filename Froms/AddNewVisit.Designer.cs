@@ -257,6 +257,7 @@
             this.btn_printVisitAction.TabIndex = 67;
             this.btn_printVisitAction.Text = "Print Visit";
             this.btn_printVisitAction.UseVisualStyleBackColor = true;
+            this.btn_printVisitAction.Click += new System.EventHandler(this.btn_printVisitAction_Click);
             // 
             // btn_addVisitAction
             // 

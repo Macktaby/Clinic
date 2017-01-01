@@ -27,3 +27,4 @@ D:\Projects\Clinic\bin\Release\Clinic.application
 D:\Projects\Clinic\obj\Release\Clinic.csprojResolveAssemblyReference.cache
 D:\Projects\Clinic\obj\Release\Clinic.exe.manifest
 D:\Projects\Clinic\obj\Release\Clinic.application
+D:\Projects\Clinic\obj\Release\Clinic.Froms.PrescriptionPrint.resources

@@ -210,5 +210,16 @@ namespace Clinic.Froms
             loadMedicines();
         }
 
+        private void btn_printVisitAction_Click(object sender, EventArgs e)
+        {
+             using (PrescriptionPrint frm = new PrescriptionPrint(
+                 ""
+                ))
+            {
+                frm.ShowDialog();
+            }
+
+        }
+
     }
 }
