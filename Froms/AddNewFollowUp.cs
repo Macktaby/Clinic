@@ -39,6 +39,7 @@ namespace Clinic.Froms
             : this()
         {
             this.patientID = patientID;
+            loadPastHistory();
         }
 
         private void number_KeyPress(object sender, KeyPressEventArgs e)
@@ -192,7 +193,7 @@ namespace Clinic.Froms
                 return;
             }
 
-            String fHistory = combo_familyHistory.Text.ToString();
+            String fHistory = combo_familyHistory.SelectedItem.ToString();
             listBox_FamilyHistory.Items.Add(fHistory);
             selectedFamilyHistory.Add(familyHistory[combo_familyHistory.SelectedIndex]);
         }
@@ -205,7 +206,7 @@ namespace Clinic.Froms
                 return;
             }
 
-            String pHistory = combo_pastHistory.Text.ToString();
+            String pHistory = combo_pastHistory.SelectedItem.ToString();
             listBox_pastHistory.Items.Add(pHistory);
             selectedPastHistory.Add(pastHistory[combo_pastHistory.SelectedIndex]);
         }
@@ -244,10 +245,12 @@ namespace Clinic.Froms
 
         private void combo_pastHistory_DropDown(object sender, EventArgs e)
         {
+//            MessageBox.Show("PAST");
             loadPastHistory();
         }
         private void combo_familyHistory_DropDown(object sender, EventArgs e)
         {
+//            MessageBox.Show("Family5");
             loadFamilyHistory();
         }
 
@@ -310,9 +313,6 @@ namespace Clinic.Froms
                 conn.Close();
             }
         }
-
-
-
 
     }
 }

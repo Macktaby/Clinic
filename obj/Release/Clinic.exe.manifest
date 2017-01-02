@@ -68,14 +68,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Clinic.exe" size="895488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Clinic.exe" size="897536">
       <assemblyIdentity name="Clinic" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YcRc/omKh9kZ2/mtQClois/7xlRFCf60EePUlPDEjh0=</dsig:DigestValue>
+        <dsig:DigestValue>ZrJNUnGI/IvQOGE+pFY8FX9F+aYj+gjjlsmapM7xMy4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

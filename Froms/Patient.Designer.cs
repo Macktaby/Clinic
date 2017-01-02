@@ -82,6 +82,8 @@
             this.btn_addLabLink = new System.Windows.Forms.Button();
             this.btn_transferLink = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_patientID = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_husbandAge)).BeginInit();
@@ -91,6 +93,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.txt_patientID);
             this.groupBox3.Controls.Add(this.num_patientAge);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label3);
@@ -107,7 +111,7 @@
             this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Location = new System.Drawing.Point(27, 23);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(668, 167);
+            this.groupBox3.Size = new System.Drawing.Size(668, 181);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Patient Info";
@@ -115,7 +119,7 @@
             // num_patientAge
             // 
             this.num_patientAge.Enabled = false;
-            this.num_patientAge.Location = new System.Drawing.Point(497, 39);
+            this.num_patientAge.Location = new System.Drawing.Point(497, 59);
             this.num_patientAge.Name = "num_patientAge";
             this.num_patientAge.Size = new System.Drawing.Size(120, 20);
             this.num_patientAge.TabIndex = 2;
@@ -123,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 41);
+            this.label2.Location = new System.Drawing.Point(35, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -132,7 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 77);
+            this.label3.Location = new System.Drawing.Point(31, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 26);
             this.label3.TabIndex = 2;
@@ -142,7 +146,7 @@
             // txt_phone
             // 
             this.txt_phone.Enabled = false;
-            this.txt_phone.Location = new System.Drawing.Point(87, 124);
+            this.txt_phone.Location = new System.Drawing.Point(87, 140);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(243, 20);
             this.txt_phone.TabIndex = 5;
@@ -150,7 +154,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 41);
+            this.label1.Location = new System.Drawing.Point(35, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
@@ -159,7 +163,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 127);
+            this.label4.Location = new System.Drawing.Point(35, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 3;
@@ -168,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(439, 41);
+            this.label5.Location = new System.Drawing.Point(439, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 4;
@@ -177,7 +181,7 @@
             // num_husbandAge
             // 
             this.num_husbandAge.Enabled = false;
-            this.num_husbandAge.Location = new System.Drawing.Point(497, 80);
+            this.num_husbandAge.Location = new System.Drawing.Point(497, 100);
             this.num_husbandAge.Name = "num_husbandAge";
             this.num_husbandAge.Size = new System.Drawing.Size(120, 20);
             this.num_husbandAge.TabIndex = 4;
@@ -185,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(439, 77);
+            this.label6.Location = new System.Drawing.Point(439, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 26);
             this.label6.TabIndex = 5;
@@ -195,7 +199,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(439, 41);
+            this.label9.Location = new System.Drawing.Point(439, 61);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 4;
@@ -204,14 +208,14 @@
             // txt_patientName
             // 
             this.txt_patientName.Enabled = false;
-            this.txt_patientName.Location = new System.Drawing.Point(87, 38);
+            this.txt_patientName.Location = new System.Drawing.Point(87, 58);
             this.txt_patientName.Name = "txt_patientName";
             this.txt_patientName.Size = new System.Drawing.Size(243, 20);
             this.txt_patientName.TabIndex = 1;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(497, 39);
+            this.numericUpDown1.Location = new System.Drawing.Point(497, 59);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 11;
@@ -219,14 +223,14 @@
             // txt_husbandName
             // 
             this.txt_husbandName.Enabled = false;
-            this.txt_husbandName.Location = new System.Drawing.Point(87, 80);
+            this.txt_husbandName.Location = new System.Drawing.Point(87, 100);
             this.txt_husbandName.Name = "txt_husbandName";
             this.txt_husbandName.Size = new System.Drawing.Size(243, 20);
             this.txt_husbandName.TabIndex = 3;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(87, 38);
+            this.textBox4.Location = new System.Drawing.Point(87, 58);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(243, 20);
             this.textBox4.TabIndex = 6;
@@ -558,7 +562,7 @@
             // combo_followUps
             // 
             this.combo_followUps.FormattingEnabled = true;
-            this.combo_followUps.Location = new System.Drawing.Point(106, 221);
+            this.combo_followUps.Location = new System.Drawing.Point(106, 232);
             this.combo_followUps.Name = "combo_followUps";
             this.combo_followUps.Size = new System.Drawing.Size(175, 21);
             this.combo_followUps.TabIndex = 21;
@@ -609,12 +613,29 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(43, 216);
+            this.label7.Location = new System.Drawing.Point(43, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 26);
             this.label7.TabIndex = 26;
             this.label7.Text = "Patient \r\nFollow ups";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(27, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Patient ID";
+            // 
+            // txt_patientID
+            // 
+            this.txt_patientID.Enabled = false;
+            this.txt_patientID.Location = new System.Drawing.Point(87, 22);
+            this.txt_patientID.Name = "txt_patientID";
+            this.txt_patientID.Size = new System.Drawing.Size(59, 20);
+            this.txt_patientID.TabIndex = 13;
             // 
             // Patient
             // 
@@ -700,5 +721,7 @@
         private System.Windows.Forms.Button btn_prointFollowUpLink;
         private System.Windows.Forms.Button btn_viewVisitsLink;
         private System.Windows.Forms.Button btn_addVisitLink;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_patientID;
     }
 }

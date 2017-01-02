@@ -152,9 +152,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(15, 205);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 26);
+            this.label7.Size = new System.Drawing.Size(56, 26);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Hopital entry \r\ntime";
+            this.label7.Text = "Operation \r\ntime";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // combo_fasting

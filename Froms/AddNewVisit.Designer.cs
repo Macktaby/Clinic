@@ -181,9 +181,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(138, 64);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 13);
+            this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Kilogram";
+            this.label8.Text = "Kilograms";
             // 
             // label9
             // 
@@ -196,6 +196,8 @@
             // 
             // combo_medication
             // 
+            this.combo_medication.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_medication.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_medication.FormattingEnabled = true;
             this.combo_medication.Location = new System.Drawing.Point(27, 190);
             this.combo_medication.Name = "combo_medication";
@@ -251,17 +253,17 @@
             // 
             // btn_printVisitAction
             // 
-            this.btn_printVisitAction.Location = new System.Drawing.Point(577, 28);
+            this.btn_printVisitAction.Location = new System.Drawing.Point(571, 28);
             this.btn_printVisitAction.Name = "btn_printVisitAction";
-            this.btn_printVisitAction.Size = new System.Drawing.Size(68, 35);
+            this.btn_printVisitAction.Size = new System.Drawing.Size(74, 35);
             this.btn_printVisitAction.TabIndex = 67;
-            this.btn_printVisitAction.Text = "Print Visit";
+            this.btn_printVisitAction.Text = "Print Prescription";
             this.btn_printVisitAction.UseVisualStyleBackColor = true;
             this.btn_printVisitAction.Click += new System.EventHandler(this.btn_printVisitAction_Click);
             // 
             // btn_addVisitAction
             // 
-            this.btn_addVisitAction.Location = new System.Drawing.Point(503, 28);
+            this.btn_addVisitAction.Location = new System.Drawing.Point(499, 28);
             this.btn_addVisitAction.Name = "btn_addVisitAction";
             this.btn_addVisitAction.Size = new System.Drawing.Size(68, 35);
             this.btn_addVisitAction.TabIndex = 68;
@@ -271,7 +273,6 @@
             // 
             // txt_notes
             // 
-            this.txt_notes.Enabled = false;
             this.txt_notes.Location = new System.Drawing.Point(27, 287);
             this.txt_notes.Name = "txt_notes";
             this.txt_notes.Size = new System.Drawing.Size(280, 20);

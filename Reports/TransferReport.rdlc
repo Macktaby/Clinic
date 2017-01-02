@@ -372,7 +372,20 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>موعد دخول المستشفى</Value>
+                <Value>موعد اجراء</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value> العملية</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                 </Style>

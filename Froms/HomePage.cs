@@ -83,13 +83,53 @@ namespace Clinic
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured !!!" + ex.Message);
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 conn.Close();
             }
+        }
 
+        private void btn_searchByID_Click(object sender, EventArgs e)
+        {
+            if (txt_patientID.Text == "")
+            {
+                MessageBox.Show("Please Enter the patient ID", "No Input Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+              try
+            {
+                conn.Open();
+                String sql = "SELECT * FROM Patient WHERE patient_id = @phone";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@pID", txt_patientID.Text);
+
+                OleDbDataReader dr = command.ExecuteReader();
+                if (dr.Read())
+                {
+                    int id = dr.GetInt32(dr.GetOrdinal("patient_id"));
+                    Patient form = new Patient(id);
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("This ID does NOT exist", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btn_addLabLink_Click(object sender, EventArgs e)

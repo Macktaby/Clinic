@@ -89,6 +89,7 @@ namespace Clinic.Froms
 
                 if (dr.Read())
                 {
+                    txt_patientID.Text = patientID.ToString();
                     txt_patientName.Text = dr["patient_name"].ToString();
                     txt_husbandName.Text = dr["husband_name"].ToString();
                     txt_phone.Text = dr["phone"].ToString();

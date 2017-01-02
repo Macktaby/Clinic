@@ -165,6 +165,8 @@
             // 
             // combo_familyHistory
             // 
+            this.combo_familyHistory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_familyHistory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_familyHistory.FormattingEnabled = true;
             this.combo_familyHistory.Location = new System.Drawing.Point(376, 359);
             this.combo_familyHistory.Name = "combo_familyHistory";
@@ -184,12 +186,13 @@
             // 
             // combo_pastHistory
             // 
+            this.combo_pastHistory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_pastHistory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_pastHistory.FormattingEnabled = true;
             this.combo_pastHistory.Location = new System.Drawing.Point(41, 359);
             this.combo_pastHistory.Name = "combo_pastHistory";
             this.combo_pastHistory.Size = new System.Drawing.Size(280, 21);
             this.combo_pastHistory.TabIndex = 57;
-            this.combo_pastHistory.DropDown += new System.EventHandler(this.combo_pastHistory_DropDown);
             // 
             // btn_addPHistory
             // 
@@ -223,6 +226,8 @@
             // 
             // combo_rh
             // 
+            this.combo_rh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_rh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_rh.FormattingEnabled = true;
             this.combo_rh.Items.AddRange(new object[] {
             "Positive",
