@@ -159,6 +159,8 @@
             // 
             // combo_fasting
             // 
+            this.combo_fasting.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_fasting.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_fasting.FormattingEnabled = true;
             this.combo_fasting.Items.AddRange(new object[] {
             "12:00",
@@ -192,6 +194,8 @@
             // 
             // combo_fastingPer
             // 
+            this.combo_fastingPer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_fastingPer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_fastingPer.FormattingEnabled = true;
             this.combo_fastingPer.Items.AddRange(new object[] {
             "A.M.",
@@ -203,6 +207,8 @@
             // 
             // combo_entryPer
             // 
+            this.combo_entryPer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_entryPer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_entryPer.FormattingEnabled = true;
             this.combo_entryPer.Items.AddRange(new object[] {
             "A.M.",
@@ -214,6 +220,8 @@
             // 
             // combo_entry
             // 
+            this.combo_entry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_entry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_entry.FormattingEnabled = true;
             this.combo_entry.Items.AddRange(new object[] {
             "12:00",

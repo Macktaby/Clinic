@@ -41,16 +41,15 @@ namespace Clinic.Froms
                 conn.Open();
 
                 String sql = "INSERT INTO Medicine "
-                    + "(medicine_name, description, ar_description, dose, concentration) "
-                    + "VALUES (@name, @desc, @arDesc, @dose, @conc)";
+                    + "(medicine_name, type, dose, concentration) "
+                    + "VALUES (@name, @type, @dose, @conc)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@name", txt_medName.Text);
-                command.Parameters.AddWithValue("@desc", txt_desc.Text);
-                command.Parameters.AddWithValue("@arDesc", txt_arDesc.Text);
+                command.Parameters.AddWithValue("@type", txt_type.Text);
                 command.Parameters.AddWithValue("@dose", txt_dose.Text);
-                command.Parameters.AddWithValue("@conc", numberValue(txt_conc.Text));
+                command.Parameters.AddWithValue("@conc", txt_conc.Text);
 
                 command.ExecuteNonQuery();
 
@@ -69,5 +68,6 @@ namespace Clinic.Froms
             }
 
         }
+
     }
 }

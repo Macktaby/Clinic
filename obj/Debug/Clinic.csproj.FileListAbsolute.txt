@@ -26,3 +26,5 @@ D:\Projects\Clinic\bin\Debug\Clinic.exe.manifest
 D:\Projects\Clinic\bin\Debug\Clinic.application
 D:\Projects\Clinic\obj\Debug\Clinic.exe.manifest
 D:\Projects\Clinic\obj\Debug\Clinic.application
+D:\Projects\Clinic\bin\Debug\ClinicDB.accdb
+D:\Projects\Clinic\obj\Debug\Clinic.Froms.PrescriptionPrint.resources

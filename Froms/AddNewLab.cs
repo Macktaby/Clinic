@@ -30,6 +30,8 @@ namespace Clinic.Froms
 
             labs = new List<int>();
             normalRange = new List<string>();
+
+            loadLabs();
         }
 
         public AddNewLab(int patientID)
@@ -71,7 +73,6 @@ namespace Clinic.Froms
                 MessageBox.Show("The Lab is added SUCCESSFULLY", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 return id;
-
             }
             catch (Exception ex)
             {
@@ -82,11 +83,6 @@ namespace Clinic.Froms
             {
                 conn.Close();
             }
-        }
-
-        private void combo_labName_DropDown(object sender, EventArgs e)
-        {
-            loadLabs();
         }
 
         private void loadLabs()
@@ -126,5 +122,11 @@ namespace Clinic.Froms
         {
             txt_normalRange.Text = normalRange[combo_labName.SelectedIndex];
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loadLabs();
+        }
+
     }
 }

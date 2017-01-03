@@ -39,7 +39,9 @@ namespace Clinic.Froms
             : this()
         {
             this.patientID = patientID;
+
             loadPastHistory();
+            loadFamilyHistory();
         }
 
         private void number_KeyPress(object sender, KeyPressEventArgs e)
@@ -129,8 +131,8 @@ namespace Clinic.Froms
                 conn.Open();
 
                 String sql = "INSERT INTO Follow_Up "
-                    + "(patient_id, parity_a, parity_b, living, male, female, lmp, rh, menarchal, cycle_d, cycle_c, notes) "
-                    + "VALUES (@pID, @parA, @parB, @living, @male, @female, @lmp, @rh, @men, @cycleD, @cycleC, @notes)";
+                    + "(patient_id, parity_a, parity_b, living, male, female, lmp, rh, menarchal, cycle_d, cycle_c, notes, start_date) "
+                    + "VALUES (@pID, @parA, @parB, @living, @male, @female, @lmp, @rh, @men, @cycleD, @cycleC, @notes, @sdate)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
@@ -146,6 +148,7 @@ namespace Clinic.Froms
                 command.Parameters.AddWithValue("@cycleD", numberValue(txt_cycleD.Text));
                 command.Parameters.AddWithValue("@cycleC", numberValue(txt_cycleC.Text));
                 command.Parameters.AddWithValue("@notes", rtxt_notes.Text);
+                command.Parameters.AddWithValue("@sdate", date_startDate.Value.Date.ToString());
 
                 command.ExecuteNonQuery();
 
@@ -245,13 +248,12 @@ namespace Clinic.Froms
 
         private void combo_pastHistory_DropDown(object sender, EventArgs e)
         {
-//            MessageBox.Show("PAST");
-            loadPastHistory();
-        }
+//            loadPastHistory();
+       }
+
         private void combo_familyHistory_DropDown(object sender, EventArgs e)
         {
-//            MessageBox.Show("Family5");
-            loadFamilyHistory();
+//            loadFamilyHistory();
         }
 
         private void loadPastHistory()
@@ -314,5 +316,14 @@ namespace Clinic.Froms
             }
         }
 
+        private void btn_pastRefresh_Click(object sender, EventArgs e)
+        {
+            loadPastHistory();
+        }
+
+        private void btn_familyRefresh_Click(object sender, EventArgs e)
+        {
+            loadFamilyHistory();
+        }
     }
 }

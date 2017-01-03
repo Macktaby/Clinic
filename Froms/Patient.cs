@@ -250,7 +250,7 @@ namespace Clinic.Froms
                 return;
             }
 
-            AddNewVisit form = new AddNewVisit(followUpID, lmp);
+            AddNewVisit form = new AddNewVisit(patientID, followUpID, lmp);
             form.Show();
         }
 

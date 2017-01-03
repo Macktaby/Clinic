@@ -17,6 +17,7 @@ namespace Clinic.Froms
         private String connectionStr;
 
         private int followUpID;
+        private int patientID;
         private DateTime lmp;
         private int days;
 
@@ -29,20 +30,20 @@ namespace Clinic.Froms
 
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
-            
+
             medicines = new List<int>();
             selectedMedications = new List<int>();
+            loadMedicines();
         }
-        public AddNewVisit(int followUpID, DateTime lmp)
+        public AddNewVisit(int patientID, int followUpID, DateTime lmp)
             : this()
         {
+            this.patientID = patientID;
             this.followUpID = followUpID;
             this.lmp = lmp;
 
             DateTime now = DateTime.Today;
-            txt_curentDate.Text = now.ToString("dd/MM/yyyy");
-            days = (now - lmp).Days;
-
+            days = (now - lmp).Days; 
             txt_gasAge.Text = (days / 7) + " Week(s) and " + (days % 7) + " Day(s)";
         }
 
@@ -60,7 +61,7 @@ namespace Clinic.Froms
                 while (dr.Read())
                 {
                     medicines.Add(dr.GetInt32(dr.GetOrdinal("medicine_id")));
-                    String med = dr[dr.GetOrdinal("medicine_name")] + " " + dr[dr.GetOrdinal("concentration")];
+                    String med = dr[dr.GetOrdinal("medicine_name")] + " " + dr[dr.GetOrdinal("concentration")] + " "  +dr[dr.GetOrdinal("type")];
                     combo_medication.Items.Add(med);
                 }
             }
@@ -74,7 +75,6 @@ namespace Clinic.Froms
             }
 
         }
-
 
         public int numberValue(String s)
         {
@@ -106,8 +106,8 @@ namespace Clinic.Froms
                 conn.Open();
 
                 String sql = "INSERT INTO Visit "
-                    + "(weight, bl_pr_num, bl_pr_dom, tmp, ultra_sound, notes, follow_up_id) "
-                    + "VALUES (@weight, @bl_num, @bl_dom, @tmp, @ultra, @notes, @fID)";
+                    + "(weight, bl_pr_num, bl_pr_dom, tmp, ultra_sound, notes, follow_up_id, visit_date) "
+                    + "VALUES (@weight, @bl_num, @bl_dom, @tmp, @ultra, @notes, @fID, @vdate)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
@@ -118,6 +118,7 @@ namespace Clinic.Froms
                 command.Parameters.AddWithValue("@ultra", stringValue(txt_ultraSound.Text));
                 command.Parameters.AddWithValue("@notes", stringValue(txt_notes.Text));
                 command.Parameters.AddWithValue("@fID", followUpID);
+                command.Parameters.AddWithValue("@vdate", date_visitDate.Value.Date.ToString());
 
                 command.ExecuteNonQuery();
 
@@ -133,6 +134,34 @@ namespace Clinic.Froms
             {
                 MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void loadLastLabs()
+        {
+            try
+            {
+                conn.Open();
+
+                String sql = "SELECT * FROM Lab, Values_Lab "
+                + "WHERE Lab.lab_value_id = Values_Lab.ID "
+                + "AND lab_id in (SELECT MAX(lab_id) FROM Lab WHERE Lab.patient_id = @pID GROUP BY lab_value_id);";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@pID", patientID);
+
+                OleDbDataReader dr = command.ExecuteReader();
+                ViewLabs form = new ViewLabs(dr);
+                form.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -164,7 +193,6 @@ namespace Clinic.Froms
                 throw;
             }
         }
-
 
         private void number_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -205,21 +233,33 @@ namespace Clinic.Froms
             }
         }
 
-        private void combo_medication_DropDown(object sender, EventArgs e)
-        {
-            loadMedicines();
-        }
-
         private void btn_printVisitAction_Click(object sender, EventArgs e)
         {
-             using (PrescriptionPrint frm = new PrescriptionPrint(
-                 ""
-                ))
+            using (PrescriptionPrint frm = new PrescriptionPrint(
+                ""
+               ))
             {
                 frm.ShowDialog();
             }
 
         }
+
+        private void btn_medRefresh_Click(object sender, EventArgs e)
+        {
+            loadMedicines();
+        }
+
+        private void btn_addLabLink_Click(object sender, EventArgs e)
+        {
+            AddNewLab form = new AddNewLab(patientID);
+            form.Show();
+        }
+
+        private void btn_viewLabsLink_Click(object sender, EventArgs e)
+        {
+            loadLastLabs();
+        }
+
 
     }
 }

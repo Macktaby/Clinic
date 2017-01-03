@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_familyRefresh = new System.Windows.Forms.Button();
+            this.btn_pastRefresh = new System.Windows.Forms.Button();
             this.txt_female = new System.Windows.Forms.TextBox();
             this.txt_male = new System.Windows.Forms.TextBox();
             this.txt_living = new System.Windows.Forms.TextBox();
@@ -65,11 +67,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.date_startDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.date_startDate);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btn_familyRefresh);
+            this.groupBox1.Controls.Add(this.btn_pastRefresh);
             this.groupBox1.Controls.Add(this.txt_female);
             this.groupBox1.Controls.Add(this.txt_male);
             this.groupBox1.Controls.Add(this.txt_living);
@@ -113,9 +121,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
+            // btn_familyRefresh
+            // 
+            this.btn_familyRefresh.Location = new System.Drawing.Point(634, 358);
+            this.btn_familyRefresh.Name = "btn_familyRefresh";
+            this.btn_familyRefresh.Size = new System.Drawing.Size(52, 24);
+            this.btn_familyRefresh.TabIndex = 68;
+            this.btn_familyRefresh.Text = "Refresh";
+            this.btn_familyRefresh.UseVisualStyleBackColor = true;
+            this.btn_familyRefresh.Click += new System.EventHandler(this.btn_familyRefresh_Click);
+            // 
+            // btn_pastRefresh
+            // 
+            this.btn_pastRefresh.Location = new System.Drawing.Point(281, 357);
+            this.btn_pastRefresh.Name = "btn_pastRefresh";
+            this.btn_pastRefresh.Size = new System.Drawing.Size(58, 23);
+            this.btn_pastRefresh.TabIndex = 67;
+            this.btn_pastRefresh.Text = "Refresh";
+            this.btn_pastRefresh.UseVisualStyleBackColor = true;
+            this.btn_pastRefresh.Click += new System.EventHandler(this.btn_pastRefresh_Click);
+            // 
             // txt_female
             // 
-            this.txt_female.Location = new System.Drawing.Point(487, 90);
+            this.txt_female.Location = new System.Drawing.Point(610, 90);
             this.txt_female.Name = "txt_female";
             this.txt_female.Size = new System.Drawing.Size(40, 20);
             this.txt_female.TabIndex = 66;
@@ -123,7 +151,7 @@
             // 
             // txt_male
             // 
-            this.txt_male.Location = new System.Drawing.Point(420, 90);
+            this.txt_male.Location = new System.Drawing.Point(543, 90);
             this.txt_male.Name = "txt_male";
             this.txt_male.Size = new System.Drawing.Size(40, 20);
             this.txt_male.TabIndex = 65;
@@ -131,7 +159,7 @@
             // 
             // txt_living
             // 
-            this.txt_living.Location = new System.Drawing.Point(420, 45);
+            this.txt_living.Location = new System.Drawing.Point(543, 45);
             this.txt_living.Name = "txt_living";
             this.txt_living.Size = new System.Drawing.Size(40, 20);
             this.txt_living.TabIndex = 64;
@@ -139,7 +167,7 @@
             // 
             // txt_parityB
             // 
-            this.txt_parityB.Location = new System.Drawing.Point(152, 38);
+            this.txt_parityB.Location = new System.Drawing.Point(424, 43);
             this.txt_parityB.Name = "txt_parityB";
             this.txt_parityB.Size = new System.Drawing.Size(40, 20);
             this.txt_parityB.TabIndex = 63;
@@ -147,7 +175,7 @@
             // 
             // txt_parityA
             // 
-            this.txt_parityA.Location = new System.Drawing.Point(87, 38);
+            this.txt_parityA.Location = new System.Drawing.Point(362, 43);
             this.txt_parityA.Name = "txt_parityA";
             this.txt_parityA.Size = new System.Drawing.Size(40, 20);
             this.txt_parityA.TabIndex = 62;
@@ -155,7 +183,7 @@
             // 
             // btn_addFHistory
             // 
-            this.btn_addFHistory.Location = new System.Drawing.Point(420, 386);
+            this.btn_addFHistory.Location = new System.Drawing.Point(422, 389);
             this.btn_addFHistory.Name = "btn_addFHistory";
             this.btn_addFHistory.Size = new System.Drawing.Size(75, 34);
             this.btn_addFHistory.TabIndex = 61;
@@ -168,15 +196,15 @@
             this.combo_familyHistory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.combo_familyHistory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_familyHistory.FormattingEnabled = true;
-            this.combo_familyHistory.Location = new System.Drawing.Point(376, 359);
+            this.combo_familyHistory.Location = new System.Drawing.Point(367, 359);
             this.combo_familyHistory.Name = "combo_familyHistory";
-            this.combo_familyHistory.Size = new System.Drawing.Size(280, 21);
+            this.combo_familyHistory.Size = new System.Drawing.Size(261, 21);
             this.combo_familyHistory.TabIndex = 60;
             this.combo_familyHistory.DropDown += new System.EventHandler(this.combo_familyHistory_DropDown);
             // 
             // btn_removeFHistory
             // 
-            this.btn_removeFHistory.Location = new System.Drawing.Point(530, 386);
+            this.btn_removeFHistory.Location = new System.Drawing.Point(503, 389);
             this.btn_removeFHistory.Name = "btn_removeFHistory";
             this.btn_removeFHistory.Size = new System.Drawing.Size(75, 34);
             this.btn_removeFHistory.TabIndex = 58;
@@ -189,14 +217,15 @@
             this.combo_pastHistory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.combo_pastHistory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_pastHistory.FormattingEnabled = true;
-            this.combo_pastHistory.Location = new System.Drawing.Point(41, 359);
+            this.combo_pastHistory.Location = new System.Drawing.Point(21, 359);
             this.combo_pastHistory.Name = "combo_pastHistory";
-            this.combo_pastHistory.Size = new System.Drawing.Size(280, 21);
+            this.combo_pastHistory.Size = new System.Drawing.Size(254, 21);
             this.combo_pastHistory.TabIndex = 57;
+            this.combo_pastHistory.DropDown += new System.EventHandler(this.combo_pastHistory_DropDown);
             // 
             // btn_addPHistory
             // 
-            this.btn_addPHistory.Location = new System.Drawing.Point(71, 385);
+            this.btn_addPHistory.Location = new System.Drawing.Point(95, 387);
             this.btn_addPHistory.Name = "btn_addPHistory";
             this.btn_addPHistory.Size = new System.Drawing.Size(75, 38);
             this.btn_addPHistory.TabIndex = 56;
@@ -206,7 +235,7 @@
             // 
             // btn_removePHistory
             // 
-            this.btn_removePHistory.Location = new System.Drawing.Point(195, 386);
+            this.btn_removePHistory.Location = new System.Drawing.Point(187, 386);
             this.btn_removePHistory.Name = "btn_removePHistory";
             this.btn_removePHistory.Size = new System.Drawing.Size(75, 38);
             this.btn_removePHistory.TabIndex = 55;
@@ -232,14 +261,14 @@
             this.combo_rh.Items.AddRange(new object[] {
             "Positive",
             "Negative"});
-            this.combo_rh.Location = new System.Drawing.Point(420, 129);
+            this.combo_rh.Location = new System.Drawing.Point(543, 129);
             this.combo_rh.Name = "combo_rh";
             this.combo_rh.Size = new System.Drawing.Size(121, 21);
             this.combo_rh.TabIndex = 45;
             // 
             // date_lmp
             // 
-            this.date_lmp.Location = new System.Drawing.Point(87, 77);
+            this.date_lmp.Location = new System.Drawing.Point(73, 76);
             this.date_lmp.Name = "date_lmp";
             this.date_lmp.Size = new System.Drawing.Size(200, 20);
             this.date_lmp.TabIndex = 44;
@@ -360,7 +389,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(378, 137);
+            this.label17.Location = new System.Drawing.Point(501, 137);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 13);
             this.label17.TabIndex = 24;
@@ -369,7 +398,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(486, 74);
+            this.label16.Location = new System.Drawing.Point(609, 74);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 22;
@@ -378,7 +407,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(427, 74);
+            this.label12.Location = new System.Drawing.Point(550, 74);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 20;
@@ -387,7 +416,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(368, 50);
+            this.label15.Location = new System.Drawing.Point(491, 50);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(35, 13);
             this.label15.TabIndex = 18;
@@ -406,7 +435,7 @@
             // txt_edd
             // 
             this.txt_edd.Enabled = false;
-            this.txt_edd.Location = new System.Drawing.Point(87, 113);
+            this.txt_edd.Location = new System.Drawing.Point(73, 113);
             this.txt_edd.Name = "txt_edd";
             this.txt_edd.Size = new System.Drawing.Size(200, 20);
             this.txt_edd.TabIndex = 17;
@@ -414,7 +443,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(133, 41);
+            this.label10.Location = new System.Drawing.Point(405, 46);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 15;
@@ -433,11 +462,28 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 41);
+            this.label8.Location = new System.Drawing.Point(317, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Parity";
+            // 
+            // date_startDate
+            // 
+            this.date_startDate.Location = new System.Drawing.Point(73, 39);
+            this.date_startDate.Name = "date_startDate";
+            this.date_startDate.Size = new System.Drawing.Size(202, 20);
+            this.date_startDate.TabIndex = 73;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 26);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Start\r\nDate";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Add_new_Follow_Up
             // 
@@ -492,5 +538,9 @@
         private System.Windows.Forms.TextBox txt_female;
         private System.Windows.Forms.TextBox txt_male;
         private System.Windows.Forms.TextBox txt_living;
+        private System.Windows.Forms.Button btn_pastRefresh;
+        private System.Windows.Forms.Button btn_familyRefresh;
+        private System.Windows.Forms.DateTimePicker date_startDate;
+        private System.Windows.Forms.Label label1;
     }
 }
