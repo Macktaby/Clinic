@@ -246,5 +246,30 @@ namespace Clinic
             form.Show();
         }
 
+        private void btn_deletePaientAction_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+
+                String sql = "DELETE FROM Patient WHERE patient_id=@pID";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@fID", patientID);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
     }
 }

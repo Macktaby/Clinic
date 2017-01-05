@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_patientID = new System.Windows.Forms.TextBox();
             this.num_patientAge = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -82,8 +84,7 @@
             this.btn_addLabLink = new System.Windows.Forms.Button();
             this.btn_transferLink = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_patientID = new System.Windows.Forms.TextBox();
+            this.btn_editFollowUp = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_husbandAge)).BeginInit();
@@ -115,6 +116,23 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Patient Info";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(27, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Patient ID";
+            // 
+            // txt_patientID
+            // 
+            this.txt_patientID.Enabled = false;
+            this.txt_patientID.Location = new System.Drawing.Point(87, 22);
+            this.txt_patientID.Name = "txt_patientID";
+            this.txt_patientID.Size = new System.Drawing.Size(59, 20);
+            this.txt_patientID.TabIndex = 13;
             // 
             // num_patientAge
             // 
@@ -237,6 +255,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_editFollowUp);
             this.groupBox1.Controls.Add(this.btn_prointFollowUpLink);
             this.groupBox1.Controls.Add(this.btn_viewVisitsLink);
             this.groupBox1.Controls.Add(this.btn_addVisitLink);
@@ -278,7 +297,7 @@
             // 
             // btn_prointFollowUpLink
             // 
-            this.btn_prointFollowUpLink.Location = new System.Drawing.Point(829, 120);
+            this.btn_prointFollowUpLink.Location = new System.Drawing.Point(829, 155);
             this.btn_prointFollowUpLink.Name = "btn_prointFollowUpLink";
             this.btn_prointFollowUpLink.Size = new System.Drawing.Size(106, 23);
             this.btn_prointFollowUpLink.TabIndex = 46;
@@ -620,22 +639,15 @@
             this.label7.Text = "Patient \r\nFollow ups";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label13
+            // btn_editFollowUp
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(27, 25);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Patient ID";
-            // 
-            // txt_patientID
-            // 
-            this.txt_patientID.Enabled = false;
-            this.txt_patientID.Location = new System.Drawing.Point(87, 22);
-            this.txt_patientID.Name = "txt_patientID";
-            this.txt_patientID.Size = new System.Drawing.Size(59, 20);
-            this.txt_patientID.TabIndex = 13;
+            this.btn_editFollowUp.Location = new System.Drawing.Point(829, 120);
+            this.btn_editFollowUp.Name = "btn_editFollowUp";
+            this.btn_editFollowUp.Size = new System.Drawing.Size(106, 23);
+            this.btn_editFollowUp.TabIndex = 47;
+            this.btn_editFollowUp.Text = "Edit follow Up";
+            this.btn_editFollowUp.UseVisualStyleBackColor = true;
+            this.btn_editFollowUp.Click += new System.EventHandler(this.btn_editFollowUp_Click);
             // 
             // Patient
             // 
@@ -723,5 +735,6 @@
         private System.Windows.Forms.Button btn_addVisitLink;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_patientID;
+        private System.Windows.Forms.Button btn_editFollowUp;
     }
 }

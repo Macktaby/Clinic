@@ -434,6 +434,7 @@
             this.btn_deletePaientAction.TabIndex = 47;
             this.btn_deletePaientAction.Text = "Delete Patient";
             this.btn_deletePaientAction.UseVisualStyleBackColor = true;
+            this.btn_deletePaientAction.Click += new System.EventHandler(this.btn_deletePaientAction_Click);
             // 
             // btn_viewProfileLink
             // 

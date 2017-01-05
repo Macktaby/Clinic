@@ -1,6 +1,6 @@
 ﻿namespace Clinic.Froms
 {
-    partial class Add_new_Follow_Up
+    partial class EditFollowUp
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             this.combo_pastHistory = new System.Windows.Forms.ComboBox();
             this.btn_addPHistory = new System.Windows.Forms.Button();
             this.btn_removePHistory = new System.Windows.Forms.Button();
-            this.btn_addFollowUpAction = new System.Windows.Forms.Button();
+            this.btn_editFollowUpAction = new System.Windows.Forms.Button();
             this.combo_rh = new System.Windows.Forms.ComboBox();
             this.date_lmp = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.groupBox1.Controls.Add(this.combo_pastHistory);
             this.groupBox1.Controls.Add(this.btn_addPHistory);
             this.groupBox1.Controls.Add(this.btn_removePHistory);
-            this.groupBox1.Controls.Add(this.btn_addFollowUpAction);
+            this.groupBox1.Controls.Add(this.btn_editFollowUpAction);
             this.groupBox1.Controls.Add(this.combo_rh);
             this.groupBox1.Controls.Add(this.date_lmp);
             this.groupBox1.Controls.Add(this.label22);
@@ -114,10 +114,10 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(18, 27);
+            this.groupBox1.Location = new System.Drawing.Point(20, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1013, 447);
-            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
@@ -164,7 +164,6 @@
             this.txt_female.Name = "txt_female";
             this.txt_female.Size = new System.Drawing.Size(40, 20);
             this.txt_female.TabIndex = 66;
-            this.txt_female.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_male
             // 
@@ -172,7 +171,6 @@
             this.txt_male.Name = "txt_male";
             this.txt_male.Size = new System.Drawing.Size(40, 20);
             this.txt_male.TabIndex = 65;
-            this.txt_male.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_living
             // 
@@ -180,7 +178,6 @@
             this.txt_living.Name = "txt_living";
             this.txt_living.Size = new System.Drawing.Size(40, 20);
             this.txt_living.TabIndex = 64;
-            this.txt_living.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_parityB
             // 
@@ -188,7 +185,6 @@
             this.txt_parityB.Name = "txt_parityB";
             this.txt_parityB.Size = new System.Drawing.Size(40, 20);
             this.txt_parityB.TabIndex = 63;
-            this.txt_parityB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_parityA
             // 
@@ -196,7 +192,6 @@
             this.txt_parityA.Name = "txt_parityA";
             this.txt_parityA.Size = new System.Drawing.Size(40, 20);
             this.txt_parityA.TabIndex = 62;
-            this.txt_parityA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // btn_addFHistory
             // 
@@ -217,7 +212,6 @@
             this.combo_familyHistory.Name = "combo_familyHistory";
             this.combo_familyHistory.Size = new System.Drawing.Size(261, 21);
             this.combo_familyHistory.TabIndex = 60;
-            this.combo_familyHistory.DropDown += new System.EventHandler(this.combo_familyHistory_DropDown);
             // 
             // btn_removeFHistory
             // 
@@ -238,7 +232,6 @@
             this.combo_pastHistory.Name = "combo_pastHistory";
             this.combo_pastHistory.Size = new System.Drawing.Size(254, 21);
             this.combo_pastHistory.TabIndex = 57;
-            this.combo_pastHistory.DropDown += new System.EventHandler(this.combo_pastHistory_DropDown);
             // 
             // btn_addPHistory
             // 
@@ -260,15 +253,15 @@
             this.btn_removePHistory.UseVisualStyleBackColor = true;
             this.btn_removePHistory.Click += new System.EventHandler(this.btn_removePHistory_Click);
             // 
-            // btn_addFollowUpAction
+            // btn_editFollowUpAction
             // 
-            this.btn_addFollowUpAction.Location = new System.Drawing.Point(814, 386);
-            this.btn_addFollowUpAction.Name = "btn_addFollowUpAction";
-            this.btn_addFollowUpAction.Size = new System.Drawing.Size(133, 42);
-            this.btn_addFollowUpAction.TabIndex = 52;
-            this.btn_addFollowUpAction.Text = "Add \r\nFollow Up";
-            this.btn_addFollowUpAction.UseVisualStyleBackColor = true;
-            this.btn_addFollowUpAction.Click += new System.EventHandler(this.btn_addFollowUpAction_Click);
+            this.btn_editFollowUpAction.Location = new System.Drawing.Point(814, 386);
+            this.btn_editFollowUpAction.Name = "btn_editFollowUpAction";
+            this.btn_editFollowUpAction.Size = new System.Drawing.Size(133, 42);
+            this.btn_editFollowUpAction.TabIndex = 52;
+            this.btn_editFollowUpAction.Text = "Edit\r\nFollow Up";
+            this.btn_editFollowUpAction.UseVisualStyleBackColor = true;
+            this.btn_editFollowUpAction.Click += new System.EventHandler(this.btn_editFollowUpAction_Click);
             // 
             // combo_rh
             // 
@@ -285,7 +278,7 @@
             // 
             // date_lmp
             // 
-            this.date_lmp.Location = new System.Drawing.Point(73, 76);
+            this.date_lmp.Location = new System.Drawing.Point(73, 78);
             this.date_lmp.Name = "date_lmp";
             this.date_lmp.Size = new System.Drawing.Size(200, 20);
             this.date_lmp.TabIndex = 44;
@@ -305,7 +298,6 @@
             this.txt_cycleC.Name = "txt_cycleC";
             this.txt_cycleC.Size = new System.Drawing.Size(40, 20);
             this.txt_cycleC.TabIndex = 42;
-            this.txt_cycleC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_cycleD
             // 
@@ -313,7 +305,6 @@
             this.txt_cycleD.Name = "txt_cycleD";
             this.txt_cycleD.Size = new System.Drawing.Size(40, 20);
             this.txt_cycleD.TabIndex = 41;
-            this.txt_cycleD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label21
             // 
@@ -341,7 +332,6 @@
             this.txt_menarchal.Name = "txt_menarchal";
             this.txt_menarchal.Size = new System.Drawing.Size(103, 20);
             this.txt_menarchal.TabIndex = 36;
-            this.txt_menarchal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label25
             // 
@@ -485,14 +475,14 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Parity";
             // 
-            // Add_new_Follow_Up
+            // EditFollowUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 502);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Add_new_Follow_Up";
-            this.Text = "Add_new_Follow_Up";
+            this.Name = "EditFollowUp";
+            this.Text = "WditFollowUp";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -502,6 +492,22 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker date_startDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_familyRefresh;
+        private System.Windows.Forms.Button btn_pastRefresh;
+        private System.Windows.Forms.TextBox txt_female;
+        private System.Windows.Forms.TextBox txt_male;
+        private System.Windows.Forms.TextBox txt_living;
+        private System.Windows.Forms.TextBox txt_parityB;
+        private System.Windows.Forms.TextBox txt_parityA;
+        private System.Windows.Forms.Button btn_addFHistory;
+        private System.Windows.Forms.ComboBox combo_familyHistory;
+        private System.Windows.Forms.Button btn_removeFHistory;
+        private System.Windows.Forms.ComboBox combo_pastHistory;
+        private System.Windows.Forms.Button btn_addPHistory;
+        private System.Windows.Forms.Button btn_removePHistory;
+        private System.Windows.Forms.Button btn_editFollowUpAction;
         private System.Windows.Forms.ComboBox combo_rh;
         private System.Windows.Forms.DateTimePicker date_lmp;
         private System.Windows.Forms.Label label22;
@@ -526,21 +532,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btn_addFollowUpAction;
-        private System.Windows.Forms.ComboBox combo_familyHistory;
-        private System.Windows.Forms.Button btn_removeFHistory;
-        private System.Windows.Forms.ComboBox combo_pastHistory;
-        private System.Windows.Forms.Button btn_addPHistory;
-        private System.Windows.Forms.Button btn_removePHistory;
-        private System.Windows.Forms.Button btn_addFHistory;
-        private System.Windows.Forms.TextBox txt_parityB;
-        private System.Windows.Forms.TextBox txt_parityA;
-        private System.Windows.Forms.TextBox txt_female;
-        private System.Windows.Forms.TextBox txt_male;
-        private System.Windows.Forms.TextBox txt_living;
-        private System.Windows.Forms.Button btn_pastRefresh;
-        private System.Windows.Forms.Button btn_familyRefresh;
-        private System.Windows.Forms.DateTimePicker date_startDate;
-        private System.Windows.Forms.Label label1;
+
     }
 }

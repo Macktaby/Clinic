@@ -305,5 +305,17 @@ namespace Clinic.Froms
             form.Show();
         }
 
+        private void btn_editFollowUp_Click(object sender, EventArgs e)
+        {
+            if (followUpID == 0)
+            {
+                MessageBox.Show("Please select a follow up");
+                return;
+            }
+
+            EditFollowUp form = new EditFollowUp(followUpID);
+            form.Show();
+        }
+
     }
 }
