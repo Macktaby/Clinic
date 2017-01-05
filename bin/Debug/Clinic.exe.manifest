@@ -68,14 +68,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Clinic.exe" size="931840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Clinic.exe" size="937472">
       <assemblyIdentity name="Clinic" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>L5dJKzDL0mU/tqNJVDfADmdWCaX5V7u76ez+TudyqMo=</dsig:DigestValue>
+        <dsig:DigestValue>LskVqYfsqkSyrTYMhz9F1dK6BCJwjewO3JOPdU9JE44=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -94,7 +94,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1gYI7tcFs/4fFye6mebYCX/0DbMBAp00L+gpNWWZt98=</dsig:DigestValue>
+      <dsig:DigestValue>JDJLRtRlo/pbugVhaBbtI7zfaX0eHiA0sZcxylulSas=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logo.ico" size="370070">

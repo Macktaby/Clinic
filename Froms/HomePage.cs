@@ -15,14 +15,29 @@ namespace Clinic
 {
     public partial class Form1 : Form
     {
-        OleDbConnection conn;
-        String connectionStr;
+        private OleDbConnection conn;
+        private String connectionStr;
+
+        public static int patientID;
 
         public Form1()
         {
             InitializeComponent();
+
+            this.WindowState = FormWindowState.Maximized;
+
+            patientID = -1;
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
+        }
+
+        private string calcAge(DateTime birthday)
+        {
+            DateTime now = DateTime.Today;
+            int age = now.Year - birthday.Year;
+            if (now < birthday.AddYears(age)) age--;
+
+            return age.ToString();
         }
 
         private void btn_addAction_Click(object sender, EventArgs e)
@@ -47,7 +62,7 @@ namespace Clinic
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured!!" + ex.Message);
+                MessageBox.Show(ex.ToString(), "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -99,37 +114,8 @@ namespace Clinic
                 return;
             }
 
-              try
-            {
-                conn.Open();
-                String sql = "SELECT * FROM Patient WHERE patient_id = @phone";
-
-                OleDbCommand command = new OleDbCommand(sql, conn);
-
-                command.Parameters.AddWithValue("@pID", txt_patientID.Text);
-
-                OleDbDataReader dr = command.ExecuteReader();
-                if (dr.Read())
-                {
-                    int id = dr.GetInt32(dr.GetOrdinal("patient_id"));
-                    Patient form = new Patient(id);
-                    form.Show();
-                }
-                else
-                {
-                    MessageBox.Show("This ID does NOT exist", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            patientID = Convert.ToInt32(txt_patientID.Text);
+            loadPatient();
         }
 
         private void btn_addLabLink_Click(object sender, EventArgs e)
@@ -153,6 +139,110 @@ namespace Clinic
         private void btn_addMedicineLink_Click(object sender, EventArgs e)
         {
             AddNewMedicine form = new AddNewMedicine();
+            form.Show();
+        }
+
+        private void date_updateBD_ValueChanged(object sender, EventArgs e)
+        {
+            txt_updatedPatAge.Text = calcAge(date_updateBD.Value);
+        }
+
+        private void date_updateHusbandBD_ValueChanged(object sender, EventArgs e)
+        {
+            txt_updatedHusbandAge.Text = calcAge(date_updateHusbandBD.Value);
+        }
+
+        public void loadPatient()
+        {
+            try
+            {
+                conn.Open();
+                String sql = "SELECT * FROM Patient WHERE patient_id = @pID";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                command.Parameters.AddWithValue("@pID", patientID);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    patientID = dr.GetInt32(dr.GetOrdinal("patient_id"));
+
+                    txt_viewPatientID.Text = patientID.ToString();
+                    txt_updateName.Text = dr["patient_name"].ToString();
+                    txt_updateHusbandName.Text = dr["husband_name"].ToString();
+                    txt_updatePhone.Text = dr["phone"].ToString();
+
+                    DateTime age = dr.GetDateTime(dr.GetOrdinal("patient_bdate"));
+                    date_updateBD.Value = age;
+                    txt_updatedPatAge.Text = calcAge(age);
+
+                    age = dr.GetDateTime(dr.GetOrdinal("husband_bdate"));
+                    date_updateHusbandBD.Value = age;
+                    txt_updatedHusbandAge.Text = calcAge(age);
+                }
+                else
+                {
+                    MessageBox.Show("This ID does NOT exist", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void btn_updatePatientAction_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                String sql = "UPDATE Patient "
+                    + "SET patient_name=@name, patient_bdate=@bdate, husband_name=@hName, husband_bdate=@hBDate, phone=@phone "
+                    + "WHERE patient_id=@pID";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@name", txt_updateName.Text);
+                command.Parameters.AddWithValue("@bdate", date_updateBD.Value.Date);
+                command.Parameters.AddWithValue("@hName", txt_updateHusbandName.Text);
+                command.Parameters.AddWithValue("@hBDate", date_updateHusbandBD.Value.Date);
+                command.Parameters.AddWithValue("@phone", txt_updatePhone.Text);
+                command.Parameters.AddWithValue("@pID", patientID);
+
+                command.ExecuteNonQuery();
+                MessageBox.Show("Patient updated SUCCESSFULLY", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void getPatient_TextChanged(object sender, EventArgs e)
+        {
+            txt_viewPatientID.Text = "";
+            txt_updateName.Text = "";
+            txt_updateHusbandName.Text = "";
+            txt_updatePhone.Text = "";
+
+            date_updateBD.Value = DateTime.Now;
+            txt_updatedPatAge.Text = "0";
+
+            date_updateHusbandBD.Value = DateTime.Now;
+            txt_updatedHusbandAge.Text = "0";
+        }
+
+        private void btn_viewProfileLink_Click(object sender, EventArgs e)
+        {
+            Patient form = new Patient(patientID);
             form.Show();
         }
 

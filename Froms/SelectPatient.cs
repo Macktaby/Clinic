@@ -45,9 +45,9 @@ namespace Clinic
     //            if (Int32.TryParse(TextBoxD1.Text, out x))
                 int id = Int32.Parse(listView.Items[intselectedindex].Text);
 
-                Patient patient = new Patient(id);
+//                Form1.patientID = id;
+
                 this.Close();
-                patient.Show();
             }
         }
 
@@ -65,10 +65,10 @@ namespace Clinic
 
         private void listView_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btn_select_Click(sender, e);
-            }
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    btn_select_Click(sender, e);
+            //}
         }
 
     }
