@@ -43,7 +43,7 @@ namespace Clinic.Froms
             this.lmp = lmp;
 
             DateTime now = DateTime.Today;
-            days = (now - lmp).Days; 
+            days = (now - lmp).Days;
             txt_gasAge.Text = (days / 7) + " Week(s) and " + (days % 7) + " Day(s)";
         }
 
@@ -61,7 +61,7 @@ namespace Clinic.Froms
                 while (dr.Read())
                 {
                     medicines.Add(dr.GetInt32(dr.GetOrdinal("medicine_id")));
-                    String med = dr[dr.GetOrdinal("medicine_name")] + " " + dr[dr.GetOrdinal("concentration")] + " "  +dr[dr.GetOrdinal("type")];
+                    String med = dr[dr.GetOrdinal("medicine_name")] + " " + dr[dr.GetOrdinal("concentration")] + " " + dr[dr.GetOrdinal("type")];
                     combo_medication.Items.Add(med);
                 }
             }
@@ -73,7 +73,6 @@ namespace Clinic.Froms
             {
                 conn.Close();
             }
-
         }
 
         public int numberValue(String s)
@@ -235,13 +234,70 @@ namespace Clinic.Froms
 
         private void btn_printVisitAction_Click(object sender, EventArgs e)
         {
-            using (PrescriptionPrint frm = new PrescriptionPrint(
-                ""
-               ))
+            List<String> images = new List<string>();
+
+            MessageBox.Show("Please select the visit images");
+
+            OpenFileDialog open = new OpenFileDialog();
+            open.Multiselect = true;
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                foreach (string item in open.FileNames)
+                    images.Add("file:"+item);
+            }
+
+            List<String> meds = new List<string>();
+            List<String> doses = new List<string>();
+
+            getSelectedMedicinesValues(out meds, out doses);
+
+            using (PrescriptionPrint frm = new PrescriptionPrint(meds, doses, images))
             {
                 frm.ShowDialog();
             }
 
+        }
+
+        private void getSelectedMedicinesValues(out List<string> meds, out List<string> doses)
+        {
+            meds = new List<string>();
+            doses = new List<string>();
+
+            try
+            {
+                if (selectedMedications.Count == 0)
+                    return;
+                String[] parameters = new String[selectedMedications.Count];
+                OleDbCommand cmd = new OleDbCommand();
+                for (int i = 0; i < selectedMedications.Count; i++)
+                {
+                    parameters[i] = string.Format("@id{0}", i);
+                    cmd.Parameters.AddWithValue(parameters[i], selectedMedications[i]);
+                }
+
+                conn.Open();
+                String sql = string.Format("SELECT * FROM Medicine WHERE medicine_id IN ({0})", string.Join(", ", parameters));
+                cmd.CommandText = sql;
+                cmd.Connection = conn;
+
+                OleDbDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    String med = dr[dr.GetOrdinal("medicine_name")] + " " + dr[dr.GetOrdinal("concentration")] + " " + dr[dr.GetOrdinal("type")];
+                    meds.Add(med);
+                    doses.Add(dr[dr.GetOrdinal("dose")].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btn_medRefresh_Click(object sender, EventArgs e)

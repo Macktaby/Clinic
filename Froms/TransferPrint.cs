@@ -16,21 +16,23 @@ namespace Clinic.Froms
     {
         private String name;
         private String age;
+        private String hospName;
         private String reason;
         private String date;
-        private String currDate;
+        private String transferDate;
         private string fas;
         private string entry;
 
-        public TransferPrint(String name, String age, String reason, String date, String currDate, String fas, String entry)
+        public TransferPrint(String name, String age, String hospName, String reason, String date, String transferDate, String fas, String entry)
         {
             InitializeComponent();
 
             this.name = name;
             this.age = age;
+            this.hospName = hospName;
             this.reason = reason;
             this.date = date;
-            this.currDate = currDate;
+            this.transferDate = transferDate;
             this.fas = fas;
             this.entry = entry;
         }
@@ -43,9 +45,10 @@ namespace Clinic.Froms
             {
                 new Microsoft.Reporting.WinForms.ReportParameter("pName", name), 
                 new Microsoft.Reporting.WinForms.ReportParameter("age", age), 
+                new Microsoft.Reporting.WinForms.ReportParameter("hospName", hospName), 
                 new Microsoft.Reporting.WinForms.ReportParameter("date", date), 
                 new Microsoft.Reporting.WinForms.ReportParameter("transfer", reason), 
-                new Microsoft.Reporting.WinForms.ReportParameter("currentDate", currDate),
+                new Microsoft.Reporting.WinForms.ReportParameter("transferDate", transferDate),
                 new Microsoft.Reporting.WinForms.ReportParameter("fasting", fas), 
                 new Microsoft.Reporting.WinForms.ReportParameter("hosEntry", entry)
             };

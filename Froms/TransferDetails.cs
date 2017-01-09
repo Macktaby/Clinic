@@ -16,9 +16,6 @@ namespace Clinic.Froms
         public TransferDetails()
         {
             InitializeComponent();
-
-            DateTime now = DateTime.Today;
-            txt_currentDate.Text = now.ToString("dd/MM/yyyy");
         }
 
         public TransferDetails(string patientName, string patientAge)
@@ -33,9 +30,10 @@ namespace Clinic.Froms
             using (TransferPrint frm = new TransferPrint(
                 txt_patName.Text,
                 txt_age.Text,
+                txt_hosName.Text,
                 txt_reason.Text,
+                date_current.Value.ToString("dd/MM/yyyy"),
                 date_transfer.Value.ToString("dd/MM/yyyy"),
-                txt_currentDate.Text,
                 combo_fasting.Text + " " + combo_fastingPer.Text,
                 combo_entry.Text + " " + combo_entryPer.Text
                 ))

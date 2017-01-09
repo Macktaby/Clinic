@@ -34,8 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_reason = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_currentDate = new System.Windows.Forms.TextBox();
-            this.date_transfer = new System.Windows.Forms.DateTimePicker();
+            this.date_current = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_age = new System.Windows.Forms.TextBox();
             this.btn_printAction = new System.Windows.Forms.Button();
@@ -45,6 +44,9 @@
             this.combo_fastingPer = new System.Windows.Forms.ComboBox();
             this.combo_entryPer = new System.Windows.Forms.ComboBox();
             this.combo_entry = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_hosName = new System.Windows.Forms.TextBox();
+            this.date_transfer = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // txt_patName
@@ -68,14 +70,14 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Transfer Date";
+            this.label2.Text = "Current Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 91);
+            this.label3.Location = new System.Drawing.Point(25, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 26);
             this.label3.TabIndex = 5;
@@ -84,7 +86,7 @@
             // 
             // txt_reason
             // 
-            this.txt_reason.Location = new System.Drawing.Point(94, 96);
+            this.txt_reason.Location = new System.Drawing.Point(94, 135);
             this.txt_reason.Name = "txt_reason";
             this.txt_reason.Size = new System.Drawing.Size(200, 20);
             this.txt_reason.TabIndex = 4;
@@ -92,25 +94,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 136);
+            this.label4.Location = new System.Drawing.Point(10, 173);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Current Date";
+            this.label4.Text = "Operation Date";
             // 
-            // txt_currentDate
+            // date_current
             // 
-            this.txt_currentDate.Location = new System.Drawing.Point(94, 133);
-            this.txt_currentDate.Name = "txt_currentDate";
-            this.txt_currentDate.Size = new System.Drawing.Size(200, 20);
-            this.txt_currentDate.TabIndex = 6;
-            // 
-            // date_transfer
-            // 
-            this.date_transfer.Location = new System.Drawing.Point(94, 64);
-            this.date_transfer.Name = "date_transfer";
-            this.date_transfer.Size = new System.Drawing.Size(200, 20);
-            this.date_transfer.TabIndex = 8;
+            this.date_current.Location = new System.Drawing.Point(94, 64);
+            this.date_current.Name = "date_current";
+            this.date_current.Size = new System.Drawing.Size(200, 20);
+            this.date_current.TabIndex = 8;
             // 
             // label5
             // 
@@ -141,7 +136,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 171);
+            this.label6.Location = new System.Drawing.Point(15, 210);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 12;
@@ -150,11 +145,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 205);
+            this.label7.Location = new System.Drawing.Point(14, 247);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 26);
+            this.label7.Size = new System.Drawing.Size(75, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Operation \r\ntime";
+            this.label7.Text = "Operation time";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // combo_fasting
@@ -187,7 +182,7 @@
             "10:30",
             "11:00",
             "11:30"});
-            this.combo_fasting.Location = new System.Drawing.Point(95, 168);
+            this.combo_fasting.Location = new System.Drawing.Point(95, 207);
             this.combo_fasting.Name = "combo_fasting";
             this.combo_fasting.Size = new System.Drawing.Size(108, 21);
             this.combo_fasting.TabIndex = 14;
@@ -200,7 +195,7 @@
             this.combo_fastingPer.Items.AddRange(new object[] {
             "A.M.",
             "P.M."});
-            this.combo_fastingPer.Location = new System.Drawing.Point(209, 168);
+            this.combo_fastingPer.Location = new System.Drawing.Point(209, 207);
             this.combo_fastingPer.Name = "combo_fastingPer";
             this.combo_fastingPer.Size = new System.Drawing.Size(85, 21);
             this.combo_fastingPer.TabIndex = 15;
@@ -213,7 +208,7 @@
             this.combo_entryPer.Items.AddRange(new object[] {
             "A.M.",
             "P.M."});
-            this.combo_entryPer.Location = new System.Drawing.Point(209, 205);
+            this.combo_entryPer.Location = new System.Drawing.Point(209, 244);
             this.combo_entryPer.Name = "combo_entryPer";
             this.combo_entryPer.Size = new System.Drawing.Size(85, 21);
             this.combo_entryPer.TabIndex = 17;
@@ -248,16 +243,43 @@
             "10:30",
             "11:00",
             "11:30"});
-            this.combo_entry.Location = new System.Drawing.Point(95, 205);
+            this.combo_entry.Location = new System.Drawing.Point(95, 244);
             this.combo_entry.Name = "combo_entry";
             this.combo_entry.Size = new System.Drawing.Size(108, 21);
             this.combo_entry.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 94);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 26);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Hospital \r\nName";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_hosName
+            // 
+            this.txt_hosName.Location = new System.Drawing.Point(94, 99);
+            this.txt_hosName.Name = "txt_hosName";
+            this.txt_hosName.Size = new System.Drawing.Size(200, 20);
+            this.txt_hosName.TabIndex = 18;
+            // 
+            // date_transfer
+            // 
+            this.date_transfer.Location = new System.Drawing.Point(95, 170);
+            this.date_transfer.Name = "date_transfer";
+            this.date_transfer.Size = new System.Drawing.Size(200, 20);
+            this.date_transfer.TabIndex = 20;
             // 
             // TransferDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 280);
+            this.Controls.Add(this.date_transfer);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txt_hosName);
             this.Controls.Add(this.combo_entryPer);
             this.Controls.Add(this.combo_entry);
             this.Controls.Add(this.combo_fastingPer);
@@ -267,9 +289,8 @@
             this.Controls.Add(this.btn_printAction);
             this.Controls.Add(this.txt_age);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.date_transfer);
+            this.Controls.Add(this.date_current);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_currentDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_reason);
             this.Controls.Add(this.label2);
@@ -290,8 +311,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_reason;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_currentDate;
-        private System.Windows.Forms.DateTimePicker date_transfer;
+        private System.Windows.Forms.DateTimePicker date_current;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_age;
         private System.Windows.Forms.Button btn_printAction;
@@ -301,5 +321,8 @@
         private System.Windows.Forms.ComboBox combo_fastingPer;
         private System.Windows.Forms.ComboBox combo_entryPer;
         private System.Windows.Forms.ComboBox combo_entry;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_hosName;
+        private System.Windows.Forms.DateTimePicker date_transfer;
     }
 }

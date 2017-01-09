@@ -56,6 +56,7 @@
             this.date_visitDate = new System.Windows.Forms.DateTimePicker();
             this.btn_addLabLink = new System.Windows.Forms.Button();
             this.btn_viewLabsLink = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // txt_ultraSound
@@ -309,6 +310,10 @@
             this.btn_viewLabsLink.UseVisualStyleBackColor = true;
             this.btn_viewLabsLink.Click += new System.EventHandler(this.btn_viewLabsLink_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AddNewVisit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +384,6 @@
         private System.Windows.Forms.DateTimePicker date_visitDate;
         private System.Windows.Forms.Button btn_addLabLink;
         private System.Windows.Forms.Button btn_viewLabsLink;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
