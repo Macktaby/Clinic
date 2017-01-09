@@ -69,11 +69,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.date_startDate);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_familyRefresh);
@@ -282,6 +284,7 @@
             this.date_lmp.Name = "date_lmp";
             this.date_lmp.Size = new System.Drawing.Size(200, 20);
             this.date_lmp.TabIndex = 44;
+            this.date_lmp.ValueChanged += new System.EventHandler(this.date_lmp_ValueChanged);
             // 
             // label22
             // 
@@ -330,7 +333,7 @@
             // 
             this.txt_menarchal.Location = new System.Drawing.Point(781, 84);
             this.txt_menarchal.Name = "txt_menarchal";
-            this.txt_menarchal.Size = new System.Drawing.Size(103, 20);
+            this.txt_menarchal.Size = new System.Drawing.Size(39, 20);
             this.txt_menarchal.TabIndex = 36;
             // 
             // label25
@@ -475,6 +478,15 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Parity";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(826, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 74;
+            this.label2.Text = " Years Old";
+            // 
             // EditFollowUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,6 +544,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label2;
 
     }
 }

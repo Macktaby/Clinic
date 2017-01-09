@@ -326,5 +326,12 @@ namespace Clinic.Froms
             loadFamilyHistory();
         }
 
+        private void date_lmp_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime edd = date_lmp.Value;
+            edd = edd.AddMonths(9).AddDays(7);
+            txt_edd.Text = edd.ToString("dd/MM/yyyy");
+        }
+
     }
 }

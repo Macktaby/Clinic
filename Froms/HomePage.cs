@@ -179,6 +179,8 @@ namespace Clinic
                     age = dr.GetDateTime(dr.GetOrdinal("husband_bdate"));
                     date_updateHusbandBD.Value = age;
                     txt_updatedHusbandAge.Text = calcAge(age);
+
+                    MessageBox.Show("Patient info Loaded SUCCESSFULLY");
                 }
                 else
                 {

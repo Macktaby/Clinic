@@ -85,7 +85,7 @@ namespace Clinic.Froms
                 while (dr.Read())
                 {
                     visits.Add(dr.GetInt32(dr.GetOrdinal("visit_id")));
-                    combo_visits.Items.Add(dr.GetDateTime(dr.GetOrdinal("visit_date")));
+                    combo_visits.Items.Add(dr.GetDateTime(dr.GetOrdinal("visit_date")).ToString("dd/MM/yyyy"));
                 }
             }
             catch (Exception ex)
@@ -112,7 +112,7 @@ namespace Clinic.Froms
 
                 if (dr.Read())
                 {
-                    txt_visitDate.Text = dr.GetDateTime(dr.GetOrdinal("visit_date")).ToString();
+                    txt_visitDate.Text = dr.GetDateTime(dr.GetOrdinal("visit_date")).ToString("dd/MM/yyyy");
                     txt_bl_pr_num.Text = dr.GetInt32(dr.GetOrdinal("bl_pr_num")).ToString();
                     txt_bl_pr_dom.Text = dr.GetInt32(dr.GetOrdinal("bl_pr_dom")).ToString();
                     txt_weight.Text = dr.GetInt32(dr.GetOrdinal("weight")).ToString();

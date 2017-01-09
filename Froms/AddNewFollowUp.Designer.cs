@@ -289,6 +289,7 @@
             this.date_lmp.Name = "date_lmp";
             this.date_lmp.Size = new System.Drawing.Size(200, 20);
             this.date_lmp.TabIndex = 44;
+            this.date_lmp.ValueChanged += new System.EventHandler(this.date_lmp_ValueChanged);
             // 
             // label22
             // 

@@ -61,7 +61,7 @@ namespace Clinic.Froms
                 while (dr.Read())
                 {
                     followUps.Add(dr.GetInt32(dr.GetOrdinal("follow_up_id")));
-                    combo_followUps.Items.Add(dr.GetDateTime(dr.GetOrdinal("start_date")));
+                    combo_followUps.Items.Add(dr.GetDateTime(dr.GetOrdinal("start_date")).ToString("dd/MM/yyyy"));
                 }
             }
             catch (Exception ex)
@@ -160,11 +160,11 @@ namespace Clinic.Froms
                     txt_parityB.Text = dr.GetInt32(dr.GetOrdinal("parity_b")).ToString();
 
                     lmp = dr.GetDateTime(dr.GetOrdinal("lmp"));
-                    txt_lmp.Text = Convert.ToString(lmp.ToString());
+                    txt_lmp.Text = lmp.ToString("dd/MM/yyyy");
 
                     DateTime edd = dr.GetDateTime(dr.GetOrdinal("lmp"));
                     edd = edd.AddMonths(9).AddDays(7);
-                    txt_edd.Text = edd.ToString();
+                    txt_edd.Text = edd.ToString("dd/MM/yyyy");
 
                     txt_living.Text = dr.GetInt32(dr.GetOrdinal("living")).ToString();
                     txt_male.Text = dr.GetInt32(dr.GetOrdinal("male")).ToString();

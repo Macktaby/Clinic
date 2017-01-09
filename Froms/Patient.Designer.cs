@@ -46,6 +46,7 @@
             this.txt_husbandName = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_editFollowUp = new System.Windows.Forms.Button();
             this.btn_prointFollowUpLink = new System.Windows.Forms.Button();
             this.btn_viewVisitsLink = new System.Windows.Forms.Button();
             this.btn_addVisitLink = new System.Windows.Forms.Button();
@@ -84,7 +85,6 @@
             this.btn_addLabLink = new System.Windows.Forms.Button();
             this.btn_transferLink = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.btn_editFollowUp = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_husbandAge)).BeginInit();
@@ -207,7 +207,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(439, 97);
+            this.label6.Location = new System.Drawing.Point(425, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 26);
             this.label6.TabIndex = 5;
@@ -294,6 +294,16 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
+            // 
+            // btn_editFollowUp
+            // 
+            this.btn_editFollowUp.Location = new System.Drawing.Point(829, 120);
+            this.btn_editFollowUp.Name = "btn_editFollowUp";
+            this.btn_editFollowUp.Size = new System.Drawing.Size(106, 23);
+            this.btn_editFollowUp.TabIndex = 47;
+            this.btn_editFollowUp.Text = "Edit follow Up";
+            this.btn_editFollowUp.UseVisualStyleBackColor = true;
+            this.btn_editFollowUp.Click += new System.EventHandler(this.btn_editFollowUp_Click);
             // 
             // btn_prointFollowUpLink
             // 
@@ -638,16 +648,6 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "Patient \r\nFollow ups";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btn_editFollowUp
-            // 
-            this.btn_editFollowUp.Location = new System.Drawing.Point(829, 120);
-            this.btn_editFollowUp.Name = "btn_editFollowUp";
-            this.btn_editFollowUp.Size = new System.Drawing.Size(106, 23);
-            this.btn_editFollowUp.TabIndex = 47;
-            this.btn_editFollowUp.Text = "Edit follow Up";
-            this.btn_editFollowUp.UseVisualStyleBackColor = true;
-            this.btn_editFollowUp.Click += new System.EventHandler(this.btn_editFollowUp_Click);
             // 
             // Patient
             // 

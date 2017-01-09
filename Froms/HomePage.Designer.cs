@@ -442,7 +442,7 @@
             this.btn_viewProfileLink.Name = "btn_viewProfileLink";
             this.btn_viewProfileLink.Size = new System.Drawing.Size(101, 37);
             this.btn_viewProfileLink.TabIndex = 46;
-            this.btn_viewProfileLink.Text = "View Patient Profile";
+            this.btn_viewProfileLink.Text = "Open Patient Profile";
             this.btn_viewProfileLink.UseVisualStyleBackColor = true;
             this.btn_viewProfileLink.Click += new System.EventHandler(this.btn_viewProfileLink_Click);
             // 

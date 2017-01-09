@@ -21,10 +21,12 @@ namespace Clinic.Froms
         private List<int> pastHistory;
         private List<int> addedPastHistory;
         private List<int> removedPastHistory;
+        private List<int> selectedPastHistory;
 
         private List<int> familyHistory;
         private List<int> addedFamilyHistory;
         private List<int> removedFamilyHistory;
+        private List<int> selectedFamilyHistory;
 
         public EditFollowUp()
         {
@@ -35,9 +37,11 @@ namespace Clinic.Froms
 
             addedPastHistory = new List<int>();
             removedPastHistory = new List<int>();
+            selectedPastHistory = new List<int>();
 
             addedFamilyHistory = new List<int>();
             removedFamilyHistory = new List<int>();
+            selectedFamilyHistory = new List<int>();
         }
 
         public EditFollowUp(int followUpID)
@@ -94,6 +98,8 @@ namespace Clinic.Froms
 
                 if (dr.Read())
                 {
+                    date_startDate.Value = dr.GetDateTime(dr.GetOrdinal("start_date"));
+
                     txt_parityA.Text = dr.GetInt32(dr.GetOrdinal("parity_a")).ToString();
                     txt_parityB.Text = dr.GetInt32(dr.GetOrdinal("parity_b")).ToString();
 
@@ -102,7 +108,7 @@ namespace Clinic.Froms
 
                     DateTime edd = lmp;
                     edd = edd.AddMonths(9).AddDays(7);
-                    txt_edd.Text = edd.ToString();
+                    txt_edd.Text = edd.ToString("dd/MM/yyyy");
 
                     txt_living.Text = dr.GetInt32(dr.GetOrdinal("living")).ToString();
                     txt_male.Text = dr.GetInt32(dr.GetOrdinal("male")).ToString();
@@ -110,7 +116,7 @@ namespace Clinic.Froms
 
                     combo_rh.SelectedItem = dr[dr.GetOrdinal("rh")].ToString();
 
-                    txt_menarchal.Text = dr.GetInt32(dr.GetOrdinal("menarchal")) + " Years Old";
+                    txt_menarchal.Text = dr.GetInt32(dr.GetOrdinal("menarchal")).ToString();
                     txt_cycleD.Text = dr.GetInt32(dr.GetOrdinal("cycle_d")).ToString();
                     txt_cycleC.Text = dr.GetInt32(dr.GetOrdinal("cycle_c")).ToString();
 
@@ -143,6 +149,7 @@ namespace Clinic.Froms
                 while (dr.Read())
                 {
                     listBox_pastHistory.Items.Add(dr[dr.GetOrdinal("hName")]);
+                    selectedPastHistory.Add(dr.GetInt32(dr.GetOrdinal("hValue")));
                 }
             }
             catch (Exception)
@@ -166,6 +173,7 @@ namespace Clinic.Froms
                 while (dr.Read())
                 {
                     listBox_FamilyHistory.Items.Add(dr[dr.GetOrdinal("hName")]);
+                    selectedFamilyHistory.Add(dr.GetInt32(dr.GetOrdinal("hValue")));
                 }
             }
             catch (Exception)
@@ -242,7 +250,7 @@ namespace Clinic.Froms
 
                 String sql = "UPDATE Follow_Up "
                     + "SET parity_a=@parA, parity_b=@parB, living=@living, male=@male, female=@female, "
-                    + "lmp=@lmp, rh=@rh, menarchal=@men, cycle_d=@cycleD, cycle_c=@cycleC, notes=@notes, start_date=@sdate) "
+                    + "lmp=@lmp, rh=@rh, menarchal=@men, cycle_d=@cycleD, cycle_c=@cycleC, notes=@notes, start_date=@sdate "
                     + "WHERE follow_up_id = @fID";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
@@ -262,6 +270,10 @@ namespace Clinic.Froms
                 command.Parameters.AddWithValue("@fID", followUpID);
 
                 command.ExecuteNonQuery();
+
+                updateAllPastHistory();
+                updateAllFamilyHistory();
+                MessageBox.Show("Follow Up updated SUCCESSFULLY");
             }
             catch (Exception ex)
             {
@@ -286,9 +298,6 @@ namespace Clinic.Froms
         private void btn_editFollowUpAction_Click(object sender, EventArgs e)
         {
             updateFollowUp();
-            updateAllPastHistory();
-            updateAllFamilyHistory();
-            MessageBox.Show("Follow Up updated SUCCESSFULLY");
         }
 
         private void updateAllPastHistory()
@@ -314,7 +323,7 @@ namespace Clinic.Froms
         {
             try
             {
-                conn.Open();
+                //                conn.Open();
 
                 String sql = "INSERT INTO Past_History (follow_up_id, hValue) VALUES (@fID, @hValue)";
 
@@ -325,13 +334,10 @@ namespace Clinic.Froms
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                throw;
+                //                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -339,9 +345,8 @@ namespace Clinic.Froms
         {
             try
             {
-                conn.Open();
-
-                String sql = "DELETE FROM Past_History WHERE follow_up_id=@fID, hValue=@hValue";
+                String sql = "DELETE FROM Past_History WHERE ID in "
+                    + "(Select max(ID) From Past_History WHERE follow_up_id=@fID AND hValue=@hValue)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
@@ -350,13 +355,9 @@ namespace Clinic.Froms
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                throw;
             }
         }
 
@@ -364,8 +365,6 @@ namespace Clinic.Froms
         {
             try
             {
-                conn.Open();
-
                 String sql = "INSERT INTO Family_History (follow_up_id, hValue) VALUES (@fID, @hValue)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
@@ -375,13 +374,9 @@ namespace Clinic.Froms
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                throw;
             }
         }
 
@@ -389,9 +384,8 @@ namespace Clinic.Froms
         {
             try
             {
-                conn.Open();
-
-                String sql = "DELETE FROM Family_History WHERE follow_up_id=@fID, hValue=@hValue";
+                String sql = "DELETE FROM Family_History WHERE ID in "
+                    + "(Select max(ID) From Family_History WHERE follow_up_id=@fID AND hValue=@hValue)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
 
@@ -400,13 +394,9 @@ namespace Clinic.Froms
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                throw;
             }
         }
 
@@ -421,7 +411,7 @@ namespace Clinic.Froms
             String pHistory = combo_pastHistory.SelectedItem.ToString();
             listBox_pastHistory.Items.Add(pHistory);
             addedPastHistory.Add(pastHistory[combo_pastHistory.SelectedIndex]);
-            //            pastHistory.Add(pastHistory[combo_pastHistory.SelectedIndex]);
+            selectedPastHistory.Add(pastHistory[combo_pastHistory.SelectedIndex]);
         }
 
         private void btn_removePHistory_Click(object sender, EventArgs e)
@@ -435,9 +425,10 @@ namespace Clinic.Froms
             int intselectedindex = listBox_pastHistory.SelectedIndices[0];
             if (intselectedindex >= 0)
             {
+                int removedID = selectedPastHistory[intselectedindex];
                 listBox_pastHistory.Items.RemoveAt(intselectedindex);
-                //                selectedPastHistory.RemoveAt(intselectedindex);
-                //                if(intselectedindex < )
+                selectedPastHistory.RemoveAt(intselectedindex);
+                removedPastHistory.Add(removedID);
             }
         }
 
@@ -452,12 +443,32 @@ namespace Clinic.Froms
             String fHistory = combo_familyHistory.SelectedItem.ToString();
             listBox_FamilyHistory.Items.Add(fHistory);
             addedFamilyHistory.Add(familyHistory[combo_familyHistory.SelectedIndex]);
-            //            familyHistory.Add(familyHistory[combo_familyHistory.SelectedIndex]);
+            selectedFamilyHistory.Add(familyHistory[combo_familyHistory.SelectedIndex]);
         }
 
         private void btn_removeFHistory_Click(object sender, EventArgs e)
         {
+            if (listBox_FamilyHistory.SelectedIndices.Count <= 0)
+            {
+                MessageBox.Show("No item Selected !!!");
+                return;
+            }
 
+            int intselectedindex = listBox_FamilyHistory.SelectedIndices[0];
+            if (intselectedindex >= 0)
+            {
+                int removedID = selectedFamilyHistory[intselectedindex];
+                listBox_FamilyHistory.Items.RemoveAt(intselectedindex);
+                selectedFamilyHistory.RemoveAt(intselectedindex);
+                removedFamilyHistory.Add(removedID);
+            }
+        }
+
+        private void date_lmp_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime edd = date_lmp.Value;
+            edd = edd.AddMonths(9).AddDays(7);
+            txt_edd.Text = edd.ToString("dd/MM/yyyy");
         }
 
     }
