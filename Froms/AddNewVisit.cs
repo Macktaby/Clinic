@@ -316,6 +316,5 @@ namespace Clinic.Froms
             loadLastLabs();
         }
 
-
     }
 }

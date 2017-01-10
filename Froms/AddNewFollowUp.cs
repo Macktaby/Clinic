@@ -55,10 +55,20 @@ namespace Clinic.Froms
         }
         private void btn_addFollowUpAction_Click(object sender, EventArgs e)
         {
+            int preg = numberValue(txt_parityA.Text);
+            if (preg != listBox_preg.Items.Count)
+            {
+                MessageBox.Show("Pregnancy values are NOT equal to Pregnancy number(" + preg + ")");
+                return;
+            }
+            int abort = numberValue(txt_parityB.Text);
+            if (abort != listBox_abortion.Items.Count)
+            {
+                MessageBox.Show("Abortion values are NOT equal to Abortion number(" + abort + ")");
+                return;
+            }
+
             int followUpID = addFollowUp();
-            addAllPastHistory(followUpID);
-            addAllFamilyHistoy(followUpID);
-            MessageBox.Show("Follow Up added SUCCESSFULLY");
             this.Close();
         }
 
@@ -72,8 +82,6 @@ namespace Clinic.Froms
         {
             try
             {
-                conn.Open();
-
                 String sql = "INSERT INTO Family_History (follow_up_id, hValue) VALUES (@fID, @hValue)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
@@ -83,13 +91,9 @@ namespace Clinic.Froms
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                throw;
             }
         }
 
@@ -103,8 +107,6 @@ namespace Clinic.Froms
         {
             try
             {
-                conn.Open();
-
                 String sql = "INSERT INTO Past_History (follow_up_id, hValue) VALUES (@fID, @hValue)";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
@@ -114,13 +116,9 @@ namespace Clinic.Froms
 
                 command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString(), "Error Occured !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
+                throw;
             }
         }
 
@@ -154,7 +152,16 @@ namespace Clinic.Froms
 
                 command = new OleDbCommand("SELECT @@IDENTITY", conn);
 
-                return (int)command.ExecuteScalar(); ;
+                int followUpID = (int)command.ExecuteScalar(); ;
+                addAllPastHistory(followUpID);
+                addAllFamilyHistoy(followUpID);
+
+                addAllPregValues(followUpID);
+                addAllAbortionValues(followUpID);
+
+                MessageBox.Show("Follow Up added SUCCESSFULLY");
+
+                return followUpID;
             }
             catch (Exception ex)
             {
@@ -164,6 +171,56 @@ namespace Clinic.Froms
             finally
             {
                 conn.Close();
+            }
+        }
+
+        private void addAllAbortionValues(int followUpID)
+        {
+            foreach (String value in listBox_abortion.Items)
+                addAbortionValue(followUpID, value);
+        }
+
+        private void addAbortionValue(int followUpID, string value)
+        {
+            try
+            {
+                String sql = "INSERT INTO Parity_Abortion (follow_up_id, hValue) VALUES (@fID, @hValue)";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@fID", followUpID);
+                command.Parameters.AddWithValue("@hValue", value);
+
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        private void addAllPregValues(int followUpID)
+        {
+            foreach (String value in listBox_preg.Items)
+                addPregValue(followUpID, value);
+        }
+
+        private void addPregValue(int followUpID, string value)
+        {
+            try
+            {
+                String sql = "INSERT INTO Parity_Preg (follow_up_id, hValue) VALUES (@fID, @hValue)";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+
+                command.Parameters.AddWithValue("@fID", followUpID);
+                command.Parameters.AddWithValue("@hValue", value);
+
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                throw;
             }
         }
 
@@ -248,12 +305,12 @@ namespace Clinic.Froms
 
         private void combo_pastHistory_DropDown(object sender, EventArgs e)
         {
-//            loadPastHistory();
-       }
+            //            loadPastHistory();
+        }
 
         private void combo_familyHistory_DropDown(object sender, EventArgs e)
         {
-//            loadFamilyHistory();
+            //            loadFamilyHistory();
         }
 
         private void loadPastHistory()
@@ -331,6 +388,60 @@ namespace Clinic.Froms
             DateTime edd = date_lmp.Value;
             edd = edd.AddMonths(9).AddDays(7);
             txt_edd.Text = edd.ToString("dd/MM/yyyy");
+        }
+
+        private void btn_addPregAction_Click(object sender, EventArgs e)
+        {
+            if (combo_preg.SelectedIndex < 0)
+            {
+                MessageBox.Show("No value selected");
+                return;
+            }
+
+            String value = combo_preg.SelectedItem.ToString();
+            listBox_preg.Items.Add(value);
+        }
+
+        private void btn_rmvPregAction_Click(object sender, EventArgs e)
+        {
+            if (listBox_preg.SelectedIndices.Count <= 0)
+            {
+                MessageBox.Show("No item Selected !!!");
+                return;
+            }
+
+            int intselectedindex = listBox_preg.SelectedIndices[0];
+            if (intselectedindex >= 0)
+            {
+                listBox_preg.Items.RemoveAt(intselectedindex);
+            }
+        }
+
+        private void btn_addAbortionAction_Click(object sender, EventArgs e)
+        {
+            if (combo_abortion.SelectedIndex < 0)
+            {
+                MessageBox.Show("No value selected");
+                return;
+            }
+
+            String value = combo_abortion.SelectedItem.ToString();
+            listBox_abortion.Items.Add(value);
+        }
+
+        private void btn_rmvAbortionAction_Click(object sender, EventArgs e)
+        {
+            if (listBox_abortion.SelectedIndices.Count <= 0)
+            {
+                MessageBox.Show("No item Selected !!!");
+                return;
+            }
+
+            int intselectedindex = listBox_abortion.SelectedIndices[0];
+            if (intselectedindex >= 0)
+            {
+                listBox_abortion.Items.RemoveAt(intselectedindex);
+            }
         }
 
     }

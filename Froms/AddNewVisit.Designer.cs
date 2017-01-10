@@ -61,7 +61,7 @@
             // 
             // txt_ultraSound
             // 
-            this.txt_ultraSound.Location = new System.Drawing.Point(349, 112);
+            this.txt_ultraSound.Location = new System.Drawing.Point(349, 170);
             this.txt_ultraSound.Multiline = true;
             this.txt_ultraSound.Name = "txt_ultraSound";
             this.txt_ultraSound.Size = new System.Drawing.Size(296, 72);
@@ -184,7 +184,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(278, 115);
+            this.label9.Location = new System.Drawing.Point(349, 150);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 16;
@@ -195,14 +195,14 @@
             this.combo_medication.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.combo_medication.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_medication.FormattingEnabled = true;
-            this.combo_medication.Location = new System.Drawing.Point(27, 190);
+            this.combo_medication.Location = new System.Drawing.Point(25, 314);
             this.combo_medication.Name = "combo_medication";
             this.combo_medication.Size = new System.Drawing.Size(280, 21);
             this.combo_medication.TabIndex = 62;
             // 
             // btn_addMedication
             // 
-            this.btn_addMedication.Location = new System.Drawing.Point(178, 217);
+            this.btn_addMedication.Location = new System.Drawing.Point(176, 341);
             this.btn_addMedication.Name = "btn_addMedication";
             this.btn_addMedication.Size = new System.Drawing.Size(100, 24);
             this.btn_addMedication.TabIndex = 61;
@@ -212,7 +212,7 @@
             // 
             // btn_removeMedication
             // 
-            this.btn_removeMedication.Location = new System.Drawing.Point(38, 217);
+            this.btn_removeMedication.Location = new System.Drawing.Point(36, 341);
             this.btn_removeMedication.Name = "btn_removeMedication";
             this.btn_removeMedication.Size = new System.Drawing.Size(111, 24);
             this.btn_removeMedication.TabIndex = 60;
@@ -223,7 +223,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(48, 167);
+            this.label18.Location = new System.Drawing.Point(46, 291);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(59, 13);
             this.label18.TabIndex = 59;
@@ -232,7 +232,7 @@
             // listBox_visitMedications
             // 
             this.listBox_visitMedications.FormattingEnabled = true;
-            this.listBox_visitMedications.Location = new System.Drawing.Point(349, 191);
+            this.listBox_visitMedications.Location = new System.Drawing.Point(349, 273);
             this.listBox_visitMedications.Name = "listBox_visitMedications";
             this.listBox_visitMedications.Size = new System.Drawing.Size(296, 134);
             this.listBox_visitMedications.TabIndex = 58;
@@ -240,7 +240,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 271);
+            this.label10.Location = new System.Drawing.Point(26, 154);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 63;
@@ -268,14 +268,15 @@
             // 
             // txt_notes
             // 
-            this.txt_notes.Location = new System.Drawing.Point(27, 287);
+            this.txt_notes.Location = new System.Drawing.Point(27, 170);
+            this.txt_notes.Multiline = true;
             this.txt_notes.Name = "txt_notes";
-            this.txt_notes.Size = new System.Drawing.Size(280, 20);
+            this.txt_notes.Size = new System.Drawing.Size(280, 72);
             this.txt_notes.TabIndex = 69;
             // 
             // btn_medRefresh
             // 
-            this.btn_medRefresh.Location = new System.Drawing.Point(200, 161);
+            this.btn_medRefresh.Location = new System.Drawing.Point(198, 285);
             this.btn_medRefresh.Name = "btn_medRefresh";
             this.btn_medRefresh.Size = new System.Drawing.Size(65, 24);
             this.btn_medRefresh.TabIndex = 70;
@@ -318,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 346);
+            this.ClientSize = new System.Drawing.Size(677, 431);
             this.Controls.Add(this.btn_addLabLink);
             this.Controls.Add(this.btn_viewLabsLink);
             this.Controls.Add(this.date_visitDate);

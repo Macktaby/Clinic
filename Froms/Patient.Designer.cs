@@ -56,7 +56,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txt_menarchal = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -73,23 +72,29 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_edd = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txt_parityB = new System.Windows.Forms.TextBox();
             this.txt_parityA = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txt_lmp = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.combo_followUps = new System.Windows.Forms.ComboBox();
             this.btn_addFollowUpLink = new System.Windows.Forms.Button();
             this.btn_viewLabs = new System.Windows.Forms.Button();
             this.btn_addLabLink = new System.Windows.Forms.Button();
             this.btn_transferLink = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBox_preg = new System.Windows.Forms.ListBox();
+            this.listBox_abortion = new System.Windows.Forms.ListBox();
+            this.Parity = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_patientAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_husbandAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.Parity.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -255,17 +260,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Parity);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.btn_editFollowUp);
             this.groupBox1.Controls.Add(this.btn_prointFollowUpLink);
             this.groupBox1.Controls.Add(this.btn_viewVisitsLink);
             this.groupBox1.Controls.Add(this.btn_addVisitLink);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.txt_cycleC);
-            this.groupBox1.Controls.Add(this.txt_cycleD);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.txt_menarchal);
-            this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
@@ -282,22 +282,18 @@
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txt_edd);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txt_parityB);
-            this.groupBox1.Controls.Add(this.txt_parityA);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txt_lmp);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(27, 261);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(965, 399);
+            this.groupBox1.Size = new System.Drawing.Size(1104, 418);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
             // btn_editFollowUp
             // 
-            this.btn_editFollowUp.Location = new System.Drawing.Point(829, 120);
+            this.btn_editFollowUp.Location = new System.Drawing.Point(983, 318);
             this.btn_editFollowUp.Name = "btn_editFollowUp";
             this.btn_editFollowUp.Size = new System.Drawing.Size(106, 23);
             this.btn_editFollowUp.TabIndex = 47;
@@ -307,7 +303,7 @@
             // 
             // btn_prointFollowUpLink
             // 
-            this.btn_prointFollowUpLink.Location = new System.Drawing.Point(829, 155);
+            this.btn_prointFollowUpLink.Location = new System.Drawing.Point(983, 353);
             this.btn_prointFollowUpLink.Name = "btn_prointFollowUpLink";
             this.btn_prointFollowUpLink.Size = new System.Drawing.Size(106, 23);
             this.btn_prointFollowUpLink.TabIndex = 46;
@@ -316,7 +312,7 @@
             // 
             // btn_viewVisitsLink
             // 
-            this.btn_viewVisitsLink.Location = new System.Drawing.Point(829, 85);
+            this.btn_viewVisitsLink.Location = new System.Drawing.Point(983, 283);
             this.btn_viewVisitsLink.Name = "btn_viewVisitsLink";
             this.btn_viewVisitsLink.Size = new System.Drawing.Size(106, 23);
             this.btn_viewVisitsLink.TabIndex = 45;
@@ -326,7 +322,7 @@
             // 
             // btn_addVisitLink
             // 
-            this.btn_addVisitLink.Location = new System.Drawing.Point(829, 50);
+            this.btn_addVisitLink.Location = new System.Drawing.Point(983, 248);
             this.btn_addVisitLink.Name = "btn_addVisitLink";
             this.btn_addVisitLink.Size = new System.Drawing.Size(106, 23);
             this.btn_addVisitLink.TabIndex = 44;
@@ -337,7 +333,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(713, 116);
+            this.label22.Location = new System.Drawing.Point(141, 60);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(12, 13);
             this.label22.TabIndex = 43;
@@ -346,7 +342,7 @@
             // txt_cycleC
             // 
             this.txt_cycleC.Enabled = false;
-            this.txt_cycleC.Location = new System.Drawing.Point(731, 113);
+            this.txt_cycleC.Location = new System.Drawing.Point(159, 57);
             this.txt_cycleC.Name = "txt_cycleC";
             this.txt_cycleC.Size = new System.Drawing.Size(40, 20);
             this.txt_cycleC.TabIndex = 42;
@@ -354,7 +350,7 @@
             // txt_cycleD
             // 
             this.txt_cycleD.Enabled = false;
-            this.txt_cycleD.Location = new System.Drawing.Point(667, 113);
+            this.txt_cycleD.Location = new System.Drawing.Point(95, 57);
             this.txt_cycleD.Name = "txt_cycleD";
             this.txt_cycleD.Size = new System.Drawing.Size(40, 20);
             this.txt_cycleD.TabIndex = 41;
@@ -362,7 +358,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(587, 120);
+            this.label21.Location = new System.Drawing.Point(15, 64);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(56, 13);
             this.label21.TabIndex = 40;
@@ -372,7 +368,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(587, 87);
+            this.label24.Location = new System.Drawing.Point(15, 31);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(57, 13);
             this.label24.TabIndex = 33;
@@ -382,24 +378,15 @@
             // txt_menarchal
             // 
             this.txt_menarchal.Enabled = false;
-            this.txt_menarchal.Location = new System.Drawing.Point(668, 84);
+            this.txt_menarchal.Location = new System.Drawing.Point(96, 28);
             this.txt_menarchal.Name = "txt_menarchal";
             this.txt_menarchal.Size = new System.Drawing.Size(103, 20);
             this.txt_menarchal.TabIndex = 36;
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(574, 48);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(109, 13);
-            this.label25.TabIndex = 32;
-            this.label25.Text = "Gynecological History";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(681, 192);
+            this.label20.Location = new System.Drawing.Point(681, 217);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(35, 13);
             this.label20.TabIndex = 31;
@@ -408,7 +395,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(360, 192);
+            this.label19.Location = new System.Drawing.Point(360, 217);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 13);
             this.label19.TabIndex = 30;
@@ -417,7 +404,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(35, 192);
+            this.label18.Location = new System.Drawing.Point(35, 217);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 13);
             this.label18.TabIndex = 29;
@@ -426,7 +413,7 @@
             // rtxt_notes
             // 
             this.rtxt_notes.Enabled = false;
-            this.rtxt_notes.Location = new System.Drawing.Point(684, 215);
+            this.rtxt_notes.Location = new System.Drawing.Point(684, 240);
             this.rtxt_notes.Name = "rtxt_notes";
             this.rtxt_notes.Size = new System.Drawing.Size(274, 160);
             this.rtxt_notes.TabIndex = 28;
@@ -436,7 +423,7 @@
             // 
             this.listBox_FamilyHistory.Enabled = false;
             this.listBox_FamilyHistory.FormattingEnabled = true;
-            this.listBox_FamilyHistory.Location = new System.Drawing.Point(357, 215);
+            this.listBox_FamilyHistory.Location = new System.Drawing.Point(357, 240);
             this.listBox_FamilyHistory.Name = "listBox_FamilyHistory";
             this.listBox_FamilyHistory.Size = new System.Drawing.Size(300, 160);
             this.listBox_FamilyHistory.TabIndex = 27;
@@ -445,7 +432,7 @@
             // 
             this.listBox_pastHistory.Enabled = false;
             this.listBox_pastHistory.FormattingEnabled = true;
-            this.listBox_pastHistory.Location = new System.Drawing.Point(34, 215);
+            this.listBox_pastHistory.Location = new System.Drawing.Point(34, 240);
             this.listBox_pastHistory.Name = "listBox_pastHistory";
             this.listBox_pastHistory.Size = new System.Drawing.Size(296, 160);
             this.listBox_pastHistory.TabIndex = 26;
@@ -453,15 +440,15 @@
             // txt_rh
             // 
             this.txt_rh.Enabled = false;
-            this.txt_rh.Location = new System.Drawing.Point(422, 134);
+            this.txt_rh.Location = new System.Drawing.Point(85, 171);
             this.txt_rh.Name = "txt_rh";
-            this.txt_rh.Size = new System.Drawing.Size(105, 20);
+            this.txt_rh.Size = new System.Drawing.Size(91, 20);
             this.txt_rh.TabIndex = 25;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(378, 137);
+            this.label17.Location = new System.Drawing.Point(35, 174);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 13);
             this.label17.TabIndex = 24;
@@ -470,7 +457,7 @@
             // txt_female
             // 
             this.txt_female.Enabled = false;
-            this.txt_female.Location = new System.Drawing.Point(487, 89);
+            this.txt_female.Location = new System.Drawing.Point(136, 138);
             this.txt_female.Name = "txt_female";
             this.txt_female.Size = new System.Drawing.Size(40, 20);
             this.txt_female.TabIndex = 23;
@@ -478,7 +465,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(488, 73);
+            this.label16.Location = new System.Drawing.Point(137, 122);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 22;
@@ -487,7 +474,7 @@
             // txt_male
             // 
             this.txt_male.Enabled = false;
-            this.txt_male.Location = new System.Drawing.Point(420, 89);
+            this.txt_male.Location = new System.Drawing.Point(85, 138);
             this.txt_male.Name = "txt_male";
             this.txt_male.Size = new System.Drawing.Size(40, 20);
             this.txt_male.TabIndex = 21;
@@ -495,7 +482,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(425, 73);
+            this.label12.Location = new System.Drawing.Point(90, 122);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 20;
@@ -504,7 +491,7 @@
             // txt_living
             // 
             this.txt_living.Enabled = false;
-            this.txt_living.Location = new System.Drawing.Point(419, 47);
+            this.txt_living.Location = new System.Drawing.Point(85, 96);
             this.txt_living.Name = "txt_living";
             this.txt_living.Size = new System.Drawing.Size(43, 20);
             this.txt_living.TabIndex = 19;
@@ -512,7 +499,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(378, 50);
+            this.label15.Location = new System.Drawing.Point(29, 99);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(35, 13);
             this.label15.TabIndex = 18;
@@ -521,7 +508,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(31, 116);
+            this.label11.Location = new System.Drawing.Point(29, 67);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 16;
@@ -531,24 +518,15 @@
             // txt_edd
             // 
             this.txt_edd.Enabled = false;
-            this.txt_edd.Location = new System.Drawing.Point(87, 113);
+            this.txt_edd.Location = new System.Drawing.Point(85, 64);
             this.txt_edd.Name = "txt_edd";
             this.txt_edd.Size = new System.Drawing.Size(243, 20);
             this.txt_edd.TabIndex = 17;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(133, 41);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "+";
-            // 
             // txt_parityB
             // 
             this.txt_parityB.Enabled = false;
-            this.txt_parityB.Location = new System.Drawing.Point(151, 38);
+            this.txt_parityB.Location = new System.Drawing.Point(473, 19);
             this.txt_parityB.Name = "txt_parityB";
             this.txt_parityB.Size = new System.Drawing.Size(40, 20);
             this.txt_parityB.TabIndex = 14;
@@ -556,7 +534,7 @@
             // txt_parityA
             // 
             this.txt_parityA.Enabled = false;
-            this.txt_parityA.Location = new System.Drawing.Point(87, 38);
+            this.txt_parityA.Location = new System.Drawing.Point(157, 19);
             this.txt_parityA.Name = "txt_parityA";
             this.txt_parityA.Size = new System.Drawing.Size(40, 20);
             this.txt_parityA.TabIndex = 13;
@@ -564,7 +542,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(31, 83);
+            this.label14.Location = new System.Drawing.Point(29, 34);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 2;
@@ -574,19 +552,10 @@
             // txt_lmp
             // 
             this.txt_lmp.Enabled = false;
-            this.txt_lmp.Location = new System.Drawing.Point(87, 80);
+            this.txt_lmp.Location = new System.Drawing.Point(85, 31);
             this.txt_lmp.Name = "txt_lmp";
             this.txt_lmp.Size = new System.Drawing.Size(243, 20);
             this.txt_lmp.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Parity";
             // 
             // combo_followUps
             // 
@@ -649,11 +618,75 @@
             this.label7.Text = "Patient \r\nFollow ups";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.txt_menarchal);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.txt_cycleD);
+            this.groupBox2.Controls.Add(this.txt_cycleC);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Location = new System.Drawing.Point(202, 99);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(213, 100);
+            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Gynecological History";
+            // 
+            // listBox_preg
+            // 
+            this.listBox_preg.FormattingEnabled = true;
+            this.listBox_preg.Location = new System.Drawing.Point(15, 43);
+            this.listBox_preg.Name = "listBox_preg";
+            this.listBox_preg.Size = new System.Drawing.Size(296, 121);
+            this.listBox_preg.TabIndex = 88;
+            // 
+            // listBox_abortion
+            // 
+            this.listBox_abortion.FormattingEnabled = true;
+            this.listBox_abortion.Location = new System.Drawing.Point(335, 43);
+            this.listBox_abortion.Name = "listBox_abortion";
+            this.listBox_abortion.Size = new System.Drawing.Size(296, 121);
+            this.listBox_abortion.TabIndex = 89;
+            // 
+            // Parity
+            // 
+            this.Parity.Controls.Add(this.label10);
+            this.Parity.Controls.Add(this.label8);
+            this.Parity.Controls.Add(this.listBox_preg);
+            this.Parity.Controls.Add(this.listBox_abortion);
+            this.Parity.Controls.Add(this.txt_parityA);
+            this.Parity.Controls.Add(this.txt_parityB);
+            this.Parity.Location = new System.Drawing.Point(433, 39);
+            this.Parity.Name = "Parity";
+            this.Parity.Size = new System.Drawing.Size(660, 180);
+            this.Parity.TabIndex = 90;
+            this.Parity.TabStop = false;
+            this.Parity.Text = "Parity";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(93, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "Pregnancy";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(421, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 92;
+            this.label10.Text = "Abortion";
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 672);
+            this.ClientSize = new System.Drawing.Size(1143, 691);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_transferLink);
             this.Controls.Add(this.btn_addLabLink);
@@ -672,6 +705,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.Parity.ResumeLayout(false);
+            this.Parity.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,8 +740,6 @@
         private System.Windows.Forms.Button btn_addLabLink;
         private System.Windows.Forms.Button btn_transferLink;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_parityB;
         private System.Windows.Forms.TextBox txt_parityA;
         private System.Windows.Forms.Label label11;
@@ -729,12 +764,17 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txt_menarchal;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btn_prointFollowUpLink;
         private System.Windows.Forms.Button btn_viewVisitsLink;
         private System.Windows.Forms.Button btn_addVisitLink;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_patientID;
         private System.Windows.Forms.Button btn_editFollowUp;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox listBox_preg;
+        private System.Windows.Forms.ListBox listBox_abortion;
+        private System.Windows.Forms.GroupBox Parity;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
     }
 }

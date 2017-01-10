@@ -26,7 +26,7 @@ namespace Clinic.Froms
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            
+
             connectionStr = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ClinicDB.accdb";
             conn = new OleDbConnection(connectionStr);
         }
@@ -175,9 +175,12 @@ namespace Clinic.Froms
                     txt_menarchal.Text = dr.GetInt32(dr.GetOrdinal("menarchal")) + " Years Old";
                     txt_cycleD.Text = dr.GetInt32(dr.GetOrdinal("cycle_d")).ToString();
                     txt_cycleC.Text = dr.GetInt32(dr.GetOrdinal("cycle_c")).ToString();
+                    rtxt_notes.Text = dr[dr.GetOrdinal("notes")].ToString();
 
                     getPastHistory();
                     getFamilyHistory();
+                    getPregnancy();
+                    getAbortion();
                 }
             }
             catch (Exception ex)
@@ -190,12 +193,56 @@ namespace Clinic.Froms
             }
         }
 
+        private void getAbortion()
+        {
+            try
+            {
+                String sql = "SELECT * FROM Parity_Abortion WHERE follow_up_id = @id";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                command.Parameters.AddWithValue("@id", followUpID);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                listBox_pastHistory.Items.Clear();
+                while (dr.Read())
+                {
+                    listBox_abortion.Items.Add(dr[dr.GetOrdinal("hValue")]);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void getPregnancy()
+        {
+            try
+            {
+                String sql = "SELECT * FROM Parity_Preg WHERE follow_up_id = @id";
+
+                OleDbCommand command = new OleDbCommand(sql, conn);
+                command.Parameters.AddWithValue("@id", followUpID);
+                OleDbDataReader dr = command.ExecuteReader();
+
+                listBox_pastHistory.Items.Clear();
+                while (dr.Read())
+                {
+                    listBox_preg.Items.Add(dr[dr.GetOrdinal("hValue")]);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         private void getPastHistory()
         {
             try
             {
                 String sql = "SELECT * FROM Past_History, Values_Past_History "
-                +"WHERE follow_up_id = @id AND Past_History.hValue = Values_Past_History.ID";
+                + "WHERE follow_up_id = @id AND Past_History.hValue = Values_Past_History.ID";
 
                 OleDbCommand command = new OleDbCommand(sql, conn);
                 command.Parameters.AddWithValue("@id", followUpID);

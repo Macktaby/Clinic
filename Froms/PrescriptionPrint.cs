@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace Clinic.Froms
 {
@@ -32,17 +33,17 @@ namespace Clinic.Froms
 
         private void PrescriptionPrint_Load(object sender, EventArgs e)
         {
-            Microsoft.Reporting.WinForms.ReportParameter[] para = new Microsoft.Reporting.WinForms.ReportParameter[(meds.Count*2)+images.Count];
+            ReportParameter[] para = new ReportParameter[(meds.Count * 2) + images.Count];
 
             for (int i = 0; i < meds.Count; i++)
             {
-                para[2 * i] = new Microsoft.Reporting.WinForms.ReportParameter("med" + (i + 1), meds[i]);
-                para[2 * i + 1] = new Microsoft.Reporting.WinForms.ReportParameter("dose" + (i + 1), doses[i]);
+                para[2 * i] = new ReportParameter("med" + (i + 1), meds[i]);
+                para[2 * i + 1] = new ReportParameter("dose" + (i + 1), doses[i]);
             }
 
             for (int i = 0; i < images.Count; i++)
             {
-                para[(meds.Count * 2)+i] = new Microsoft.Reporting.WinForms.ReportParameter("image" + (i + 1), images[i]);
+                para[(meds.Count * 2) + i] = new ReportParameter("image" + (i + 1), images[i]);
             }
 
             this.reportViewer.LocalReport.SetParameters(para);
