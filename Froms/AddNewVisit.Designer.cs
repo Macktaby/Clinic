@@ -65,14 +65,14 @@
             this.txt_ultraSound.Multiline = true;
             this.txt_ultraSound.Name = "txt_ultraSound";
             this.txt_ultraSound.Size = new System.Drawing.Size(296, 72);
-            this.txt_ultraSound.TabIndex = 0;
+            this.txt_ultraSound.TabIndex = 8;
             // 
             // txt_bl_pr_num
             // 
             this.txt_bl_pr_num.Location = new System.Drawing.Point(82, 102);
             this.txt_bl_pr_num.Name = "txt_bl_pr_num";
             this.txt_bl_pr_num.Size = new System.Drawing.Size(41, 20);
-            this.txt_bl_pr_num.TabIndex = 2;
+            this.txt_bl_pr_num.TabIndex = 3;
             this.txt_bl_pr_num.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_weight
@@ -80,7 +80,7 @@
             this.txt_weight.Location = new System.Drawing.Point(82, 60);
             this.txt_weight.Name = "txt_weight";
             this.txt_weight.Size = new System.Drawing.Size(41, 20);
-            this.txt_weight.TabIndex = 4;
+            this.txt_weight.TabIndex = 2;
             this.txt_weight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label1
@@ -135,7 +135,7 @@
             this.txt_bl_pr_dom.Location = new System.Drawing.Point(147, 102);
             this.txt_bl_pr_dom.Name = "txt_bl_pr_dom";
             this.txt_bl_pr_dom.Size = new System.Drawing.Size(41, 20);
-            this.txt_bl_pr_dom.TabIndex = 10;
+            this.txt_bl_pr_dom.TabIndex = 4;
             this.txt_bl_pr_dom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_gasAge
@@ -144,14 +144,14 @@
             this.txt_gasAge.Location = new System.Drawing.Point(353, 25);
             this.txt_gasAge.Name = "txt_gasAge";
             this.txt_gasAge.Size = new System.Drawing.Size(127, 20);
-            this.txt_gasAge.TabIndex = 11;
+            this.txt_gasAge.TabIndex = 5;
             // 
             // txt_tmp
             // 
             this.txt_tmp.Location = new System.Drawing.Point(353, 61);
             this.txt_tmp.Name = "txt_tmp";
             this.txt_tmp.Size = new System.Drawing.Size(63, 20);
-            this.txt_tmp.TabIndex = 13;
+            this.txt_tmp.TabIndex = 6;
             this.txt_tmp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label6
@@ -198,24 +198,24 @@
             this.combo_medication.Location = new System.Drawing.Point(25, 314);
             this.combo_medication.Name = "combo_medication";
             this.combo_medication.Size = new System.Drawing.Size(280, 21);
-            this.combo_medication.TabIndex = 62;
+            this.combo_medication.TabIndex = 9;
             // 
             // btn_addMedication
             // 
-            this.btn_addMedication.Location = new System.Drawing.Point(176, 341);
+            this.btn_addMedication.Location = new System.Drawing.Point(49, 341);
             this.btn_addMedication.Name = "btn_addMedication";
             this.btn_addMedication.Size = new System.Drawing.Size(100, 24);
-            this.btn_addMedication.TabIndex = 61;
+            this.btn_addMedication.TabIndex = 11;
             this.btn_addMedication.Text = "Add";
             this.btn_addMedication.UseVisualStyleBackColor = true;
             this.btn_addMedication.Click += new System.EventHandler(this.btn_addMedication_Click);
             // 
             // btn_removeMedication
             // 
-            this.btn_removeMedication.Location = new System.Drawing.Point(36, 341);
+            this.btn_removeMedication.Location = new System.Drawing.Point(174, 341);
             this.btn_removeMedication.Name = "btn_removeMedication";
             this.btn_removeMedication.Size = new System.Drawing.Size(111, 24);
-            this.btn_removeMedication.TabIndex = 60;
+            this.btn_removeMedication.TabIndex = 12;
             this.btn_removeMedication.Text = "Remove selected";
             this.btn_removeMedication.UseVisualStyleBackColor = true;
             this.btn_removeMedication.Click += new System.EventHandler(this.btn_removeMedication_Click);
@@ -235,7 +235,7 @@
             this.listBox_visitMedications.Location = new System.Drawing.Point(349, 273);
             this.listBox_visitMedications.Name = "listBox_visitMedications";
             this.listBox_visitMedications.Size = new System.Drawing.Size(296, 134);
-            this.listBox_visitMedications.TabIndex = 58;
+            this.listBox_visitMedications.TabIndex = 13;
             // 
             // label10
             // 
@@ -251,7 +251,7 @@
             this.btn_printVisitAction.Location = new System.Drawing.Point(571, 28);
             this.btn_printVisitAction.Name = "btn_printVisitAction";
             this.btn_printVisitAction.Size = new System.Drawing.Size(83, 35);
-            this.btn_printVisitAction.TabIndex = 67;
+            this.btn_printVisitAction.TabIndex = 15;
             this.btn_printVisitAction.Text = "Print Prescription";
             this.btn_printVisitAction.UseVisualStyleBackColor = true;
             this.btn_printVisitAction.Click += new System.EventHandler(this.btn_printVisitAction_Click);
@@ -261,7 +261,7 @@
             this.btn_addVisitAction.Location = new System.Drawing.Point(499, 28);
             this.btn_addVisitAction.Name = "btn_addVisitAction";
             this.btn_addVisitAction.Size = new System.Drawing.Size(68, 35);
-            this.btn_addVisitAction.TabIndex = 68;
+            this.btn_addVisitAction.TabIndex = 14;
             this.btn_addVisitAction.Text = "Add Visit";
             this.btn_addVisitAction.UseVisualStyleBackColor = true;
             this.btn_addVisitAction.Click += new System.EventHandler(this.btn_addVisitAction_Click);
@@ -272,14 +272,14 @@
             this.txt_notes.Multiline = true;
             this.txt_notes.Name = "txt_notes";
             this.txt_notes.Size = new System.Drawing.Size(280, 72);
-            this.txt_notes.TabIndex = 69;
+            this.txt_notes.TabIndex = 7;
             // 
             // btn_medRefresh
             // 
             this.btn_medRefresh.Location = new System.Drawing.Point(198, 285);
             this.btn_medRefresh.Name = "btn_medRefresh";
             this.btn_medRefresh.Size = new System.Drawing.Size(65, 24);
-            this.btn_medRefresh.TabIndex = 70;
+            this.btn_medRefresh.TabIndex = 10;
             this.btn_medRefresh.Text = "Refresh";
             this.btn_medRefresh.UseVisualStyleBackColor = true;
             this.btn_medRefresh.Click += new System.EventHandler(this.btn_medRefresh_Click);
@@ -289,14 +289,14 @@
             this.date_visitDate.Location = new System.Drawing.Point(67, 24);
             this.date_visitDate.Name = "date_visitDate";
             this.date_visitDate.Size = new System.Drawing.Size(181, 20);
-            this.date_visitDate.TabIndex = 71;
+            this.date_visitDate.TabIndex = 1;
             // 
             // btn_addLabLink
             // 
             this.btn_addLabLink.Location = new System.Drawing.Point(499, 69);
             this.btn_addLabLink.Name = "btn_addLabLink";
             this.btn_addLabLink.Size = new System.Drawing.Size(68, 35);
-            this.btn_addLabLink.TabIndex = 73;
+            this.btn_addLabLink.TabIndex = 16;
             this.btn_addLabLink.Text = "Add new Lab";
             this.btn_addLabLink.UseVisualStyleBackColor = true;
             this.btn_addLabLink.Click += new System.EventHandler(this.btn_addLabLink_Click);
@@ -306,7 +306,7 @@
             this.btn_viewLabsLink.Location = new System.Drawing.Point(571, 68);
             this.btn_viewLabsLink.Name = "btn_viewLabsLink";
             this.btn_viewLabsLink.Size = new System.Drawing.Size(83, 35);
-            this.btn_viewLabsLink.TabIndex = 72;
+            this.btn_viewLabsLink.TabIndex = 17;
             this.btn_viewLabsLink.Text = "View Distinct Labs";
             this.btn_viewLabsLink.UseVisualStyleBackColor = true;
             this.btn_viewLabsLink.Click += new System.EventHandler(this.btn_viewLabsLink_Click);

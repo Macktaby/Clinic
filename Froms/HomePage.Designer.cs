@@ -181,7 +181,7 @@
             this.btn_addAction.Location = new System.Drawing.Point(542, 160);
             this.btn_addAction.Name = "btn_addAction";
             this.btn_addAction.Size = new System.Drawing.Size(75, 23);
-            this.btn_addAction.TabIndex = 18;
+            this.btn_addAction.TabIndex = 6;
             this.btn_addAction.Text = "Add Patient";
             this.btn_addAction.UseVisualStyleBackColor = true;
             this.btn_addAction.Click += new System.EventHandler(this.btn_addAction_Click);
@@ -213,14 +213,14 @@
             this.date_husbandBDate.Location = new System.Drawing.Point(443, 97);
             this.date_husbandBDate.Name = "date_husbandBDate";
             this.date_husbandBDate.Size = new System.Drawing.Size(200, 20);
-            this.date_husbandBDate.TabIndex = 20;
+            this.date_husbandBDate.TabIndex = 4;
             // 
             // date_patientBDate
             // 
             this.date_patientBDate.Location = new System.Drawing.Point(443, 38);
             this.date_patientBDate.Name = "date_patientBDate";
             this.date_patientBDate.Size = new System.Drawing.Size(200, 20);
-            this.date_patientBDate.TabIndex = 19;
+            this.date_patientBDate.TabIndex = 2;
             // 
             // goupBox1
             // 
@@ -250,7 +250,7 @@
             this.txt_patientID.Location = new System.Drawing.Point(48, 73);
             this.txt_patientID.Name = "txt_patientID";
             this.txt_patientID.Size = new System.Drawing.Size(243, 20);
-            this.txt_patientID.TabIndex = 38;
+            this.txt_patientID.TabIndex = 10;
             this.txt_patientID.TextChanged += new System.EventHandler(this.getPatient_TextChanged);
             this.txt_patientID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
@@ -259,7 +259,7 @@
             this.btn_searchByID.Location = new System.Drawing.Point(128, 114);
             this.btn_searchByID.Name = "btn_searchByID";
             this.btn_searchByID.Size = new System.Drawing.Size(75, 23);
-            this.btn_searchByID.TabIndex = 33;
+            this.btn_searchByID.TabIndex = 11;
             this.btn_searchByID.Text = "View Patient";
             this.btn_searchByID.UseVisualStyleBackColor = true;
             this.btn_searchByID.Click += new System.EventHandler(this.btn_searchByID_Click);
@@ -292,7 +292,7 @@
             this.btn_searchPatient.Location = new System.Drawing.Point(116, 121);
             this.btn_searchPatient.Name = "btn_searchPatient";
             this.btn_searchPatient.Size = new System.Drawing.Size(75, 23);
-            this.btn_searchPatient.TabIndex = 33;
+            this.btn_searchPatient.TabIndex = 9;
             this.btn_searchPatient.Text = "Search";
             this.btn_searchPatient.UseVisualStyleBackColor = true;
             this.btn_searchPatient.Click += new System.EventHandler(this.btn_searchPatient_Click);
@@ -311,7 +311,7 @@
             this.txt_patientSearchPhone.Location = new System.Drawing.Point(63, 83);
             this.txt_patientSearchPhone.Name = "txt_patientSearchPhone";
             this.txt_patientSearchPhone.Size = new System.Drawing.Size(243, 20);
-            this.txt_patientSearchPhone.TabIndex = 37;
+            this.txt_patientSearchPhone.TabIndex = 8;
             this.txt_patientSearchPhone.TextChanged += new System.EventHandler(this.getPatient_TextChanged);
             // 
             // txt_patientSearchName
@@ -319,7 +319,7 @@
             this.txt_patientSearchName.Location = new System.Drawing.Point(63, 40);
             this.txt_patientSearchName.Name = "txt_patientSearchName";
             this.txt_patientSearchName.Size = new System.Drawing.Size(243, 20);
-            this.txt_patientSearchName.TabIndex = 35;
+            this.txt_patientSearchName.TabIndex = 7;
             this.txt_patientSearchName.TextChanged += new System.EventHandler(this.getPatient_TextChanged);
             // 
             // label11
@@ -356,7 +356,7 @@
             this.btn_addFamHistValue.Location = new System.Drawing.Point(840, 324);
             this.btn_addFamHistValue.Name = "btn_addFamHistValue";
             this.btn_addFamHistValue.Size = new System.Drawing.Size(75, 52);
-            this.btn_addFamHistValue.TabIndex = 23;
+            this.btn_addFamHistValue.TabIndex = 24;
             this.btn_addFamHistValue.Text = "Add New Family History Value";
             this.btn_addFamHistValue.UseVisualStyleBackColor = true;
             this.btn_addFamHistValue.Click += new System.EventHandler(this.btn_addFamHistValue_Click);
@@ -366,7 +366,7 @@
             this.btn_addPastHistValue.Location = new System.Drawing.Point(739, 324);
             this.btn_addPastHistValue.Name = "btn_addPastHistValue";
             this.btn_addPastHistValue.Size = new System.Drawing.Size(75, 52);
-            this.btn_addPastHistValue.TabIndex = 24;
+            this.btn_addPastHistValue.TabIndex = 23;
             this.btn_addPastHistValue.Text = "Add New Past History Value";
             this.btn_addPastHistValue.UseVisualStyleBackColor = true;
             this.btn_addPastHistValue.Click += new System.EventHandler(this.btn_addPastHistValue_Click);
@@ -424,14 +424,14 @@
             this.txt_viewPatientID.Location = new System.Drawing.Point(73, 28);
             this.txt_viewPatientID.Name = "txt_viewPatientID";
             this.txt_viewPatientID.Size = new System.Drawing.Size(243, 20);
-            this.txt_viewPatientID.TabIndex = 49;
+            this.txt_viewPatientID.TabIndex = 12;
             // 
             // btn_deletePaientAction
             // 
             this.btn_deletePaientAction.Location = new System.Drawing.Point(783, 115);
             this.btn_deletePaientAction.Name = "btn_deletePaientAction";
             this.btn_deletePaientAction.Size = new System.Drawing.Size(101, 36);
-            this.btn_deletePaientAction.TabIndex = 47;
+            this.btn_deletePaientAction.TabIndex = 20;
             this.btn_deletePaientAction.Text = "Delete Patient";
             this.btn_deletePaientAction.UseVisualStyleBackColor = true;
             this.btn_deletePaientAction.Click += new System.EventHandler(this.btn_deletePaientAction_Click);
@@ -441,7 +441,7 @@
             this.btn_viewProfileLink.Location = new System.Drawing.Point(783, 73);
             this.btn_viewProfileLink.Name = "btn_viewProfileLink";
             this.btn_viewProfileLink.Size = new System.Drawing.Size(101, 37);
-            this.btn_viewProfileLink.TabIndex = 46;
+            this.btn_viewProfileLink.TabIndex = 19;
             this.btn_viewProfileLink.Text = "Open Patient Profile";
             this.btn_viewProfileLink.UseVisualStyleBackColor = true;
             this.btn_viewProfileLink.Click += new System.EventHandler(this.btn_viewProfileLink_Click);
@@ -506,7 +506,7 @@
             this.date_updateHusbandBD.Location = new System.Drawing.Point(391, 124);
             this.date_updateHusbandBD.Name = "date_updateHusbandBD";
             this.date_updateHusbandBD.Size = new System.Drawing.Size(200, 20);
-            this.date_updateHusbandBD.TabIndex = 20;
+            this.date_updateHusbandBD.TabIndex = 16;
             this.date_updateHusbandBD.ValueChanged += new System.EventHandler(this.date_updateHusbandBD_ValueChanged);
             // 
             // date_updateBD
@@ -514,7 +514,7 @@
             this.date_updateBD.Location = new System.Drawing.Point(391, 65);
             this.date_updateBD.Name = "date_updateBD";
             this.date_updateBD.Size = new System.Drawing.Size(200, 20);
-            this.date_updateBD.TabIndex = 19;
+            this.date_updateBD.TabIndex = 14;
             this.date_updateBD.ValueChanged += new System.EventHandler(this.date_updateBD_ValueChanged);
             // 
             // btn_updatePatientAction
@@ -551,7 +551,7 @@
             this.txt_updatePhone.Location = new System.Drawing.Point(75, 171);
             this.txt_updatePhone.Name = "txt_updatePhone";
             this.txt_updatePhone.Size = new System.Drawing.Size(243, 20);
-            this.txt_updatePhone.TabIndex = 5;
+            this.txt_updatePhone.TabIndex = 17;
             // 
             // label14
             // 
@@ -586,14 +586,14 @@
             this.txt_updateHusbandName.Location = new System.Drawing.Point(75, 124);
             this.txt_updateHusbandName.Name = "txt_updateHusbandName";
             this.txt_updateHusbandName.Size = new System.Drawing.Size(243, 20);
-            this.txt_updateHusbandName.TabIndex = 7;
+            this.txt_updateHusbandName.TabIndex = 15;
             // 
             // txt_updateName
             // 
             this.txt_updateName.Location = new System.Drawing.Point(73, 65);
             this.txt_updateName.Name = "txt_updateName";
             this.txt_updateName.Size = new System.Drawing.Size(243, 20);
-            this.txt_updateName.TabIndex = 6;
+            this.txt_updateName.TabIndex = 13;
             // 
             // Form1
             // 

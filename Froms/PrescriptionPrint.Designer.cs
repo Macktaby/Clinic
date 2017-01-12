@@ -37,14 +37,14 @@
             this.reportViewer.LocalReport.ReportEmbeddedResource = "Clinic.Reports.PrescriptionReport.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
-            this.reportViewer.Size = new System.Drawing.Size(701, 567);
+            this.reportViewer.Size = new System.Drawing.Size(752, 567);
             this.reportViewer.TabIndex = 0;
             // 
             // PrescriptionPrint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 567);
+            this.ClientSize = new System.Drawing.Size(752, 567);
             this.Controls.Add(this.reportViewer);
             this.Name = "PrescriptionPrint";
             this.Text = "PrescriptionPrint";

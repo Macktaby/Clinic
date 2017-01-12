@@ -2,6 +2,300 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
+      <Image Name="img1">
+        <Source>External</Source>
+        <Value>=Parameters!image1.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>1.46446cm</Top>
+        <Left>10.90754cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <Visibility>
+          <Hidden>=Parameters!image1.Value=""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image1.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="img2">
+        <Source>External</Source>
+        <Value>=Parameters!image2.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>6.4658cm</Top>
+        <Left>10.8899cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>1</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image2.Value=""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image2.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="img3">
+        <Source>External</Source>
+        <Value>=Parameters!image3.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>11.43799cm</Top>
+        <Left>10.8899cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>2</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image3.Value=""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image3.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+        <cl:ComponentMetadata xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" />
+      </Image>
+      <Image Name="img4">
+        <Source>External</Source>
+        <Value>=Parameters!image4.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>16.45522cm</Top>
+        <Left>10.90754cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>3</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image4.Value=""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image4.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:الأسم</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>adobe Arabic</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox21</rd:DefaultName>
+        <Top>0.17639cm</Top>
+        <Left>17.19474cm</Left>
+        <Height>0.83813cm</Height>
+        <Width>1.17708cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:التاريخ</Value>
+                <Style>
+                  <FontFamily>adobe Arabic</FontFamily>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>0.17639cm</Top>
+        <Left>3.52338cm</Left>
+        <Height>0.83813cm</Height>
+        <Width>1.41521cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!patName.Value</Value>
+                <Style>
+                  <FontFamily>adobe Arabic</FontFamily>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>0.17639cm</Top>
+        <Left>5.72647cm</Left>
+        <Height>0.83813cm</Height>
+        <Width>11.29188cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!date.Value</Value>
+                <Style>
+                  <FontFamily>adobe Arabic</FontFamily>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>0.17639cm</Top>
+        <Left>0.60114cm</Left>
+        <Height>0.83813cm</Height>
+        <Width>2.74584cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="img5">
+        <Source>External</Source>
+        <Value>=Parameters!image5.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>22.31854cm</Top>
+        <Left>10.88989cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>8</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image5.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image5.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="img6">
+        <Source>External</Source>
+        <Value>=Parameters!image6.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>27.34565cm</Top>
+        <Left>10.88988cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>9</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image6.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image6.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="img7">
+        <Source>External</Source>
+        <Value>=Parameters!image7.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>32.46611cm</Top>
+        <Left>10.88988cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>10</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image7.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image7.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="img8">
+        <Source>External</Source>
+        <Value>=Parameters!image8.Value</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>37.62081cm</Top>
+        <Left>10.88988cm</Left>
+        <Height>4.7958cm</Height>
+        <Width>7.4525cm</Width>
+        <ZIndex>11</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!image8.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!image8.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
       <Textbox Name="Textbox1">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -9,23 +303,18 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
+                <Value>R/  </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value xml:space="preserve"> </Value>
-                <Style>
-                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>=Parameters!med1.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -37,22 +326,26 @@
               <TextRun>
                 <Value>=Parameters!dose1.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.60537cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>1.46446cm</Top>
+        <Left>0.5cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58cm</Width>
+        <Width>9.03474cm</Width>
+        <ZIndex>12</ZIndex>
         <Visibility>
-          <Hidden>=iif(Parameters!med1.Value = "ALL",true ,false)</Hidden>
+          <Hidden>=Parameters!med1.Value=""</Hidden>
         </Visibility>
-        <ToolTip>=iif(true,true ,true)</ToolTip>
+        <ToolTip>=IIF((Parameters!med1.Value = ""), True, False)</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -63,78 +356,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line2">
-        <Top>0.3175cm</Top>
-        <Left>8.98208cm</Left>
-        <Height>20.79965cm</Height>
-        <Width>0cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
-      <Image Name="img1">
-        <Source>External</Source>
-        <Value>=Parameters!image1.Value</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>0.60537cm</Top>
-        <Left>10.01854cm</Left>
-        <Height>4.2cm</Height>
-        <Width>6.5cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Image Name="img2">
-        <Source>External</Source>
-        <Value>=Parameters!image2.Value</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>5.04904cm</Top>
-        <Left>10.01854cm</Left>
-        <Height>4.2cm</Height>
-        <Width>6.5cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Image Name="img3">
-        <Source>External</Source>
-        <Value>=Parameters!image3.Value</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>9.48893cm</Top>
-        <Left>10.01854cm</Left>
-        <Height>4.2cm</Height>
-        <Width>6.5cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Image Name="img4">
-        <Source>External</Source>
-        <Value>=Parameters!image4.Value</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>13.94513cm</Top>
-        <Left>10.01854cm</Left>
-        <Height>4.2cm</Height>
-        <Width>6.5cm</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
       <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -142,11 +363,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
-                <ToolTip>=iif(Parameters!med2.Value = "ALL",true ,false)</ToolTip>
+                <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -160,6 +381,7 @@
               <TextRun>
                 <Value>=Parameters!med2.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -171,23 +393,26 @@
               <TextRun>
                 <Value>=Parameters!dose2.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>3.18722cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>3.9193cm</Top>
+        <Left>0.50001cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>6</ZIndex>
+        <Width>9.03473cm</Width>
+        <ZIndex>13</ZIndex>
         <Visibility>
-          <Hidden>=iif(Parameters!med2.Value = "ALL",true ,false)</Hidden>
+          <Hidden>=Parameters!med2.Value=""</Hidden>
         </Visibility>
-        <ToolTip>=iif(true,false ,false)</ToolTip>
+        <ToolTip>=IIF((Parameters!med2.Value = ""), True, False)</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -205,10 +430,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
+                <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -222,6 +448,7 @@
               <TextRun>
                 <Value>=Parameters!med3.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -233,19 +460,26 @@
               <TextRun>
                 <Value>=Parameters!dose3.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>5.80659cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>6.57043cm</Top>
+        <Left>0.50001cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>7</ZIndex>
+        <Width>9.03473cm</Width>
+        <ZIndex>14</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med3.Value=""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!med3.Value = ""), True, False)</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -263,10 +497,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
+                <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -280,6 +515,7 @@
               <TextRun>
                 <Value>=Parameters!med4.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -291,19 +527,26 @@
               <TextRun>
                 <Value>=Parameters!dose4.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>8.41827cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>9.05511cm</Top>
+        <Left>0.50001cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>8</ZIndex>
+        <Width>9.03473cm</Width>
+        <ZIndex>15</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med4.Value=""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!med4.Value = ""), True, False)</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -321,10 +564,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
+                <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -338,6 +582,7 @@
               <TextRun>
                 <Value>=Parameters!med5.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -349,19 +594,25 @@
               <TextRun>
                 <Value>=Parameters!dose5.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>11.00012cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>11.63695cm</Top>
+        <Left>0.50001cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>9</ZIndex>
+        <Width>9.03473cm</Width>
+        <ZIndex>16</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med5.Value=""</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -382,13 +633,22 @@
                 <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>=Parameters!med6.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -400,19 +660,25 @@
               <TextRun>
                 <Value>=Parameters!dose6.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>13.61949cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>14.09758cm</Top>
+        <Left>0.50001cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>10</ZIndex>
+        <Width>9.03473cm</Width>
+        <ZIndex>17</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med6.Value=""</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -430,10 +696,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
+                <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -447,6 +714,7 @@
               <TextRun>
                 <Value>=Parameters!med7.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -458,19 +726,548 @@
               <TextRun>
                 <Value>=Parameters!dose7.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>16.63492cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03473cm</Width>
+        <ZIndex>18</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med7.Value=""</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/  </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med9.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose9.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>16.28383cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>22.31855cm</Top>
+        <Left>0.50001cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>11</ZIndex>
+        <Width>9.03473cm</Width>
+        <ZIndex>19</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med9.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!med9.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med10.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose10.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>24.90039cm</Top>
+        <Left>0.50002cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>20</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med10.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=IIF((Parameters!med10.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med11.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose11.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>27.31582cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>21</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med11.Value = ""</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med12.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose12.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>29.9275cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>22</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med12.Value = ""</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med13.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose13.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>32.50934cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>23</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med13.Value = ""</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med14.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose14.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>35.12872cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>24</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med14.Value = ""</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med15.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose15.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>37.79306cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>25</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med15.Value = ""</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>R/ </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!med16.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!dose16.Value</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>40.41243cm</Top>
+        <Left>0.50001cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>9.03472cm</Width>
+        <ZIndex>26</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med16.Value = ""</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -488,10 +1285,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>R/</Value>
+                <Value>R/ </Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>Script MT Bold</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -505,6 +1303,7 @@
               <TextRun>
                 <Value>=Parameters!med8.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -516,19 +1315,25 @@
               <TextRun>
                 <Value>=Parameters!dose8.Value</Value>
                 <Style>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>18.9032cm</Top>
-        <Left>1.00224cm</Left>
+        <Top>19.22618cm</Top>
+        <Left>0.5cm</Left>
         <Height>2.21395cm</Height>
-        <Width>7.58001cm</Width>
-        <ZIndex>12</ZIndex>
+        <Width>9.03474cm</Width>
+        <ZIndex>27</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med8.Value=""</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -539,14 +1344,71 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>:ملاحظات</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>adobe Arabic</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!notes.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>adobe Arabic</FontFamily>
+                  <FontSize>15pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>43.09111cm</Top>
+        <Left>0.60114cm</Left>
+        <Height>2.21395cm</Height>
+        <Width>17.77068cm</Width>
+        <ZIndex>28</ZIndex>
+        <Visibility>
+          <Hidden>=Parameters!med1.Value = ""</Hidden>
+        </Visibility>
+        <ToolTip>=Microsoft.VisualBasic.Interaction.IIF((Parameters!notes.Value = ""), True, False)</ToolTip>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>21.22298cm</Height>
+    <Height>45.70767cm</Height>
     <Style />
   </Body>
-  <Width>18.07104cm</Width>
+  <Width>19.00087cm</Width>
   <Page>
     <PageHeader>
-      <Height>3.94505cm</Height>
+      <Height>3.73486cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -561,7 +1423,7 @@
 محمد كـمــــــال قطب</Value>
                   <Style>
                     <FontFamily>AGA Cordoba Regular</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
@@ -573,10 +1435,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>أستشارى امراض النساء و التوليد و العقم</Value>
+                  <Value>امراض النساء و التوليد و العقم</Value>
                   <Style>
                     <FontFamily>Adobe Arabic</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                   </Style>
                 </TextRun>
@@ -592,7 +1454,7 @@
 المناظير الجراحية</Value>
                   <Style>
                     <FontFamily>Adobe Arabic</FontFamily>
-                    <FontSize>14pt</FontSize>
+                    <FontSize>16pt</FontSize>
                     <FontWeight>Normal</FontWeight>
                   </Style>
                 </TextRun>
@@ -603,8 +1465,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.1186cm</Top>
-          <Left>10.06608cm</Left>
+          <Top>0.04804cm</Top>
+          <Left>11.33608cm</Left>
           <Height>3.61626cm</Height>
           <Width>7.66479cm</Width>
           <Style>
@@ -632,27 +1494,20 @@
             </Border>
           </Style>
         </Image>
-        <Line Name="Line1">
-          <Top>3.8529cm</Top>
-          <Left>0.84287cm</Left>
-          <Height>0cm</Height>
-          <Width>15.92904cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
       </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
         </Border>
+        <BottomBorder>
+          <Color>Black</Color>
+          <Style>Solid</Style>
+          <Width>1pt</Width>
+        </BottomBorder>
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.03729cm</Height>
+      <Height>2.11667cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -664,6 +1519,20 @@
               <TextRuns>
                 <TextRun>
                   <Value>العنوان: شارع مؤسسة الزكاة - محطة على ندا - بجوار بنزينة التعاون و فوق سوبر ماركت بيم</Value>
+                  <Style>
+                    <FontFamily>Adobe Arabic</FontFamily>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>الأستشارة خلال اسبوع من الكشف</Value>
                   <Style>
                     <FontFamily>Adobe Arabic</FontFamily>
                     <FontSize>16pt</FontSize>
@@ -690,9 +1559,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox4</rd:DefaultName>
-          <Top>0.38262cm</Top>
+          <Top>0.0635cm</Top>
           <Left>2.2086cm</Left>
-          <Height>1.39375cm</Height>
+          <Height>1.94938cm</Height>
           <Width>13.77125cm</Width>
           <Style>
             <Border>
@@ -704,31 +1573,28 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Line Name="Line4">
-          <Top>0.18154cm</Top>
-          <Left>1.071cm</Left>
-          <Height>0cm</Height>
-          <Width>15.92904cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
       </ReportItems>
       <Style>
         <Border>
-          <Style>None</Style>
+          <Style>Solid</Style>
         </Border>
+        <BottomBorder>
+          <Style>None</Style>
+        </BottomBorder>
+        <LeftBorder>
+          <Style>None</Style>
+        </LeftBorder>
+        <RightBorder>
+          <Style>None</Style>
+        </RightBorder>
       </Style>
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
     <LeftMargin>1cm</LeftMargin>
     <RightMargin>1cm</RightMargin>
-    <TopMargin>1cm</TopMargin>
-    <BottomMargin>1cm</BottomMargin>
+    <TopMargin>0.5cm</TopMargin>
+    <BottomMargin>0.5cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
     <Style />
   </Page>
@@ -800,13 +1666,13 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="med7">
+    <ReportParameter Name="dose6">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="dose6">
+    <ReportParameter Name="med7">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
@@ -825,6 +1691,102 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="dose8">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med9">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose9">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med10">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose10">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med11">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose11">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med12">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose12">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med13">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose13">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med14">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose14">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med15">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose15">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="med16">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="dose16">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
@@ -849,6 +1811,54 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="image4">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="image5">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="image6">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="image7">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="image8">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="patID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="patName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="date">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="notes">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>

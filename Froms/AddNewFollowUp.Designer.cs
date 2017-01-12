@@ -29,6 +29,26 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_addAbortionAction = new System.Windows.Forms.Button();
+            this.combo_abortion = new System.Windows.Forms.ComboBox();
+            this.txt_parityA = new System.Windows.Forms.TextBox();
+            this.btn_rmvAbortionAction = new System.Windows.Forms.Button();
+            this.txt_parityB = new System.Windows.Forms.TextBox();
+            this.combo_preg = new System.Windows.Forms.ComboBox();
+            this.listBox_preg = new System.Windows.Forms.ListBox();
+            this.btn_addPregAction = new System.Windows.Forms.Button();
+            this.listBox_abortion = new System.Windows.Forms.ListBox();
+            this.btn_rmvPregAction = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_menarchal = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txt_cycleD = new System.Windows.Forms.TextBox();
+            this.txt_cycleC = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.date_startDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_familyRefresh = new System.Windows.Forms.Button();
@@ -45,12 +65,6 @@
             this.btn_addFollowUpAction = new System.Windows.Forms.Button();
             this.combo_rh = new System.Windows.Forms.ComboBox();
             this.date_lmp = new System.Windows.Forms.DateTimePicker();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txt_cycleC = new System.Windows.Forms.TextBox();
-            this.txt_cycleD = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txt_menarchal = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -64,23 +78,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txt_edd = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_addAbortionAction = new System.Windows.Forms.Button();
-            this.combo_abortion = new System.Windows.Forms.ComboBox();
-            this.txt_parityA = new System.Windows.Forms.TextBox();
-            this.btn_rmvAbortionAction = new System.Windows.Forms.Button();
-            this.txt_parityB = new System.Windows.Forms.TextBox();
-            this.combo_preg = new System.Windows.Forms.ComboBox();
-            this.listBox_preg = new System.Windows.Forms.ListBox();
-            this.btn_addPregAction = new System.Windows.Forms.Button();
-            this.listBox_abortion = new System.Windows.Forms.ListBox();
-            this.btn_rmvPregAction = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -123,12 +123,219 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.btn_addAbortionAction);
+            this.groupBox3.Controls.Add(this.combo_abortion);
+            this.groupBox3.Controls.Add(this.txt_parityA);
+            this.groupBox3.Controls.Add(this.btn_rmvAbortionAction);
+            this.groupBox3.Controls.Add(this.txt_parityB);
+            this.groupBox3.Controls.Add(this.combo_preg);
+            this.groupBox3.Controls.Add(this.listBox_preg);
+            this.groupBox3.Controls.Add(this.btn_addPregAction);
+            this.groupBox3.Controls.Add(this.listBox_abortion);
+            this.groupBox3.Controls.Add(this.btn_rmvPregAction);
+            this.groupBox3.Location = new System.Drawing.Point(411, 11);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(606, 292);
+            this.groupBox3.TabIndex = 83;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Parity";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 167);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 95;
+            this.label3.Text = "Abortion:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 94;
+            this.label2.Text = "Pregnancy:";
+            // 
+            // btn_addAbortionAction
+            // 
+            this.btn_addAbortionAction.Location = new System.Drawing.Point(60, 227);
+            this.btn_addAbortionAction.Name = "btn_addAbortionAction";
+            this.btn_addAbortionAction.Size = new System.Drawing.Size(75, 38);
+            this.btn_addAbortionAction.TabIndex = 18;
+            this.btn_addAbortionAction.Text = "Add";
+            this.btn_addAbortionAction.UseVisualStyleBackColor = true;
+            this.btn_addAbortionAction.Click += new System.EventHandler(this.btn_addAbortionAction_Click);
+            // 
+            // combo_abortion
+            // 
+            this.combo_abortion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_abortion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_abortion.FormattingEnabled = true;
+            this.combo_abortion.Items.AddRange(new object[] {
+            "First Trimestic Abortion",
+            "Second Trimestic Abortion",
+            "Ectopic Pregnancy (Left Salpingectomy)",
+            "Ectopic Pregnancy (Right Salpingectomy)",
+            "Ectopic Pregnancy (Medical Treatment)"});
+            this.combo_abortion.Location = new System.Drawing.Point(13, 199);
+            this.combo_abortion.Name = "combo_abortion";
+            this.combo_abortion.Size = new System.Drawing.Size(254, 21);
+            this.combo_abortion.TabIndex = 17;
+            // 
+            // txt_parityA
+            // 
+            this.txt_parityA.Location = new System.Drawing.Point(76, 34);
+            this.txt_parityA.Name = "txt_parityA";
+            this.txt_parityA.Size = new System.Drawing.Size(40, 20);
+            this.txt_parityA.TabIndex = 11;
+            this.txt_parityA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // btn_rmvAbortionAction
+            // 
+            this.btn_rmvAbortionAction.Location = new System.Drawing.Point(152, 226);
+            this.btn_rmvAbortionAction.Name = "btn_rmvAbortionAction";
+            this.btn_rmvAbortionAction.Size = new System.Drawing.Size(75, 38);
+            this.btn_rmvAbortionAction.TabIndex = 19;
+            this.btn_rmvAbortionAction.Text = "Remove selected";
+            this.btn_rmvAbortionAction.UseVisualStyleBackColor = true;
+            this.btn_rmvAbortionAction.Click += new System.EventHandler(this.btn_rmvAbortionAction_Click);
+            // 
+            // txt_parityB
+            // 
+            this.txt_parityB.Location = new System.Drawing.Point(76, 164);
+            this.txt_parityB.Name = "txt_parityB";
+            this.txt_parityB.Size = new System.Drawing.Size(40, 20);
+            this.txt_parityB.TabIndex = 16;
+            // 
+            // combo_preg
+            // 
+            this.combo_preg.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_preg.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_preg.FormattingEnabled = true;
+            this.combo_preg.Items.AddRange(new object[] {
+            "C.S.",
+            "NVD"});
+            this.combo_preg.Location = new System.Drawing.Point(15, 71);
+            this.combo_preg.Name = "combo_preg";
+            this.combo_preg.Size = new System.Drawing.Size(254, 21);
+            this.combo_preg.TabIndex = 12;
+            // 
+            // listBox_preg
+            // 
+            this.listBox_preg.FormattingEnabled = true;
+            this.listBox_preg.Location = new System.Drawing.Point(294, 21);
+            this.listBox_preg.Name = "listBox_preg";
+            this.listBox_preg.Size = new System.Drawing.Size(296, 121);
+            this.listBox_preg.TabIndex = 15;
+            // 
+            // btn_addPregAction
+            // 
+            this.btn_addPregAction.Location = new System.Drawing.Point(62, 99);
+            this.btn_addPregAction.Name = "btn_addPregAction";
+            this.btn_addPregAction.Size = new System.Drawing.Size(75, 38);
+            this.btn_addPregAction.TabIndex = 13;
+            this.btn_addPregAction.Text = "Add";
+            this.btn_addPregAction.UseVisualStyleBackColor = true;
+            this.btn_addPregAction.Click += new System.EventHandler(this.btn_addPregAction_Click);
+            // 
+            // listBox_abortion
+            // 
+            this.listBox_abortion.FormattingEnabled = true;
+            this.listBox_abortion.Location = new System.Drawing.Point(294, 159);
+            this.listBox_abortion.Name = "listBox_abortion";
+            this.listBox_abortion.Size = new System.Drawing.Size(296, 121);
+            this.listBox_abortion.TabIndex = 20;
+            // 
+            // btn_rmvPregAction
+            // 
+            this.btn_rmvPregAction.Location = new System.Drawing.Point(154, 98);
+            this.btn_rmvPregAction.Name = "btn_rmvPregAction";
+            this.btn_rmvPregAction.Size = new System.Drawing.Size(75, 38);
+            this.btn_rmvPregAction.TabIndex = 14;
+            this.btn_rmvPregAction.Text = "Remove selected";
+            this.btn_rmvPregAction.UseVisualStyleBackColor = true;
+            this.btn_rmvPregAction.Click += new System.EventHandler(this.btn_rmvPregAction_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txt_menarchal);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.txt_cycleD);
+            this.groupBox2.Controls.Add(this.txt_cycleC);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Location = new System.Drawing.Point(185, 164);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(201, 117);
+            this.groupBox2.TabIndex = 82;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Gynecological History";
+            // 
+            // txt_menarchal
+            // 
+            this.txt_menarchal.Location = new System.Drawing.Point(78, 34);
+            this.txt_menarchal.Name = "txt_menarchal";
+            this.txt_menarchal.Size = new System.Drawing.Size(103, 20);
+            this.txt_menarchal.TabIndex = 8;
+            this.txt_menarchal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(12, 37);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(57, 13);
+            this.label24.TabIndex = 33;
+            this.label24.Text = "Menarchal";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(12, 70);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 13);
+            this.label21.TabIndex = 40;
+            this.label21.Text = "Cycle D/C";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txt_cycleD
+            // 
+            this.txt_cycleD.Location = new System.Drawing.Point(77, 63);
+            this.txt_cycleD.Name = "txt_cycleD";
+            this.txt_cycleD.Size = new System.Drawing.Size(40, 20);
+            this.txt_cycleD.TabIndex = 9;
+            this.txt_cycleD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // txt_cycleC
+            // 
+            this.txt_cycleC.Location = new System.Drawing.Point(141, 63);
+            this.txt_cycleC.Name = "txt_cycleC";
+            this.txt_cycleC.Size = new System.Drawing.Size(40, 20);
+            this.txt_cycleC.TabIndex = 10;
+            this.txt_cycleC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(123, 66);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(12, 13);
+            this.label22.TabIndex = 43;
+            this.label22.Text = "/";
+            // 
             // date_startDate
             // 
             this.date_startDate.Location = new System.Drawing.Point(73, 39);
             this.date_startDate.Name = "date_startDate";
             this.date_startDate.Size = new System.Drawing.Size(202, 20);
-            this.date_startDate.TabIndex = 73;
+            this.date_startDate.TabIndex = 1;
             // 
             // label1
             // 
@@ -145,7 +352,7 @@
             this.btn_familyRefresh.Location = new System.Drawing.Point(632, 501);
             this.btn_familyRefresh.Name = "btn_familyRefresh";
             this.btn_familyRefresh.Size = new System.Drawing.Size(52, 24);
-            this.btn_familyRefresh.TabIndex = 68;
+            this.btn_familyRefresh.TabIndex = 28;
             this.btn_familyRefresh.Text = "Refresh";
             this.btn_familyRefresh.UseVisualStyleBackColor = true;
             this.btn_familyRefresh.Click += new System.EventHandler(this.btn_familyRefresh_Click);
@@ -155,7 +362,7 @@
             this.btn_pastRefresh.Location = new System.Drawing.Point(279, 500);
             this.btn_pastRefresh.Name = "btn_pastRefresh";
             this.btn_pastRefresh.Size = new System.Drawing.Size(58, 23);
-            this.btn_pastRefresh.TabIndex = 67;
+            this.btn_pastRefresh.TabIndex = 23;
             this.btn_pastRefresh.Text = "Refresh";
             this.btn_pastRefresh.UseVisualStyleBackColor = true;
             this.btn_pastRefresh.Click += new System.EventHandler(this.btn_pastRefresh_Click);
@@ -165,7 +372,7 @@
             this.txt_female.Location = new System.Drawing.Point(132, 212);
             this.txt_female.Name = "txt_female";
             this.txt_female.Size = new System.Drawing.Size(40, 20);
-            this.txt_female.TabIndex = 66;
+            this.txt_female.TabIndex = 6;
             this.txt_female.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_male
@@ -173,7 +380,7 @@
             this.txt_male.Location = new System.Drawing.Point(73, 212);
             this.txt_male.Name = "txt_male";
             this.txt_male.Size = new System.Drawing.Size(40, 20);
-            this.txt_male.TabIndex = 65;
+            this.txt_male.TabIndex = 5;
             this.txt_male.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // txt_living
@@ -181,7 +388,7 @@
             this.txt_living.Location = new System.Drawing.Point(73, 167);
             this.txt_living.Name = "txt_living";
             this.txt_living.Size = new System.Drawing.Size(40, 20);
-            this.txt_living.TabIndex = 64;
+            this.txt_living.TabIndex = 4;
             this.txt_living.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // btn_addFHistory
@@ -189,7 +396,7 @@
             this.btn_addFHistory.Location = new System.Drawing.Point(420, 532);
             this.btn_addFHistory.Name = "btn_addFHistory";
             this.btn_addFHistory.Size = new System.Drawing.Size(75, 34);
-            this.btn_addFHistory.TabIndex = 61;
+            this.btn_addFHistory.TabIndex = 29;
             this.btn_addFHistory.Text = "Add";
             this.btn_addFHistory.UseVisualStyleBackColor = true;
             this.btn_addFHistory.Click += new System.EventHandler(this.btn_addFHistory_Click);
@@ -202,7 +409,7 @@
             this.combo_familyHistory.Location = new System.Drawing.Point(365, 502);
             this.combo_familyHistory.Name = "combo_familyHistory";
             this.combo_familyHistory.Size = new System.Drawing.Size(261, 21);
-            this.combo_familyHistory.TabIndex = 60;
+            this.combo_familyHistory.TabIndex = 27;
             this.combo_familyHistory.DropDown += new System.EventHandler(this.combo_familyHistory_DropDown);
             // 
             // btn_removeFHistory
@@ -210,7 +417,7 @@
             this.btn_removeFHistory.Location = new System.Drawing.Point(501, 532);
             this.btn_removeFHistory.Name = "btn_removeFHistory";
             this.btn_removeFHistory.Size = new System.Drawing.Size(75, 34);
-            this.btn_removeFHistory.TabIndex = 58;
+            this.btn_removeFHistory.TabIndex = 30;
             this.btn_removeFHistory.Text = "Remove selected";
             this.btn_removeFHistory.UseVisualStyleBackColor = true;
             this.btn_removeFHistory.Click += new System.EventHandler(this.btn_removeFHistory_Click);
@@ -223,7 +430,7 @@
             this.combo_pastHistory.Location = new System.Drawing.Point(19, 502);
             this.combo_pastHistory.Name = "combo_pastHistory";
             this.combo_pastHistory.Size = new System.Drawing.Size(254, 21);
-            this.combo_pastHistory.TabIndex = 57;
+            this.combo_pastHistory.TabIndex = 22;
             this.combo_pastHistory.DropDown += new System.EventHandler(this.combo_pastHistory_DropDown);
             // 
             // btn_addPHistory
@@ -231,7 +438,7 @@
             this.btn_addPHistory.Location = new System.Drawing.Point(93, 530);
             this.btn_addPHistory.Name = "btn_addPHistory";
             this.btn_addPHistory.Size = new System.Drawing.Size(75, 38);
-            this.btn_addPHistory.TabIndex = 56;
+            this.btn_addPHistory.TabIndex = 24;
             this.btn_addPHistory.Text = "Add";
             this.btn_addPHistory.UseVisualStyleBackColor = true;
             this.btn_addPHistory.Click += new System.EventHandler(this.btn_addPHistory_Click);
@@ -241,7 +448,7 @@
             this.btn_removePHistory.Location = new System.Drawing.Point(185, 529);
             this.btn_removePHistory.Name = "btn_removePHistory";
             this.btn_removePHistory.Size = new System.Drawing.Size(75, 38);
-            this.btn_removePHistory.TabIndex = 55;
+            this.btn_removePHistory.TabIndex = 25;
             this.btn_removePHistory.Text = "Remove selected";
             this.btn_removePHistory.UseVisualStyleBackColor = true;
             this.btn_removePHistory.Click += new System.EventHandler(this.btn_removePHistory_Click);
@@ -251,7 +458,7 @@
             this.btn_addFollowUpAction.Location = new System.Drawing.Point(812, 529);
             this.btn_addFollowUpAction.Name = "btn_addFollowUpAction";
             this.btn_addFollowUpAction.Size = new System.Drawing.Size(133, 42);
-            this.btn_addFollowUpAction.TabIndex = 52;
+            this.btn_addFollowUpAction.TabIndex = 32;
             this.btn_addFollowUpAction.Text = "Add \r\nFollow Up";
             this.btn_addFollowUpAction.UseVisualStyleBackColor = true;
             this.btn_addFollowUpAction.Click += new System.EventHandler(this.btn_addFollowUpAction_Click);
@@ -267,68 +474,15 @@
             this.combo_rh.Location = new System.Drawing.Point(73, 251);
             this.combo_rh.Name = "combo_rh";
             this.combo_rh.Size = new System.Drawing.Size(99, 21);
-            this.combo_rh.TabIndex = 45;
+            this.combo_rh.TabIndex = 7;
             // 
             // date_lmp
             // 
             this.date_lmp.Location = new System.Drawing.Point(73, 76);
             this.date_lmp.Name = "date_lmp";
             this.date_lmp.Size = new System.Drawing.Size(200, 20);
-            this.date_lmp.TabIndex = 44;
+            this.date_lmp.TabIndex = 2;
             this.date_lmp.ValueChanged += new System.EventHandler(this.date_lmp_ValueChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(123, 66);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(12, 13);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "/";
-            // 
-            // txt_cycleC
-            // 
-            this.txt_cycleC.Location = new System.Drawing.Point(141, 63);
-            this.txt_cycleC.Name = "txt_cycleC";
-            this.txt_cycleC.Size = new System.Drawing.Size(40, 20);
-            this.txt_cycleC.TabIndex = 42;
-            this.txt_cycleC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // txt_cycleD
-            // 
-            this.txt_cycleD.Location = new System.Drawing.Point(77, 63);
-            this.txt_cycleD.Name = "txt_cycleD";
-            this.txt_cycleD.Size = new System.Drawing.Size(40, 20);
-            this.txt_cycleD.TabIndex = 41;
-            this.txt_cycleD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 70);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(56, 13);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "Cycle D/C";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(12, 37);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(57, 13);
-            this.label24.TabIndex = 33;
-            this.label24.Text = "Menarchal";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txt_menarchal
-            // 
-            this.txt_menarchal.Location = new System.Drawing.Point(78, 34);
-            this.txt_menarchal.Name = "txt_menarchal";
-            this.txt_menarchal.Size = new System.Drawing.Size(103, 20);
-            this.txt_menarchal.TabIndex = 36;
-            this.txt_menarchal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
             // 
             // label20
             // 
@@ -362,7 +516,7 @@
             this.rtxt_notes.Location = new System.Drawing.Point(701, 331);
             this.rtxt_notes.Name = "rtxt_notes";
             this.rtxt_notes.Size = new System.Drawing.Size(274, 160);
-            this.rtxt_notes.TabIndex = 28;
+            this.rtxt_notes.TabIndex = 31;
             this.rtxt_notes.Text = "";
             // 
             // listBox_FamilyHistory
@@ -371,7 +525,7 @@
             this.listBox_FamilyHistory.Location = new System.Drawing.Point(365, 331);
             this.listBox_FamilyHistory.Name = "listBox_FamilyHistory";
             this.listBox_FamilyHistory.Size = new System.Drawing.Size(300, 160);
-            this.listBox_FamilyHistory.TabIndex = 27;
+            this.listBox_FamilyHistory.TabIndex = 26;
             // 
             // listBox_pastHistory
             // 
@@ -379,7 +533,7 @@
             this.listBox_pastHistory.Location = new System.Drawing.Point(32, 331);
             this.listBox_pastHistory.Name = "listBox_pastHistory";
             this.listBox_pastHistory.Size = new System.Drawing.Size(296, 160);
-            this.listBox_pastHistory.TabIndex = 26;
+            this.listBox_pastHistory.TabIndex = 21;
             // 
             // label17
             // 
@@ -433,7 +587,7 @@
             this.txt_edd.Location = new System.Drawing.Point(73, 113);
             this.txt_edd.Name = "txt_edd";
             this.txt_edd.Size = new System.Drawing.Size(200, 20);
-            this.txt_edd.TabIndex = 17;
+            this.txt_edd.TabIndex = 3;
             // 
             // label14
             // 
@@ -445,160 +599,6 @@
             this.label14.Text = "L M P";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txt_menarchal);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.txt_cycleD);
-            this.groupBox2.Controls.Add(this.txt_cycleC);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Location = new System.Drawing.Point(185, 164);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(201, 117);
-            this.groupBox2.TabIndex = 82;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Gynecological History";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.btn_addAbortionAction);
-            this.groupBox3.Controls.Add(this.combo_abortion);
-            this.groupBox3.Controls.Add(this.txt_parityA);
-            this.groupBox3.Controls.Add(this.btn_rmvAbortionAction);
-            this.groupBox3.Controls.Add(this.txt_parityB);
-            this.groupBox3.Controls.Add(this.combo_preg);
-            this.groupBox3.Controls.Add(this.listBox_preg);
-            this.groupBox3.Controls.Add(this.btn_addPregAction);
-            this.groupBox3.Controls.Add(this.listBox_abortion);
-            this.groupBox3.Controls.Add(this.btn_rmvPregAction);
-            this.groupBox3.Location = new System.Drawing.Point(411, 11);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(606, 292);
-            this.groupBox3.TabIndex = 83;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Parity";
-            // 
-            // btn_addAbortionAction
-            // 
-            this.btn_addAbortionAction.Location = new System.Drawing.Point(60, 227);
-            this.btn_addAbortionAction.Name = "btn_addAbortionAction";
-            this.btn_addAbortionAction.Size = new System.Drawing.Size(75, 38);
-            this.btn_addAbortionAction.TabIndex = 92;
-            this.btn_addAbortionAction.Text = "Add";
-            this.btn_addAbortionAction.UseVisualStyleBackColor = true;
-            this.btn_addAbortionAction.Click += new System.EventHandler(this.btn_addAbortionAction_Click);
-            // 
-            // combo_abortion
-            // 
-            this.combo_abortion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_abortion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_abortion.FormattingEnabled = true;
-            this.combo_abortion.Items.AddRange(new object[] {
-            "First Trimestic Abortion",
-            "Second Trimestic Abortion",
-            "Ectopic Pregnancy (Left Salpingectomy)",
-            "Ectopic Pregnancy (Right Salpingectomy)",
-            "Ectopic Pregnancy (Medical Treatment)"});
-            this.combo_abortion.Location = new System.Drawing.Point(13, 199);
-            this.combo_abortion.Name = "combo_abortion";
-            this.combo_abortion.Size = new System.Drawing.Size(254, 21);
-            this.combo_abortion.TabIndex = 93;
-            // 
-            // txt_parityA
-            // 
-            this.txt_parityA.Location = new System.Drawing.Point(76, 34);
-            this.txt_parityA.Name = "txt_parityA";
-            this.txt_parityA.Size = new System.Drawing.Size(40, 20);
-            this.txt_parityA.TabIndex = 84;
-            this.txt_parityA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_KeyPress);
-            // 
-            // btn_rmvAbortionAction
-            // 
-            this.btn_rmvAbortionAction.Location = new System.Drawing.Point(152, 226);
-            this.btn_rmvAbortionAction.Name = "btn_rmvAbortionAction";
-            this.btn_rmvAbortionAction.Size = new System.Drawing.Size(75, 38);
-            this.btn_rmvAbortionAction.TabIndex = 91;
-            this.btn_rmvAbortionAction.Text = "Remove selected";
-            this.btn_rmvAbortionAction.UseVisualStyleBackColor = true;
-            this.btn_rmvAbortionAction.Click += new System.EventHandler(this.btn_rmvAbortionAction_Click);
-            // 
-            // txt_parityB
-            // 
-            this.txt_parityB.Location = new System.Drawing.Point(76, 164);
-            this.txt_parityB.Name = "txt_parityB";
-            this.txt_parityB.Size = new System.Drawing.Size(40, 20);
-            this.txt_parityB.TabIndex = 85;
-            // 
-            // combo_preg
-            // 
-            this.combo_preg.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_preg.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_preg.FormattingEnabled = true;
-            this.combo_preg.Items.AddRange(new object[] {
-            "C.S.",
-            "NVD"});
-            this.combo_preg.Location = new System.Drawing.Point(15, 71);
-            this.combo_preg.Name = "combo_preg";
-            this.combo_preg.Size = new System.Drawing.Size(254, 21);
-            this.combo_preg.TabIndex = 90;
-            // 
-            // listBox_preg
-            // 
-            this.listBox_preg.FormattingEnabled = true;
-            this.listBox_preg.Location = new System.Drawing.Point(294, 21);
-            this.listBox_preg.Name = "listBox_preg";
-            this.listBox_preg.Size = new System.Drawing.Size(296, 121);
-            this.listBox_preg.TabIndex = 86;
-            // 
-            // btn_addPregAction
-            // 
-            this.btn_addPregAction.Location = new System.Drawing.Point(62, 99);
-            this.btn_addPregAction.Name = "btn_addPregAction";
-            this.btn_addPregAction.Size = new System.Drawing.Size(75, 38);
-            this.btn_addPregAction.TabIndex = 89;
-            this.btn_addPregAction.Text = "Add";
-            this.btn_addPregAction.UseVisualStyleBackColor = true;
-            this.btn_addPregAction.Click += new System.EventHandler(this.btn_addPregAction_Click);
-            // 
-            // listBox_abortion
-            // 
-            this.listBox_abortion.FormattingEnabled = true;
-            this.listBox_abortion.Location = new System.Drawing.Point(294, 159);
-            this.listBox_abortion.Name = "listBox_abortion";
-            this.listBox_abortion.Size = new System.Drawing.Size(296, 121);
-            this.listBox_abortion.TabIndex = 87;
-            // 
-            // btn_rmvPregAction
-            // 
-            this.btn_rmvPregAction.Location = new System.Drawing.Point(154, 98);
-            this.btn_rmvPregAction.Name = "btn_rmvPregAction";
-            this.btn_rmvPregAction.Size = new System.Drawing.Size(75, 38);
-            this.btn_rmvPregAction.TabIndex = 88;
-            this.btn_rmvPregAction.Text = "Remove selected";
-            this.btn_rmvPregAction.UseVisualStyleBackColor = true;
-            this.btn_rmvPregAction.Click += new System.EventHandler(this.btn_rmvPregAction_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 94;
-            this.label2.Text = "Pregnancy:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 167);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 95;
-            this.label3.Text = "Abortion:";
-            // 
             // Add_new_Follow_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,10 +609,10 @@
             this.Text = "Add_new_Follow_Up";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

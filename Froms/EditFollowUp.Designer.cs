@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.date_startDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_familyRefresh = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,12 +123,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Follow up Info";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(826, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 74;
+            this.label2.Text = " Years Old";
+            // 
             // date_startDate
             // 
             this.date_startDate.Location = new System.Drawing.Point(73, 39);
             this.date_startDate.Name = "date_startDate";
             this.date_startDate.Size = new System.Drawing.Size(202, 20);
-            this.date_startDate.TabIndex = 73;
+            this.date_startDate.TabIndex = 1;
             // 
             // label1
             // 
@@ -145,7 +154,7 @@
             this.btn_familyRefresh.Location = new System.Drawing.Point(634, 358);
             this.btn_familyRefresh.Name = "btn_familyRefresh";
             this.btn_familyRefresh.Size = new System.Drawing.Size(52, 24);
-            this.btn_familyRefresh.TabIndex = 68;
+            this.btn_familyRefresh.TabIndex = 20;
             this.btn_familyRefresh.Text = "Refresh";
             this.btn_familyRefresh.UseVisualStyleBackColor = true;
             this.btn_familyRefresh.Click += new System.EventHandler(this.btn_familyRefresh_Click);
@@ -155,7 +164,7 @@
             this.btn_pastRefresh.Location = new System.Drawing.Point(281, 357);
             this.btn_pastRefresh.Name = "btn_pastRefresh";
             this.btn_pastRefresh.Size = new System.Drawing.Size(58, 23);
-            this.btn_pastRefresh.TabIndex = 67;
+            this.btn_pastRefresh.TabIndex = 15;
             this.btn_pastRefresh.Text = "Refresh";
             this.btn_pastRefresh.UseVisualStyleBackColor = true;
             this.btn_pastRefresh.Click += new System.EventHandler(this.btn_pastRefresh_Click);
@@ -165,42 +174,42 @@
             this.txt_female.Location = new System.Drawing.Point(610, 90);
             this.txt_female.Name = "txt_female";
             this.txt_female.Size = new System.Drawing.Size(40, 20);
-            this.txt_female.TabIndex = 66;
+            this.txt_female.TabIndex = 8;
             // 
             // txt_male
             // 
             this.txt_male.Location = new System.Drawing.Point(543, 90);
             this.txt_male.Name = "txt_male";
             this.txt_male.Size = new System.Drawing.Size(40, 20);
-            this.txt_male.TabIndex = 65;
+            this.txt_male.TabIndex = 7;
             // 
             // txt_living
             // 
             this.txt_living.Location = new System.Drawing.Point(543, 45);
             this.txt_living.Name = "txt_living";
             this.txt_living.Size = new System.Drawing.Size(40, 20);
-            this.txt_living.TabIndex = 64;
+            this.txt_living.TabIndex = 6;
             // 
             // txt_parityB
             // 
             this.txt_parityB.Location = new System.Drawing.Point(424, 43);
             this.txt_parityB.Name = "txt_parityB";
             this.txt_parityB.Size = new System.Drawing.Size(40, 20);
-            this.txt_parityB.TabIndex = 63;
+            this.txt_parityB.TabIndex = 5;
             // 
             // txt_parityA
             // 
             this.txt_parityA.Location = new System.Drawing.Point(362, 43);
             this.txt_parityA.Name = "txt_parityA";
             this.txt_parityA.Size = new System.Drawing.Size(40, 20);
-            this.txt_parityA.TabIndex = 62;
+            this.txt_parityA.TabIndex = 4;
             // 
             // btn_addFHistory
             // 
             this.btn_addFHistory.Location = new System.Drawing.Point(422, 389);
             this.btn_addFHistory.Name = "btn_addFHistory";
             this.btn_addFHistory.Size = new System.Drawing.Size(75, 34);
-            this.btn_addFHistory.TabIndex = 61;
+            this.btn_addFHistory.TabIndex = 21;
             this.btn_addFHistory.Text = "Add";
             this.btn_addFHistory.UseVisualStyleBackColor = true;
             this.btn_addFHistory.Click += new System.EventHandler(this.btn_addFHistory_Click);
@@ -213,14 +222,14 @@
             this.combo_familyHistory.Location = new System.Drawing.Point(367, 359);
             this.combo_familyHistory.Name = "combo_familyHistory";
             this.combo_familyHistory.Size = new System.Drawing.Size(261, 21);
-            this.combo_familyHistory.TabIndex = 60;
+            this.combo_familyHistory.TabIndex = 19;
             // 
             // btn_removeFHistory
             // 
             this.btn_removeFHistory.Location = new System.Drawing.Point(503, 389);
             this.btn_removeFHistory.Name = "btn_removeFHistory";
             this.btn_removeFHistory.Size = new System.Drawing.Size(75, 34);
-            this.btn_removeFHistory.TabIndex = 58;
+            this.btn_removeFHistory.TabIndex = 22;
             this.btn_removeFHistory.Text = "Remove selected";
             this.btn_removeFHistory.UseVisualStyleBackColor = true;
             this.btn_removeFHistory.Click += new System.EventHandler(this.btn_removeFHistory_Click);
@@ -233,14 +242,14 @@
             this.combo_pastHistory.Location = new System.Drawing.Point(21, 359);
             this.combo_pastHistory.Name = "combo_pastHistory";
             this.combo_pastHistory.Size = new System.Drawing.Size(254, 21);
-            this.combo_pastHistory.TabIndex = 57;
+            this.combo_pastHistory.TabIndex = 14;
             // 
             // btn_addPHistory
             // 
             this.btn_addPHistory.Location = new System.Drawing.Point(95, 387);
             this.btn_addPHistory.Name = "btn_addPHistory";
             this.btn_addPHistory.Size = new System.Drawing.Size(75, 38);
-            this.btn_addPHistory.TabIndex = 56;
+            this.btn_addPHistory.TabIndex = 16;
             this.btn_addPHistory.Text = "Add";
             this.btn_addPHistory.UseVisualStyleBackColor = true;
             this.btn_addPHistory.Click += new System.EventHandler(this.btn_addPHistory_Click);
@@ -250,7 +259,7 @@
             this.btn_removePHistory.Location = new System.Drawing.Point(187, 386);
             this.btn_removePHistory.Name = "btn_removePHistory";
             this.btn_removePHistory.Size = new System.Drawing.Size(75, 38);
-            this.btn_removePHistory.TabIndex = 55;
+            this.btn_removePHistory.TabIndex = 17;
             this.btn_removePHistory.Text = "Remove selected";
             this.btn_removePHistory.UseVisualStyleBackColor = true;
             this.btn_removePHistory.Click += new System.EventHandler(this.btn_removePHistory_Click);
@@ -260,7 +269,7 @@
             this.btn_editFollowUpAction.Location = new System.Drawing.Point(814, 386);
             this.btn_editFollowUpAction.Name = "btn_editFollowUpAction";
             this.btn_editFollowUpAction.Size = new System.Drawing.Size(133, 42);
-            this.btn_editFollowUpAction.TabIndex = 52;
+            this.btn_editFollowUpAction.TabIndex = 24;
             this.btn_editFollowUpAction.Text = "Edit\r\nFollow Up";
             this.btn_editFollowUpAction.UseVisualStyleBackColor = true;
             this.btn_editFollowUpAction.Click += new System.EventHandler(this.btn_editFollowUpAction_Click);
@@ -276,14 +285,14 @@
             this.combo_rh.Location = new System.Drawing.Point(543, 129);
             this.combo_rh.Name = "combo_rh";
             this.combo_rh.Size = new System.Drawing.Size(121, 21);
-            this.combo_rh.TabIndex = 45;
+            this.combo_rh.TabIndex = 9;
             // 
             // date_lmp
             // 
             this.date_lmp.Location = new System.Drawing.Point(73, 78);
             this.date_lmp.Name = "date_lmp";
             this.date_lmp.Size = new System.Drawing.Size(200, 20);
-            this.date_lmp.TabIndex = 44;
+            this.date_lmp.TabIndex = 2;
             this.date_lmp.ValueChanged += new System.EventHandler(this.date_lmp_ValueChanged);
             // 
             // label22
@@ -300,14 +309,14 @@
             this.txt_cycleC.Location = new System.Drawing.Point(844, 113);
             this.txt_cycleC.Name = "txt_cycleC";
             this.txt_cycleC.Size = new System.Drawing.Size(40, 20);
-            this.txt_cycleC.TabIndex = 42;
+            this.txt_cycleC.TabIndex = 12;
             // 
             // txt_cycleD
             // 
             this.txt_cycleD.Location = new System.Drawing.Point(780, 113);
             this.txt_cycleD.Name = "txt_cycleD";
             this.txt_cycleD.Size = new System.Drawing.Size(40, 20);
-            this.txt_cycleD.TabIndex = 41;
+            this.txt_cycleD.TabIndex = 11;
             // 
             // label21
             // 
@@ -334,7 +343,7 @@
             this.txt_menarchal.Location = new System.Drawing.Point(781, 84);
             this.txt_menarchal.Name = "txt_menarchal";
             this.txt_menarchal.Size = new System.Drawing.Size(39, 20);
-            this.txt_menarchal.TabIndex = 36;
+            this.txt_menarchal.TabIndex = 10;
             // 
             // label25
             // 
@@ -377,7 +386,7 @@
             this.rtxt_notes.Location = new System.Drawing.Point(703, 188);
             this.rtxt_notes.Name = "rtxt_notes";
             this.rtxt_notes.Size = new System.Drawing.Size(274, 160);
-            this.rtxt_notes.TabIndex = 28;
+            this.rtxt_notes.TabIndex = 23;
             this.rtxt_notes.Text = "";
             // 
             // listBox_FamilyHistory
@@ -386,7 +395,7 @@
             this.listBox_FamilyHistory.Location = new System.Drawing.Point(367, 188);
             this.listBox_FamilyHistory.Name = "listBox_FamilyHistory";
             this.listBox_FamilyHistory.Size = new System.Drawing.Size(300, 160);
-            this.listBox_FamilyHistory.TabIndex = 27;
+            this.listBox_FamilyHistory.TabIndex = 18;
             // 
             // listBox_pastHistory
             // 
@@ -394,7 +403,7 @@
             this.listBox_pastHistory.Location = new System.Drawing.Point(34, 188);
             this.listBox_pastHistory.Name = "listBox_pastHistory";
             this.listBox_pastHistory.Size = new System.Drawing.Size(296, 160);
-            this.listBox_pastHistory.TabIndex = 26;
+            this.listBox_pastHistory.TabIndex = 13;
             // 
             // label17
             // 
@@ -448,7 +457,7 @@
             this.txt_edd.Location = new System.Drawing.Point(73, 113);
             this.txt_edd.Name = "txt_edd";
             this.txt_edd.Size = new System.Drawing.Size(200, 20);
-            this.txt_edd.TabIndex = 17;
+            this.txt_edd.TabIndex = 3;
             // 
             // label10
             // 
@@ -477,15 +486,6 @@
             this.label8.Size = new System.Drawing.Size(33, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Parity";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(826, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 74;
-            this.label2.Text = " Years Old";
             // 
             // EditFollowUp
             // 

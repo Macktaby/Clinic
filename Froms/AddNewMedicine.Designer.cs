@@ -44,7 +44,7 @@
             this.btn_addMedicineAction.Location = new System.Drawing.Point(415, 186);
             this.btn_addMedicineAction.Name = "btn_addMedicineAction";
             this.btn_addMedicineAction.Size = new System.Drawing.Size(75, 23);
-            this.btn_addMedicineAction.TabIndex = 0;
+            this.btn_addMedicineAction.TabIndex = 5;
             this.btn_addMedicineAction.Text = "Add Medicine";
             this.btn_addMedicineAction.UseVisualStyleBackColor = true;
             this.btn_addMedicineAction.Click += new System.EventHandler(this.btn_addMedicineAction_Click);
@@ -70,7 +70,7 @@
             this.txt_type.Multiline = true;
             this.txt_type.Name = "txt_type";
             this.txt_type.Size = new System.Drawing.Size(163, 19);
-            this.txt_type.TabIndex = 5;
+            this.txt_type.TabIndex = 4;
             // 
             // label1
             // 
@@ -116,7 +116,7 @@
             this.txt_conc.Location = new System.Drawing.Point(357, 37);
             this.txt_conc.Name = "txt_conc";
             this.txt_conc.Size = new System.Drawing.Size(163, 20);
-            this.txt_conc.TabIndex = 11;
+            this.txt_conc.TabIndex = 2;
             // 
             // AddNewMedicine
             // 

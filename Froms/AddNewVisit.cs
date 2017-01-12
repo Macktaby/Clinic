@@ -23,6 +23,7 @@ namespace Clinic.Froms
 
         private List<int> medicines;
         private List<int> selectedMedications;
+        private string patientName;
 
         public AddNewVisit()
         {
@@ -35,12 +36,14 @@ namespace Clinic.Froms
             selectedMedications = new List<int>();
             loadMedicines();
         }
-        public AddNewVisit(int patientID, int followUpID, DateTime lmp)
+
+        public AddNewVisit(int patientID, int followUpID, DateTime lmp, String patientName)
             : this()
         {
             this.patientID = patientID;
             this.followUpID = followUpID;
             this.lmp = lmp;
+            this.patientName = patientName;
 
             DateTime now = DateTime.Today;
             days = (now - lmp).Days;
@@ -252,7 +255,7 @@ namespace Clinic.Froms
 
             getSelectedMedicinesValues(out meds, out doses);
 
-            using (PrescriptionPrint frm = new PrescriptionPrint(meds, doses, images))
+            using (PrescriptionPrint frm = new PrescriptionPrint(meds, doses, images, patientName, txt_notes.Text, date_visitDate.Value.ToString("dd/MM/yyyy")))
             {
                 frm.ShowDialog();
             }

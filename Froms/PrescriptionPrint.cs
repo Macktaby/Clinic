@@ -17,6 +17,10 @@ namespace Clinic.Froms
         private List<string> doses;
         private List<string> images;
 
+        private String date;
+        private String notes;
+        private String patientName;
+
         public PrescriptionPrint()
         {
             InitializeComponent();
@@ -31,9 +35,21 @@ namespace Clinic.Froms
             this.images = images;
         }
 
+        public PrescriptionPrint(List<string> meds, List<string> doses, List<string> images, string patientName, string notes, String date)
+            : this()
+        {
+            this.meds = meds;
+            this.doses = doses;
+            this.images = images;
+
+            this.patientName = patientName;
+            this.notes = notes;
+            this.date = date;
+        }
+
         private void PrescriptionPrint_Load(object sender, EventArgs e)
         {
-            ReportParameter[] para = new ReportParameter[(meds.Count * 2) + images.Count];
+            ReportParameter[] para = new ReportParameter[(meds.Count * 2) + images.Count + 3];
 
             for (int i = 0; i < meds.Count; i++)
             {
@@ -45,6 +61,10 @@ namespace Clinic.Froms
             {
                 para[(meds.Count * 2) + i] = new ReportParameter("image" + (i + 1), images[i]);
             }
+
+            para[(meds.Count * 2) + images.Count] = new ReportParameter("notes", notes);
+            para[(meds.Count * 2) + images.Count + 1] = new ReportParameter("patName", patientName);
+            para[(meds.Count * 2) + images.Count + 2] = new ReportParameter("date", date);
 
             this.reportViewer.LocalReport.SetParameters(para);
             this.reportViewer.RefreshReport();

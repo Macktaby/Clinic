@@ -58,7 +58,7 @@
             this.btn_addLabValueAction.Location = new System.Drawing.Point(96, 152);
             this.btn_addLabValueAction.Name = "btn_addLabValueAction";
             this.btn_addLabValueAction.Size = new System.Drawing.Size(75, 23);
-            this.btn_addLabValueAction.TabIndex = 2;
+            this.btn_addLabValueAction.TabIndex = 3;
             this.btn_addLabValueAction.Text = "Add Lab";
             this.btn_addLabValueAction.UseVisualStyleBackColor = true;
             this.btn_addLabValueAction.Click += new System.EventHandler(this.btn_addLabValueAction_Click);
@@ -68,14 +68,14 @@
             this.txt_normalRange.Location = new System.Drawing.Point(96, 86);
             this.txt_normalRange.Name = "txt_normalRange";
             this.txt_normalRange.Size = new System.Drawing.Size(176, 20);
-            this.txt_normalRange.TabIndex = 3;
+            this.txt_normalRange.TabIndex = 2;
             // 
             // txt_labName
             // 
             this.txt_labName.Location = new System.Drawing.Point(96, 37);
             this.txt_labName.Name = "txt_labName";
             this.txt_labName.Size = new System.Drawing.Size(176, 20);
-            this.txt_labName.TabIndex = 4;
+            this.txt_labName.TabIndex = 1;
             // 
             // AddLabValue
             // 

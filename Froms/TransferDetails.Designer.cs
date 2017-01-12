@@ -54,7 +54,7 @@
             this.txt_patName.Location = new System.Drawing.Point(95, 29);
             this.txt_patName.Name = "txt_patName";
             this.txt_patName.Size = new System.Drawing.Size(199, 20);
-            this.txt_patName.TabIndex = 0;
+            this.txt_patName.TabIndex = 1;
             // 
             // label1
             // 
@@ -89,7 +89,7 @@
             this.txt_reason.Location = new System.Drawing.Point(94, 135);
             this.txt_reason.Name = "txt_reason";
             this.txt_reason.Size = new System.Drawing.Size(200, 20);
-            this.txt_reason.TabIndex = 4;
+            this.txt_reason.TabIndex = 5;
             // 
             // label4
             // 
@@ -105,7 +105,7 @@
             this.date_current.Location = new System.Drawing.Point(94, 64);
             this.date_current.Name = "date_current";
             this.date_current.Size = new System.Drawing.Size(200, 20);
-            this.date_current.TabIndex = 8;
+            this.date_current.TabIndex = 3;
             // 
             // label5
             // 
@@ -121,7 +121,7 @@
             this.txt_age.Location = new System.Drawing.Point(366, 28);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(39, 20);
-            this.txt_age.TabIndex = 10;
+            this.txt_age.TabIndex = 2;
             // 
             // btn_printAction
             // 
@@ -185,7 +185,7 @@
             this.combo_fasting.Location = new System.Drawing.Point(95, 207);
             this.combo_fasting.Name = "combo_fasting";
             this.combo_fasting.Size = new System.Drawing.Size(108, 21);
-            this.combo_fasting.TabIndex = 14;
+            this.combo_fasting.TabIndex = 7;
             // 
             // combo_fastingPer
             // 
@@ -198,7 +198,7 @@
             this.combo_fastingPer.Location = new System.Drawing.Point(209, 207);
             this.combo_fastingPer.Name = "combo_fastingPer";
             this.combo_fastingPer.Size = new System.Drawing.Size(85, 21);
-            this.combo_fastingPer.TabIndex = 15;
+            this.combo_fastingPer.TabIndex = 8;
             // 
             // combo_entryPer
             // 
@@ -211,7 +211,7 @@
             this.combo_entryPer.Location = new System.Drawing.Point(209, 244);
             this.combo_entryPer.Name = "combo_entryPer";
             this.combo_entryPer.Size = new System.Drawing.Size(85, 21);
-            this.combo_entryPer.TabIndex = 17;
+            this.combo_entryPer.TabIndex = 10;
             // 
             // combo_entry
             // 
@@ -246,7 +246,7 @@
             this.combo_entry.Location = new System.Drawing.Point(95, 244);
             this.combo_entry.Name = "combo_entry";
             this.combo_entry.Size = new System.Drawing.Size(108, 21);
-            this.combo_entry.TabIndex = 16;
+            this.combo_entry.TabIndex = 9;
             // 
             // label8
             // 
@@ -263,14 +263,14 @@
             this.txt_hosName.Location = new System.Drawing.Point(94, 99);
             this.txt_hosName.Name = "txt_hosName";
             this.txt_hosName.Size = new System.Drawing.Size(200, 20);
-            this.txt_hosName.TabIndex = 18;
+            this.txt_hosName.TabIndex = 4;
             // 
             // date_transfer
             // 
             this.date_transfer.Location = new System.Drawing.Point(95, 170);
             this.date_transfer.Name = "date_transfer";
             this.date_transfer.Size = new System.Drawing.Size(200, 20);
-            this.date_transfer.TabIndex = 20;
+            this.date_transfer.TabIndex = 6;
             // 
             // TransferDetails
             // 

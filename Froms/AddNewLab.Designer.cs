@@ -46,7 +46,7 @@
             this.combo_labName.Location = new System.Drawing.Point(20, 49);
             this.combo_labName.Name = "combo_labName";
             this.combo_labName.Size = new System.Drawing.Size(193, 21);
-            this.combo_labName.TabIndex = 0;
+            this.combo_labName.TabIndex = 1;
             this.combo_labName.SelectedIndexChanged += new System.EventHandler(this.combo_labName_SelectedIndexChanged);
             // 
             // label1
@@ -79,7 +79,7 @@
             this.txt_normalRange.Location = new System.Drawing.Point(242, 43);
             this.txt_normalRange.Name = "txt_normalRange";
             this.txt_normalRange.Size = new System.Drawing.Size(196, 20);
-            this.txt_normalRange.TabIndex = 6;
+            this.txt_normalRange.TabIndex = 3;
             // 
             // label3
             // 
@@ -95,7 +95,7 @@
             this.btn_addLabAction.Location = new System.Drawing.Point(316, 107);
             this.btn_addLabAction.Name = "btn_addLabAction";
             this.btn_addLabAction.Size = new System.Drawing.Size(75, 23);
-            this.btn_addLabAction.TabIndex = 7;
+            this.btn_addLabAction.TabIndex = 5;
             this.btn_addLabAction.Text = "Add lab";
             this.btn_addLabAction.UseVisualStyleBackColor = true;
             this.btn_addLabAction.Click += new System.EventHandler(this.btn_addLabAction_Click);
@@ -105,7 +105,7 @@
             this.button1.Location = new System.Drawing.Point(152, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 23);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

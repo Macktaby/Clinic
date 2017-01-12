@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_printVisitAction = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.listBox_visitMedications = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,15 +65,6 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_printVisitAction
-            // 
-            this.btn_printVisitAction.Location = new System.Drawing.Point(486, 560);
-            this.btn_printVisitAction.Name = "btn_printVisitAction";
-            this.btn_printVisitAction.Size = new System.Drawing.Size(68, 35);
-            this.btn_printVisitAction.TabIndex = 92;
-            this.btn_printVisitAction.Text = "Print Visit";
-            this.btn_printVisitAction.UseVisualStyleBackColor = true;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -90,7 +80,7 @@
             this.listBox_visitMedications.Location = new System.Drawing.Point(29, 349);
             this.listBox_visitMedications.Name = "listBox_visitMedications";
             this.listBox_visitMedications.Size = new System.Drawing.Size(296, 134);
-            this.listBox_visitMedications.TabIndex = 85;
+            this.listBox_visitMedications.TabIndex = 9;
             // 
             // label9
             // 
@@ -125,7 +115,7 @@
             this.txt_tmp.Location = new System.Drawing.Point(467, 132);
             this.txt_tmp.Name = "txt_tmp";
             this.txt_tmp.Size = new System.Drawing.Size(63, 20);
-            this.txt_tmp.TabIndex = 81;
+            this.txt_tmp.TabIndex = 5;
             // 
             // label6
             // 
@@ -142,7 +132,7 @@
             this.txt_gasAge.Location = new System.Drawing.Point(467, 96);
             this.txt_gasAge.Name = "txt_gasAge";
             this.txt_gasAge.Size = new System.Drawing.Size(127, 20);
-            this.txt_gasAge.TabIndex = 79;
+            this.txt_gasAge.TabIndex = 4;
             // 
             // txt_bl_pr_dom
             // 
@@ -150,7 +140,7 @@
             this.txt_bl_pr_dom.Location = new System.Drawing.Point(522, 171);
             this.txt_bl_pr_dom.Name = "txt_bl_pr_dom";
             this.txt_bl_pr_dom.Size = new System.Drawing.Size(41, 20);
-            this.txt_bl_pr_dom.TabIndex = 78;
+            this.txt_bl_pr_dom.TabIndex = 7;
             // 
             // label5
             // 
@@ -205,7 +195,7 @@
             this.txt_weight.Location = new System.Drawing.Point(95, 135);
             this.txt_weight.Name = "txt_weight";
             this.txt_weight.Size = new System.Drawing.Size(41, 20);
-            this.txt_weight.TabIndex = 72;
+            this.txt_weight.TabIndex = 3;
             // 
             // txt_visitDate
             // 
@@ -213,7 +203,7 @@
             this.txt_visitDate.Location = new System.Drawing.Point(95, 99);
             this.txt_visitDate.Name = "txt_visitDate";
             this.txt_visitDate.Size = new System.Drawing.Size(141, 20);
-            this.txt_visitDate.TabIndex = 71;
+            this.txt_visitDate.TabIndex = 2;
             // 
             // txt_bl_pr_num
             // 
@@ -221,7 +211,7 @@
             this.txt_bl_pr_num.Location = new System.Drawing.Point(457, 171);
             this.txt_bl_pr_num.Name = "txt_bl_pr_num";
             this.txt_bl_pr_num.Size = new System.Drawing.Size(41, 20);
-            this.txt_bl_pr_num.TabIndex = 70;
+            this.txt_bl_pr_num.TabIndex = 6;
             // 
             // txt_ultraSound
             // 
@@ -230,7 +220,7 @@
             this.txt_ultraSound.Multiline = true;
             this.txt_ultraSound.Name = "txt_ultraSound";
             this.txt_ultraSound.Size = new System.Drawing.Size(296, 72);
-            this.txt_ultraSound.TabIndex = 69;
+            this.txt_ultraSound.TabIndex = 8;
             // 
             // label11
             // 
@@ -238,7 +228,7 @@
             this.label11.Location = new System.Drawing.Point(44, 31);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 26);
-            this.label11.TabIndex = 95;
+            this.label11.TabIndex = 11;
             this.label11.Text = "Follow up \r\nvisits";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -248,7 +238,7 @@
             this.combo_visits.Location = new System.Drawing.Point(107, 36);
             this.combo_visits.Name = "combo_visits";
             this.combo_visits.Size = new System.Drawing.Size(175, 21);
-            this.combo_visits.TabIndex = 94;
+            this.combo_visits.TabIndex = 1;
             this.combo_visits.DropDown += new System.EventHandler(this.combo_visits_DropDown);
             this.combo_visits.SelectedIndexChanged += new System.EventHandler(this.combo_visits_SelectedIndexChanged);
             // 
@@ -268,7 +258,6 @@
             this.groupBox1.Controls.Add(this.txt_ultraSound);
             this.groupBox1.Controls.Add(this.combo_visits);
             this.groupBox1.Controls.Add(this.txt_bl_pr_num);
-            this.groupBox1.Controls.Add(this.btn_printVisitAction);
             this.groupBox1.Controls.Add(this.txt_visitDate);
             this.groupBox1.Controls.Add(this.txt_weight);
             this.groupBox1.Controls.Add(this.label10);
@@ -289,7 +278,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(679, 613);
-            this.groupBox1.TabIndex = 96;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Certain Visit Details";
             // 
@@ -300,7 +289,7 @@
             this.txt_visitNotes.Multiline = true;
             this.txt_visitNotes.Name = "txt_visitNotes";
             this.txt_visitNotes.Size = new System.Drawing.Size(296, 72);
-            this.txt_visitNotes.TabIndex = 96;
+            this.txt_visitNotes.TabIndex = 10;
             // 
             // label12
             // 
@@ -317,7 +306,7 @@
             this.listBox_allWeights.Location = new System.Drawing.Point(752, 65);
             this.listBox_allWeights.Name = "listBox_allWeights";
             this.listBox_allWeights.Size = new System.Drawing.Size(126, 160);
-            this.listBox_allWeights.TabIndex = 97;
+            this.listBox_allWeights.TabIndex = 11;
             // 
             // label13
             // 
@@ -334,7 +323,7 @@
             this.listBox_allBloodPressures.Location = new System.Drawing.Point(752, 331);
             this.listBox_allBloodPressures.Name = "listBox_allBloodPressures";
             this.listBox_allBloodPressures.Size = new System.Drawing.Size(126, 160);
-            this.listBox_allBloodPressures.TabIndex = 99;
+            this.listBox_allBloodPressures.TabIndex = 13;
             // 
             // label14
             // 
@@ -351,7 +340,7 @@
             this.listBox_uniqueMedicines.Location = new System.Drawing.Point(983, 65);
             this.listBox_uniqueMedicines.Name = "listBox_uniqueMedicines";
             this.listBox_uniqueMedicines.Size = new System.Drawing.Size(275, 160);
-            this.listBox_uniqueMedicines.TabIndex = 101;
+            this.listBox_uniqueMedicines.TabIndex = 12;
             // 
             // label15
             // 
@@ -374,7 +363,7 @@
             this.listView_labs.MultiSelect = false;
             this.listView_labs.Name = "listView_labs";
             this.listView_labs.Size = new System.Drawing.Size(382, 273);
-            this.listView_labs.TabIndex = 105;
+            this.listView_labs.TabIndex = 14;
             this.listView_labs.UseCompatibleStateImageBehavior = false;
             this.listView_labs.View = System.Windows.Forms.View.Details;
             // 
@@ -418,7 +407,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_printVisitAction;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox listBox_visitMedications;
         private System.Windows.Forms.Label label9;

@@ -38,7 +38,7 @@
             this.btn_addValue.Location = new System.Drawing.Point(93, 125);
             this.btn_addValue.Name = "btn_addValue";
             this.btn_addValue.Size = new System.Drawing.Size(92, 41);
-            this.btn_addValue.TabIndex = 5;
+            this.btn_addValue.TabIndex = 2;
             this.btn_addValue.Text = "Add Family History Value";
             this.btn_addValue.UseVisualStyleBackColor = true;
             this.btn_addValue.Click += new System.EventHandler(this.btn_addValue_Click);
@@ -48,7 +48,7 @@
             this.txt_value.Location = new System.Drawing.Point(10, 60);
             this.txt_value.Name = "txt_value";
             this.txt_value.Size = new System.Drawing.Size(260, 20);
-            this.txt_value.TabIndex = 4;
+            this.txt_value.TabIndex = 1;
             // 
             // label1
             // 
